@@ -1,0 +1,17 @@
+$titleColor-on-dark-background: #C8FFD3;
+$dark-background: #1D3251;
+$light-background: #FFFFFF;
+$grey-panel: #C4C4C6;
+$textColor-light-background: #1D3251;
+$textColor-dark-background: #FFFFFF;
+$font-family: 'Abril Fatface', cursive;
+
+
+$breakpoints: (
+    "mobile-min-width": 320px,
+    "mobile-max-width": 640px,
+    "tablet-min-width": 641px,
+    "tablet-max-width": 1007px,
+    "desktop-min-width": 1008px,
+    "desktop-max-width": 1200px
+);
