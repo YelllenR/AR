@@ -1,4 +1,14 @@
-html, body{
-    border: 1px solid gray;
-}
+// Base
+@import "./base/reset";
 
+// Abstract 
+@import "./abstract/mixins"; 
+@import "./abstract/variables"; 
+
+// Layout
+@import "./layout/footer"; 
+
+// Components
+@import "./components/icons"; 
+@import "./components/images"; 
+@import "./components/projects"; 

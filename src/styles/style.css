@@ -1,3 +1,7 @@
-html, body {
-  border: 1px solid gray;
-}/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* media queries *//*# sourceMappingURL=style.css.map */
