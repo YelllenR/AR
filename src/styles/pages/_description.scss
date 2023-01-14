@@ -1,0 +1,21 @@
+#description {
+    height: 100vh;
+    width: 100vw;
+    background-color: $dark-background;
+    mix-blend-mode: overlay;
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.describe{
+    margin-top: 50px;
+    font-size: 3em;
+    color: $textColor-dark-background;
+}

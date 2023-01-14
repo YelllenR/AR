@@ -3,6 +3,7 @@
 
 // Abstract 
 @import "./abstract/mixins"; 
+@import "./abstract/functions"; 
 @import "./abstract/variables"; 
 
 // Layout
@@ -11,4 +12,10 @@
 // Components
 @import "./components/icons"; 
 @import "./components/images"; 
-@import "./components/projects"; 
+
+
+// page
+
+@import "./pages/landing"; 
+@import "./pages/projects"; 
+@import "./pages/description"; 

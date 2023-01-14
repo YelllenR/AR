@@ -1,6 +1,7 @@
 <script lang="ts">
-    // import Contact from "./Contact.svelte";
-    import Projects from "./Projects.svelte";
+    import Description from "./Description/+page.svelte"; 
+    import Projects from "./Projects/+page.svelte";
+    import Landing from "./Landing/+page.svelte";
 
 </script>
 
@@ -8,16 +9,13 @@
     <title> Aurélie ROSE </title>
 </svelte:head>
 
-<section id="AR">
-    <div class="initials"></div>
-</section>
 
-<section id="container">
-    <Projects></Projects>
+<Landing></Landing>
+   
+<Description></Description>
 
-    
-    <!-- <Contact></Contact> -->
+<Projects></Projects>
 
-</section>
+
 
 
