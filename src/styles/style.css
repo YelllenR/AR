@@ -1,3 +1,88 @@
-html, body {
-  border: 1px solid gray;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#landing-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: #121F33;
+}
+
+.container {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../src/lib/images/bg.jpg");
+  filter: drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texts {
+  font-size: 4.2em;
+  color: white;
+  width: 100vw;
+  text-align: center;
+}
+
+.overflow {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.text {
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+#main-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #121F33;
+}
+
+.openclassrooms {
+  color: #E3FDE8;
+  font-family: "Abril Fatface", cursive;
+  margin: 32px 0 24px 0;
+}
+
+#description {
+  height: 100vh;
+  width: 100vw;
+  background-color: #121F33;
+  mix-blend-mode: overlay;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.describe {
+  margin-top: 50px;
+  font-size: 3em;
+  color: #E3FDE8;
 }/*# sourceMappingURL=style.css.map */
