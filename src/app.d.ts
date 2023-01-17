@@ -7,3 +7,10 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
+
+
+// declare namespace svelte.JSX{
+// 	interface HTMLAttributes<T>{
+// 		useviewport: (event: CustomEvent) => void
+// 	}
+// }

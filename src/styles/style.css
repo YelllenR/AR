@@ -19,10 +19,40 @@
 .container__background {
   height: 100vh;
   width: 100vw;
-  background-image: url("../src/lib/images/bg.jpg");
+  background-image: url("/images/bg.jpg");
+  background-position: center right;
   filter: drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
   background-size: cover;
-  opacity: 0.8;
+  -webkit-animation: background 0.7s ease-in;
+  animation: background 0.7s ease-in;
+}
+@-webkit-keyframes background {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes background {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
 .content {
@@ -34,7 +64,7 @@
 }
 
 .texts {
-  font-size: 4.2em;
+  font-size: 5em;
   color: white;
   width: 100vw;
   text-align: center;
@@ -49,6 +79,7 @@
 .text {
   display: inline-block;
   margin: 0.2rem;
+  padding: 8px;
 }
 
 #main-projects-container {
@@ -84,5 +115,134 @@
 .describe {
   margin-top: 50px;
   font-size: 3em;
-  color: #E3FDE8;
+  color: white;
+}
+
+.experience-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121F33;
+}
+
+.experience-title {
+  color: white;
+  margin: 8px 8px 32px 8px;
+  font-size: 1.8em;
+}
+
+h3, h4, p {
+  font-family: "Abril Fatface", cursive;
+}
+
+.company {
+  font-size: 1.2em;
+}
+
+.job-title {
+  font-size: 1.3em;
+  padding: 5px;
+  text-align: center;
+}
+
+.dateYear {
+  font-size: 1em;
+  padding: 5px;
+  text-align: center;
+}
+
+.dutyLists {
+  list-style: none;
+  font-family: "Abril Fatface", cursive;
+  text-align: justify;
+  font-size: 1em;
+  padding: 8px;
+}
+
+.experience-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+}
+
+.CardBox {
+  background-color: transparent;
+  height: 35vh;
+  width: 35vw;
+  margin: 20px 20px 40px;
+  perspective: 2000px;
+  border: 1px solid #121F33;
+  box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
+  border-radius: 8px 8px 0 0;
+}
+
+.experience {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.showBackCard {
+  transform: rotateY(180deg);
+  box-shadow: 3px -5px 5px -2px rgba(255, 255, 255, 0.31);
+}
+
+.frontCard,
+.backCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  padding: 8px;
+}
+
+.backCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #121F33;
+  color: white;
+  height: 35vh;
+  width: 35vw;
+  transform: rotateY(180deg) translateX(2px);
+  border-radius: 8px 8px 0 0;
+  padding: 8px;
+}
+
+button {
+  width: 35vw;
+  height: 4.5vh;
+  font-size: 1.1em;
+  font-weight: 800;
+  padding: 5px 2px;
+  text-align: center;
+  border: 1px solid #121F33;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s all;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px -5px 26px -2px rgba(0, 0, 0, 0.31);
+}
+button:active, button:focus {
+  background-color: #121F33;
+  color: white;
+  box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
 }/*# sourceMappingURL=style.css.map */

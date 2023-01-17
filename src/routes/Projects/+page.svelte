@@ -23,7 +23,7 @@ onMount(() =>{
 
 </script> -->
 
-<div id="main-projects-container">
+<div id="main-projects-container" class="invisible">
   <h2 class="openclassrooms">Projet openclassrooms</h2>
 
   <!-- <div class="projectsBox">

@@ -6,27 +6,6 @@ $textColor-light-background: #121F33;
 $textColor-dark-background: #E3FDE8;
 $font-family: 'Abril Fatface', cursive;
 
-$actualCard-opacity: 0.8;
-$card-translateY-offset: 80vh; 
-$transition-duration-card: 800ms; 
-$transition-ease: ease;
-
-// animation for projects
-// $initiateAnimationAt: 1s;
-// $initiateAnimationDelay: 0.1s;
-// $completInitiateAt: $initiateAnimationAt + $initiateAnimationDelay * ($totalProjects - 1);
-// $moveElementAt: 0.6s;
-// $expandElementAt: 0.7s;
-// $expansionDelay: 0.1s;
-// $backgroundScaleAt: 0.8s;
-// $fadeElementAt: $moveElementAt + $expandElementAt/2;
-// $projectTitleHoverAt: 0.5s;
-// $showCloseProjectAt: 0.3s;
-// $closeProjectViewAt: 0.15s;
-// $expandFullProjectAt: $moveElementAt + $expansionDelay + $expandElementAt;
-// $fadeinOverProjectAt: 0.5s; 
-
-
 
 
 $breakpoints: (

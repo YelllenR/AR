@@ -1,7 +1,8 @@
 <script lang="ts"> 
     import { fly } from 'svelte/transition';
-    import {backOut} from 'svelte/easing'; 
-    import Animation from '$lib/animate/animation.svelte';
+    import { backOut } from 'svelte/easing'; 
+    import AnimationStart from '$lib/animate/animationStart.svelte';
+
 
     const texts = [
         'Aurélie', 
@@ -9,15 +10,16 @@
         'ROSE'
     ]; 
 
-    let animate = true; 
+
 </script>
 
 
-<section id="landing-page">
+<section id="landing-page" >
  
     <div class="container__background">
         <div class="content">
-            <Animation>
+
+            <AnimationStart >
                 <div class="texts">
                     {#each texts as text, i}
                         <div class="overflow">
@@ -27,9 +29,13 @@
                         </div>
                     {/each}
                 </div>
-            </Animation>
+            </AnimationStart>
+           
         </div>
-    </div>
 
+  </div>
 </section>
+
+
+
 
