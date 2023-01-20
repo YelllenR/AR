@@ -1,9 +1,9 @@
 <script lang="ts">
     import Description from "./description.svelte"; 
-    import Projects from "./Projects/+page.svelte";
+    // import Projects from "./Projects/+page.svelte";
     import Landing from "./Landing/+page.svelte";
     import Experiences from "./Experiences/+page.svelte"; 
-
+    import Training from "./Training/+page.svelte"; 
 </script>
 
 <svelte:head>
@@ -17,8 +17,8 @@
 <Description></Description>
 
 <Experiences></Experiences>
-
-<Projects></Projects>
+<Training></Training>
+<!-- <Projects></Projects> -->
 
 
 

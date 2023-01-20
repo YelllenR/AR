@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
 #landing-page {
   height: 100vh;
   width: 100vw;
@@ -82,21 +86,6 @@
   padding: 8px;
 }
 
-#main-projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #121F33;
-}
-
-.openclassrooms {
-  color: #E3FDE8;
-  font-family: "Abril Fatface", cursive;
-  margin: 32px 0 24px 0;
-}
-
 #description {
   height: 100vh;
   width: 100vw;
@@ -119,23 +108,36 @@
 }
 
 .experience-container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #121F33;
+  height: 100vh;
+  width: 100vw;
 }
 
 .experience-title {
-  color: white;
-  margin: 8px 8px 32px 8px;
-  font-size: 1.8em;
+  justify-self: center;
+  color: #121F33;
+  margin: 0 8px 24px 8px;
+  font-size: 2em;
+  font-weight: 900;
+  text-shadow: 0px 0px 0 rgb(26, 63, 87), 0px -1px 0 rgb(17, 54, 78), 0px -2px 0 rgb(7, 44, 68), 0px -3px 0 rgb(0, 35, 59), 0px -4px 0 rgb(0, 26, 50), 0px -5px 4px rgb(41, 69, 91), 0px -5px 1px rgba(41, 69, 91, 0.5), 0px 0px 4px rgba(41, 69, 91, 0.2);
 }
 
-h3, h4, p {
-  font-family: "Abril Fatface", cursive;
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3,
+h4,
+p {
+  font-family: "Montserrat", sans-serif;
+  transform: translateY(-10%) translateZ(80px) scale(0.94);
+  padding: 2rem;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: 1000px;
 }
 
 .company {
@@ -156,7 +158,7 @@ h3, h4, p {
 
 .dutyLists {
   list-style: none;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Montserrat", sans-serif;
   text-align: justify;
   font-size: 1em;
   padding: 8px;
@@ -166,19 +168,17 @@ h3, h4, p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 90%;
-  width: 90%;
+  height: 85vh;
+  width: 85vw;
 }
 
 .CardBox {
-  background-color: transparent;
-  height: 35vh;
-  width: 35vw;
-  margin: 20px 20px 40px;
-  perspective: 2000px;
-  border: 1px solid #121F33;
-  box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
-  border-radius: 8px 8px 0 0;
+  height: 36vh;
+  width: 29vw;
+  margin: 16px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .experience {
@@ -186,32 +186,43 @@ h3, h4, p {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
-  border-radius: 8px;
 }
 
 .showBackCard {
+  transform-style: preserve-3d;
   transform: rotateY(180deg);
-  box-shadow: 3px -5px 5px -2px rgba(255, 255, 255, 0.31);
 }
 
 .frontCard,
 .backCard {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  text-align: center;
+  border-radius: 10px;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  transform: translate3d(0, 0px, 10px) perspective(500px);
 }
 
 .frontCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   color: white;
   padding: 8px;
+  z-index: 2;
+  background-color: #121F33;
+  box-shadow: -5px 5px 15px rgb(0, 0, 0);
+  border-radius: 16px;
 }
 
 .backCard {
@@ -220,29 +231,141 @@ h3, h4, p {
   justify-content: space-evenly;
   background-color: #121F33;
   color: white;
-  height: 35vh;
-  width: 35vw;
-  transform: rotateY(180deg) translateX(2px);
+  transform: rotateY(180deg);
   border-radius: 8px 8px 0 0;
   padding: 8px;
+  box-shadow: 0px 5px 20px rgb(43, 80, 104);
+  border-radius: 16px;
 }
 
-button {
-  width: 35vw;
-  height: 4.5vh;
+.btn {
+  width: auto;
+  height: auto;
   font-size: 1.1em;
-  font-weight: 800;
-  padding: 5px 2px;
+  padding: 8px;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
-  border: 1px solid #121F33;
-  background-color: white;
+  border: none;
   cursor: pointer;
-  transition: 0.3s all;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0px -5px 26px -2px rgba(0, 0, 0, 0.31);
-}
-button:active, button:focus {
-  background-color: #121F33;
+  border-radius: 8px;
+  background-color: rgb(38, 59, 79);
   color: white;
-  box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
+}
+.btn:focus {
+  border-style: none;
+}
+.btn:active {
+  border-style: none;
+}
+
+.trainingContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainingCover {
+  width: 90vw;
+  height: 75vh;
+  box-shadow: 0 0 100px rgba(41, 69, 91, 0.3);
+}
+
+.trainingBook {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  perspective: 1000px;
+}
+.trainingBook__part {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: grid;
+  transform: rotateY(0deg);
+  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: 0% 0%;
+  background-color: #F5F5F5;
+  background-image: linear-gradient(90deg, rgb(247, 246, 246) 0%, rgba(247, 247, 247, 0) 18%);
+}
+.trainingBook__part--1 {
+  cursor: pointer;
+  overflow: hidden;
+}
+.trainingBook__part--1 .imageCover {
+  background-color: #121F33;
+  background-image: url("/images/distortedBG.jpg");
+  background-blend-mode: screen;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-right: 5px solid #121F33;
+}
+.trainingBook__part:nth-of-type(1) {
+  background-image: linear-gradient(-90deg, rgb(227, 227, 227) 0%, rgba(247, 247, 247, 0) 18%);
+}
+.trainingBook__part--2 {
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  background-image: linear-gradient(90deg, rgb(227, 227, 227) 0%, rgba(247, 247, 247, 0) 18%);
+}
+.trainingBook__part--4 {
+  cursor: pointer;
+  padding: 0;
+}
+.trainingBook__part--4:checked {
+  border: 1px solid red;
+}
+.trainingBook__part-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  transform: none;
+}
+.trainingBook__part-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: none;
+}
+.trainingBook .part__content {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.trainingBook .part__content--title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7em;
+  color: #121F33;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  -webkit-text-decoration-color: rgb(43, 80, 104);
+  text-decoration-color: rgb(43, 80, 104);
+  text-underline-offset: 10px;
+}
+.trainingBook .part__content--turn {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 32px 0 0 0;
+  transform: none;
+  font-size: 1.2em;
+  color: #121F33;
+}
+.trainingBook input[type=radio]:checked {
+  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 1px solid red;
+  transform: translateY(-180deg);
 }/*# sourceMappingURL=style.css.map */

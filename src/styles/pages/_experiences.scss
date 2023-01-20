@@ -1,43 +1,65 @@
 .experience-container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $dark-background;
+  height: 100vh;
+  width: 100vw;
 }
+
 
 .experience-title {
-  color: white;
-  margin: 8px 8px 32px 8px;
-  font-size: 1.8em;
+  justify-self: center;
+  color: $dark-background;
+  margin: 0 8px 24px 8px;
+  font-size: 2em;
+  font-weight: 900;
+  text-shadow: 0px 0px 0 rgb(26, 63, 87),
+    0px -1px 0 rgb(17, 54, 78),
+    0px -2px 0 rgb(7, 44, 68),
+    0px -3px 0 rgb(-2, 35, 59),
+    0px -4px 0 rgb(-11, 26, 50),
+    0px -5px 4px rgba(41, 69, 91, 1),
+    0px -5px 1px rgba(41, 69, 91, 0.5),
+    0px 0px 4px rgba(41, 69, 91, .2);
 }
 
-h3, h4, p{
+h2 {
   font-family: $font-family;
-}; 
+}
 
-.company{
+
+h3,
+h4,
+p {
+  font-family: $font-family;
+  transform: translateY(-10%) translateZ(80px) scale(0.94);
+  padding: 2rem;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: 1000px;
+}
+
+.company {
   font-size: 1.2em;
 }
 
-.job-title{
+.job-title {
   font-size: 1.3em;
   padding: 5px;
   text-align: center;
 }
 
-.dateYear{
+.dateYear {
   font-size: 1em;
   padding: 5px;
   text-align: center;
 }
 
 .dutyLists {
-  list-style:none;
+  list-style: none;
   font-family: $font-family;
-  text-align:justify;
+  text-align: justify;
   font-size: 1em;
   padding: 8px;
 }
@@ -47,89 +69,101 @@ h3, h4, p{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 90%;
-  width: 90%;
+  height: 85vh;
+  width: 85vw;
 }
 
 
 .CardBox {
-  background-color: transparent;
-  height: 35vh;
-  width: 35vw;
-  margin: 20px 20px 40px;
-  perspective: 2000px;
-  border: 1px solid $dark-background;
-  box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
-  border-radius: 8px 8px 0 0 ;
+  height: 36vh;
+  width: 29vw;
+  margin: 16px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
 }
+
 
 .experience {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
-  border-radius: 8px;
+
 }
 
 .showBackCard {
+  transform-style: preserve-3d;
   transform: rotateY(180deg);
-  box-shadow: 3px -5px 5px -2px rgba(255, 255, 255, 0.31);
+
 }
 
 .frontCard,
 .backCard {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  text-align: center;
+  border-radius: 10px;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  transform: translate3d(0, 0px, 10px) perspective(500px);
 }
 
-.frontCard{
+.frontCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   color: white;
   padding: 8px;
+  z-index: 2;
+  background-color: $dark-background;
+  box-shadow: -5px 5px 15px rgb(0, 0, 0);
+  border-radius: 16px;
+
 }
 
 .backCard {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: $textColor-light-background;
+  background-color: $dark-background;
   color: white;
-  height: 35vh;
-  width: 35vw;
-  transform: rotateY(180deg) translateX(2px);
-  border-radius: 8px 8px  0 0 ;
+  transform: rotateY(180deg);
+  border-radius: 8px 8px 0 0;
   padding: 8px;
+  box-shadow: 0px 5px 20px $blue-sapphire;
+  border-radius: 16px;
 }
 
 
 
-
-button {
-  width: 35vw;
-  height: 4.5vh;
+.btn {
+  width: auto;
+  height: auto;
   font-size: 1.1em;
-  font-weight: 800;
-  padding: 5px 2px;
+  padding: 8px;
+  font-family: $font-family;
   text-align: center;
-  border: 1px solid $dark-background;
-  background-color: white;
+  border: none;
   cursor: pointer;
-  transition: .3s all;
-  border-radius: 0 0 8px 8px; 
-  box-shadow: 0px -5px 26px -2px rgba(0,0,0,0.31);
+  border-radius: 8px;
+  background-color: $charcoal;
+  color: white;
 
-  &:active, &:focus{
-    background-color: $dark-background;
-    color:white; 
-    box-shadow: 0px 2px 10px -2px rgba(255, 255, 255, 0.31);
+  &:focus {
+    border-style: none;
+  }
+
+  &:active {
+    border-style: none;
   }
 }
-
