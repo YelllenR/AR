@@ -3,12 +3,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 
 .experience-title {
+  @include media-mobile {
+    font-size: clamp(0.5rem, 1.3rem, 1.5rem);
+    text-shadow: none;
+    margin: 0.5rem;
+  }
+
+  @include media-tablet {
+    font-size: clamp(1.4rem, 1.6rem, 1.8rem);
+    text-shadow: none;
+  }
+  
   justify-self: center;
   color: $dark-background;
   margin: 0 8px 24px 8px;
@@ -16,61 +27,96 @@
   font-weight: 900;
   font-family: $font-family;
   text-shadow: 0px 0px 0 rgb(26, 63, 87),
-    0px -1px 0 rgb(17, 54, 78),
-    0px -2px 0 rgb(7, 44, 68),
-    0px -3px 0 rgb(-2, 35, 59),
-    0px -4px 0 rgb(-11, 26, 50),
-    0px -5px 4px rgba(41, 69, 91, 1),
-    0px -5px 1px rgba(41, 69, 91, 0.5),
-    0px 0px 4px rgba(41, 69, 91, .2);
+  0px -1px 0 rgb(17, 54, 78),
+  0px -2px 0 rgb(7, 44, 68),
+  0px -3px 0 rgb(-2, 35, 59),
+  0px -4px 0 rgb(-11, 26, 50),
+  0px -5px 4px rgba(41, 69, 91, 1),
+  0px -5px 1px rgba(41, 69, 91, 0.5),
+  0px 0px 4px rgba(41, 69, 91, .2);
 }
 
 .job-title,
 .company,
 .dateYear {
+
+  @include media-mobile {
+    padding: clamp(0.2rem, 0.4rem, 0.7rem);
+  }
+
   font-family: $font-family;
   transform: translateY(-10%) translateZ(80px) scale(0.94);
-  padding: 2rem;
+  padding: clamp(0.5rem, 0.9rem, 1rem);
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: 1000px;
 }
 
 .company {
-  font-size: 1.2em;
+  @include media-mobile {
+    font-size: clamp(0.7em, 1em, 1.2em);
+  }
+
+  font-size: clamp(1em, 1.2em, 1.3em);
+
 }
 
 .job-title {
-  font-size: 1.3em;
+  @include media-mobile {
+    font-size: clamp(0.7em, 1em, 1.2em);
+  }
+
+  font-size: clamp(1em, 1.3em, 1.5em);
   padding: 5px;
   text-align: center;
 }
 
 .dateYear {
-  font-size: 1em;
-  padding: 5px;
+  @include media-mobile {
+    font-size: clamp(0.7em, 0.9em, 1em);
+  }
+
+  font-size: clamp(0.9em, 1em, 1.1em);
+  padding: 0.2rem;
   text-align: center;
 }
 
 .dutyLists {
+  @include media-mobile {
+    font-size: clamp(0.7em, 0.8em, 1em);
+    padding: 0.3rem; 
+  }
+
   list-style: none;
   font-family: $font-family;
   text-align: justify;
   font-size: 1em;
-  padding: 8px;
+  padding: 0.4rem;
 }
 
 
 .experience-box {
+  @include media-mobile {
+
+    width: 100%;
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 85vh;
-  width: 85vw;
+  height: 90%;
+  width: 85%;
 }
 
 
 .CardBox {
+  @include media-mobile {
+    height: 32vh;
+    min-width: 75vw;
+    max-width: 80vw;
+    margin: 0.7em;
+  }
+
   height: 36vh;
   width: 29vw;
   margin: 16px;
@@ -111,6 +157,12 @@
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   transform: translate3d(0, 0px, 10px) perspective(500px);
+
+  @include media-mobile {
+    height: 100%;
+  
+  }
+
 }
 
 .frontCard {
@@ -124,6 +176,7 @@
   background-color: $dark-background;
   box-shadow: -5px 5px 15px rgb(0, 0, 0);
   border-radius: 16px;
+
 
 }
 
@@ -143,6 +196,14 @@
 
 
 .btn {
+  @include media-mobile {
+    font-size: clamp(0.5em, 0.9em, 1.1em); 
+    padding: 0.4rem; 
+  }
+  
+  @include media-tablet {
+    
+  }
   width: auto;
   height: auto;
   font-size: 1.1em;
