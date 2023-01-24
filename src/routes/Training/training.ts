@@ -1,41 +1,37 @@
-export const training = [
-    {
-        entity:"OPENCLASSROOMS", 
-        fields: "Développeur Web", 
-        dates: "", 
-        projectDescriptions:[], 
-        completionImage: "/images/OCAtt.png"
-    }, 
+export const training = {
+       OC:{
+            entity: "OPENCLASSROOMS",
+            field: "Développeur Web",
+            dates: "Avril 2022 à Novembre 2022",
+            completionImage: "/images/OCAtt.png"
+        },
 
-    {
-        entity: "FREECODECAMP", 
-        fields: "", 
-        dates:"", 
-        projectDescriptions:[], 
-        completionImage: "/images/frecodecamp1.png"
-    }, 
+        FC2:{
+            entity: "FREECODECAMP",
+            field: "web dev",
+            dates: "2022",
+            completionImage: "/images/freecodecamp1.png"
+        },
 
-    {
-        entity: "FREECODECAMP", 
-        fields: "", 
-        dates:"", 
-        projectDescriptions:[], 
-        completionImage: "/images/frecodecamp2.png"
-    }, 
+        FC1:{
+        entity: "FREECODECAMP",
+        field: "web dev",
+        dates: "2020",
+        completionImage: "/images/freecodecamp2.png"
+    },
 
-    {
-        entity: "CITY&GUILDS", 
-        fields: "Culinary Art", 
-        dates:"", 
-        projectDescriptions:[], 
+    CQ2:{
+        entity: "CITY&GUILDS",
+        field: "Culinary Art",
+        dates: "",
         completionImage: ""
-    }, 
+    },
 
-    {
-        entity: "CITY&GUILDS", 
-        fields: "Culinary Art", 
-        dates:"", 
-        projectDescriptions:[], 
+    CQ1:{
+        entity: "CITY&GUILDS",
+        field: "Culinary Art",
+        dates: "",
         completionImage: ""
     }
-]; 
+
+}
