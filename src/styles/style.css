@@ -147,19 +147,18 @@
   font-size: 2em;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
-  text-shadow: 0px 0px 0 rgb(26, 63, 87), 0px -1px 0 rgb(17, 54, 78), 0px -2px 0 rgb(7, 44, 68), 0px -3px 0 rgb(0, 35, 59), 0px -4px 0 rgb(0, 26, 50), 0px -5px 4px rgb(41, 69, 91), 0px -5px 1px rgba(41, 69, 91, 0.5), 0px 0px 4px rgba(41, 69, 91, 0.2);
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(43, 80, 104, 0.15), 0px 5px 10px rgba(37, 52, 67, 0);
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .experience-title {
-    font-size: 1.3rem;
-    text-shadow: none;
+    font-size: 1.3em;
     margin: 0.5rem;
   }
 }
-@media screen and (min-width: 641px) and (max-width: 1007px) {
+@media screen and (min-width: 640px) and (max-width: 1007px) {
   .experience-title {
-    font-size: 1.6rem;
-    text-shadow: none;
+    font-size: 1.6em;
+    margin: 1rem 0 1rem 0;
   }
 }
 
@@ -180,6 +179,13 @@
     padding: 0.4rem;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .job-title,
+.company,
+.dateYear {
+    padding: 0.5rem;
+  }
+}
 
 .company {
   font-size: 1.2em;
@@ -187,6 +193,11 @@
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .company {
     font-size: 1em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .company {
+    font-size: 1.1em;
   }
 }
 
@@ -200,6 +211,11 @@
     font-size: 1em;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .job-title {
+    font-size: 1.1em;
+  }
+}
 
 .dateYear {
   font-size: 1em;
@@ -207,6 +223,11 @@
   text-align: center;
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
+  .dateYear {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1007px) {
   .dateYear {
     font-size: 0.9em;
   }
@@ -225,6 +246,12 @@
     padding: 0.3rem;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .dutyLists {
+    font-size: 0.9em;
+    padding: 0.3rem;
+  }
+}
 
 .experience-box {
   display: flex;
@@ -238,10 +265,15 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .experience-box {
+    width: 90%;
+  }
+}
 
 .CardBox {
-  height: 36vh;
-  width: 29vw;
+  height: 45vh;
+  width: 35vw;
   margin: 16px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -249,10 +281,19 @@
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .CardBox {
-    height: 32vh;
-    min-width: 75vw;
-    max-width: 80vw;
-    margin: 0.7em;
+    min-height: 33vh;
+    max-height: 36vh;
+    width: 75vw;
+    margin: 0.8em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .CardBox {
+    min-height: 40vh;
+    max-height: 42vh;
+    min-width: 40vw;
+    max-width: 42vw;
+    margin: 0.9em;
   }
 }
 
@@ -331,6 +372,7 @@
   border-radius: 8px;
   background-color: rgb(38, 59, 79);
   color: white;
+  box-shadow: inset -1px 3px 8px 5px #263b4f, 2px 2px 10px 0px #0B325E, inset -3px 10px 29px 14px rgba(3, 5, 8, 0.41);
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .btn {
@@ -338,8 +380,15 @@
     padding: 0.4rem;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1007px) {
+  .btn {
+    font-size: 0.9em;
+    padding: 0.5rem;
+  }
+}
 .btn:focus {
   border-style: none;
+  box-shadow: inset -1px 3px 8px 5px #263b4f, 2px 2px 10 px 0px #0B325E, inset -3px 10px 29px 14px rgba(41, 69, 91, 0.41);
 }
 .btn:active {
   border-style: none;
