@@ -11,13 +11,58 @@
     align-items: center;
 
     &__background {
+
+        @include media-mobile{
+            background-size: cover;
+            background-position: center;
+        }
+
         height: 100vh;
         width: 100vw;
-        background-image: url('../src/lib/images/bg.jpg');
-        -webkit-filter:  drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
-                filter:  drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
+        background-image: url('/images/bg.jpg');
+        background-position: center right;
+        -webkit-filter: drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(0px 25px 4px rgba(0, 0, 0, 0.15));
         background-size: cover;
-        opacity: 0.8;
+        -webkit-animation: background 0.7s ease-in;
+        animation: background 0.7s ease-in;
+
+        @-webkit-keyframes background {
+            0% {
+                opacity: 0.2;
+            }
+
+            25% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes background {
+            0% {
+                opacity: 0.2;
+            }
+
+            25% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
     }
 }
 
@@ -29,20 +74,33 @@
     align-items: center;
 }
 
-.texts{
-    font-size: 4.2em;
+.texts {
+    @include media-mobile{
+        width: 100vw; 
+        margin: 0;
+    }
+    
+    
     color: white;
     width: 100vw;
     text-align: center;
+
 }
 
-.overflow{
+.overflow {
     display: inline-block;
     overflow: hidden;
     vertical-align: bottom;
 }
 
-.text{
+.text {
+    @include media-mobile{
+        font-size: clamp(2.2em, 3em, 3.5em); 
+        padding: clamp(0.2rem, 0.3rem, 0.5rem);
+    }
+    
     display: inline-block;
     margin: 0.2rem;
+    padding: clamp(0.4rem, 0.7rem, 1.1rem);;
+    font-size: clamp(3em, 4.5em, 5em); 
 }

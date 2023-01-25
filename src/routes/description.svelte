@@ -1,7 +1,14 @@
 <script lang="ts">
     import type {TransitionConfig} from 'svelte/transition'; 
-    import Animation from '$lib/animate/animation.svelte';
+    import AnimationStart from '$lib/animate/animationStart.svelte';
+	import { onMount } from 'svelte';
 
+
+    onMount(() =>{
+        let typewriteStart = document.getElementsByClassName('describe'); 
+    
+    })
+    
     type TypewriterParams = {speed?: number}; 
 
     type Typewriter =( 
@@ -15,7 +22,7 @@
     ) => {
         const describe = node.textContent ?? ''; 
         const duration = describe.length / (speed * 0.01); 
-        const delay = 600; 
+        const delay = 1000; 
         return{
             duration,
             delay,  
@@ -26,19 +33,18 @@
         }
     }
 
-   let animate = true; 
+
 </script>
 
-<section id="description">
+<section id="description" class="invisible">
+
     <div class="descriptionContainer">
-     
-            <Animation>
-                <h2 in:typewriter class="describe">
-                    Who am i...
-                </h2>
+        <AnimationStart>
+            <h2 in:typewriter class="describe">
+                Who am i...
+            </h2>
 
-
-            </Animation>
-      
+        </AnimationStart>
     </div>
 </section>
+

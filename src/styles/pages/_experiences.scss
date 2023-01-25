@@ -1,0 +1,258 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.experience-title {
+  @include media-mobile {
+    font-size: clamp(0.5em, 1.3em, 1.5em);
+    margin: 0.5rem;
+  }
+
+  @include media-tablet {
+    font-size: clamp(1.4em, 1.6em, 1.8em);
+    margin: 1rem 0 1rem 0;
+  }
+
+  justify-self: center;
+  color: $dark-background;
+  margin: 0 8px 24px 8px;
+  font-size: 2em;
+  font-weight: 900;
+  font-family: $font-family;
+  text-shadow: 2px 2px 0px #FFFFFF,
+  5px 4px 0px rgba(43, 80, 104, 0.15),
+  0px 5px 10px rgba(37, 52, 67, 0);
+}
+
+.job-title,
+.company,
+.dateYear {
+
+  @include media-mobile {
+    padding: clamp(0.2rem, 0.4rem, 0.7rem);
+  }
+
+  @include media-tablet {
+    padding: clamp(0.3rem, 0.5rem, 0.9rem);
+  }
+
+  font-family: $font-family;
+  transform: translateY(-10%) translateZ(80px) scale(0.94);
+  padding: clamp(0.5rem, 0.9rem, 1rem);
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: 1000px;
+}
+
+.company {
+  @include media-mobile {
+    font-size: clamp(0.7em, 1em, 1.2em);
+  }
+
+  @include media-tablet {
+    font-size: clamp(0.9em, 1.1em, 1.2em);
+  }
+
+  font-size: clamp(1em, 1.2em, 1.3em);
+
+}
+
+.job-title {
+  @include media-mobile {
+    font-size: clamp(0.7em, 1em, 1.2em);
+  }
+
+  @include media-tablet {
+    font-size: clamp(0.9em, 1.1em, 1.4em);
+  }
+
+  font-size: clamp(1em, 1.3em, 1.5em);
+  padding: 5px;
+  text-align: center;
+}
+
+.dateYear {
+  @include media-mobile {
+    font-size: clamp(0.7em, 0.9em, 1em);
+  }
+
+  @include media-tablet {
+    font-size: clamp(0.8em, 0.9em, 1em);
+  }
+
+  font-size: clamp(0.9em, 1em, 1.1em);
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.dutyLists {
+  @include media-mobile {
+    font-size: clamp(0.7em, 0.8em, 1em);
+    padding: 0.3rem;
+  }
+
+  @include media-tablet {
+    font-size: clamp(0.8em, 0.9em, 1em);
+    padding: 0.3rem;
+  }
+
+  list-style: none;
+  font-family: $font-family;
+  text-align: justify;
+  font-size: 1em;
+  padding: 0.4rem;
+}
+
+
+.experience-box {
+  @include media-mobile {
+    width: 100%;
+  }
+
+  @include media-tablet {
+    width: 90%;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 90%;
+  width: 85%;
+}
+
+
+.CardBox {
+  @include media-mobile {
+    min-height: 33vh;
+    max-height: 36vh;
+    width: 75vw;
+    margin: 0.8em;
+  }
+
+  @include media-tablet {
+    min-height: 40vh;
+    max-height: 42vh;
+    min-width: 40vw;
+    max-width: 42vw;
+    margin: 0.9em;
+  }
+
+  height: 45vh;
+  width: 35vw;
+  margin: 16px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+
+.experience {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+
+}
+
+.showBackCard {
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+
+}
+
+.frontCard,
+.backCard {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  border-radius: 10px;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  transform: translate3d(0, 0px, 10px) perspective(500px);
+
+  @include media-mobile {
+    height: 100%;
+  }
+
+}
+
+.frontCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 8px;
+  z-index: 2;
+  background-color: $dark-background;
+  box-shadow: -5px 5px 15px rgb(0, 0, 0);
+  border-radius: 16px;
+}
+
+.backCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: $dark-background;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 8px 8px 0 0;
+  padding: 8px;
+  box-shadow: 0px 5px 20px $blue-sapphire;
+  border-radius: 16px;
+}
+
+
+
+.btn {
+  @include media-mobile {
+    font-size: clamp(0.5em, 0.9em, 1.1em);
+    padding: 0.4rem;
+  }
+
+  @include media-tablet {
+    font-size: clamp(0.5em, 0.9em, 1.1em);
+    padding: 0.5rem;
+  }
+
+  width: auto;
+  height: auto;
+  font-size: 1.1em;
+  padding: 8px;
+  font-family: $font-family;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: $charcoal;
+  color: white;
+  box-shadow: inset -1px 3px 8px 5px #263B4Fff,
+  2px 2px 10px 0px #0B325E,
+  inset -3px 10px 29px 14px rgba(3, 5, 8, 0.41);
+
+
+
+  &:focus {
+    border-style: none;
+    box-shadow: inset -1px 3px 8px 5px #263B4Fff, 2px 2px 10 px 0px #0B325E, inset -3px 10px 29px 14px rgba(41, 69, 91, 0.41);
+
+  }
+
+  &:active {
+    border-style: none;
+  }
+}

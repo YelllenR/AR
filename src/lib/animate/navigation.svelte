@@ -1,35 +1,27 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
+	import { page } from "$app/stores";
+	import type ScrollIndex from "./cardsAnimationsOnScroll.svelte";
 
-    const pageNavigations = [
+    const pages = [
         '/', 
-        '/Landing',
+        '/Landing', 
+        '/Description', 
         '/Projects', 
+        '/Skills'
     ]; 
 
-    let scrollPosition: number; 
-    let actualPage = 0; 
+    let index = pages; 
+    let current = 0; 
 
-    function ScrollDown(scrollPosition: ScrollIntoViewOptions){
-        if(actualPage === pageNavigations.length -1){
-            actualPage += 1; 
-
-            const nextPage = actualPage; 
-            goto(pageNavigations[nextPage]); 
-            
-            return; 
-        }; 
-
-        if(actualPage <= 0){
-            actualPage -= 1; 
-            const previousPage = actualPage; 
-            goto(pageNavigations[previousPage]); 
-
-            return; 
-        }
+   export function scrollDown(){
+        console.log("scrolling" + $page.url)
     }
+
 </script>
 
-<!-- <svelte:window on:scrollY={ScrollDown}/> -->
+
+
+
 
 

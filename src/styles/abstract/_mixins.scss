@@ -1,7 +1,22 @@
-@mixin flex-column-center{
+@mixin flex-column-center {
     display: flex;
     flex-direction: column;
     // justify-content:center;
     align-items: center;
 }
 
+@mixin media-mobile {
+    @media screen and (min-width: map-get($breakpoints, mobile-min-width)) and (max-width: map-get($breakpoints, mobile-max-width)) {
+        & {
+            @content
+        }
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet-min-width)) and (max-width: map-get($breakpoints, tablet-max-width)) {
+        & {
+            @content
+        }
+    }
+}
