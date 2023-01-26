@@ -19,10 +19,15 @@
     margin: 1rem 0 1rem 0;
   }
 
+  @include media-desktop {
+    font-size: clamp(1.8em, 2em, 2.3em);
+    margin: 1rem;
+  }
+
   justify-self: center;
   color: $dark-background;
-  margin: 0 8px 24px 8px;
-  font-size: 2em;
+  margin: 1.2rem;
+  font-size: 2.2em;
   font-weight: 900;
   font-family: $font-family;
   text-shadow: 2px 2px 0px #FFFFFF,
@@ -42,9 +47,13 @@
     padding: clamp(0.3rem, 0.5rem, 0.9rem);
   }
 
+  @include media-desktop {
+    padding: clamp(0.8rem, 1rem, 1.2rem);
+  }
+
   font-family: $font-family;
   transform: translateY(-10%) translateZ(80px) scale(0.94);
-  padding: clamp(0.5rem, 0.9rem, 1rem);
+  padding: clamp(1rem, 1.2rem, 1.3rem);
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: 1000px;
@@ -59,7 +68,11 @@
     font-size: clamp(0.9em, 1.1em, 1.2em);
   }
 
-  font-size: clamp(1em, 1.2em, 1.3em);
+  @include media-desktop {
+    font-size: clamp(1em, 1.2em, 1.3em);
+  }
+
+  font-size: clamp(1.3em, 1.4em, 1.5em);
 
 }
 
@@ -70,6 +83,10 @@
 
   @include media-tablet {
     font-size: clamp(0.9em, 1.1em, 1.4em);
+  }
+
+  @include media-desktop {
+    font-size: clamp(1em, 1.2em, 1.3em);
   }
 
   font-size: clamp(1em, 1.3em, 1.5em);
@@ -84,6 +101,10 @@
 
   @include media-tablet {
     font-size: clamp(0.8em, 0.9em, 1em);
+  }
+
+  @include media-desktop {
+    font-size: clamp(1em, 1em, 1.3em);
   }
 
   font-size: clamp(0.9em, 1em, 1.1em);
@@ -102,50 +123,70 @@
     padding: 0.3rem;
   }
 
+  @include media-desktop {
+    font-size: clamp(0.9em, 1.1em, 1.2em);
+    padding: 0.4rem;
+  }
+
   list-style: none;
   font-family: $font-family;
   text-align: justify;
-  font-size: 1em;
-  padding: 0.4rem;
+  font-size: 1.3em;
+  padding: 0.5rem;
 }
 
 
 .experience-box {
   @include media-mobile {
-    width: 100%;
+    width: 90%;
   }
 
   @include media-tablet {
-    width: 90%;
+    width: 95%;
+  }
+
+  @include media-desktop {
+    width: 95%;
   }
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: 90%;
-  width: 85%;
+  width: 90%;
 }
 
 
 .CardBox {
   @include media-mobile {
-    min-height: 33vh;
-    max-height: 36vh;
-    width: 75vw;
-    margin: 0.8em;
+    min-height: 5vh;
+    max-height: 14vh;
+    min-width: 70vw;
+    max-width: 75vw;
+    margin: 0.8rem;
   }
 
   @include media-tablet {
-    min-height: 40vh;
-    max-height: 42vh;
+    min-height: 15vh;
+    max-height: 18vh;
     min-width: 40vw;
-    max-width: 42vw;
-    margin: 0.9em;
+    max-width: 43vw;
+    margin: 0.9rem 0.9rem 1rem 0.9rem;
   }
 
-  height: 45vh;
-  width: 35vw;
-  margin: 16px;
+  @include media-desktop {
+    min-height: 25vh;
+    max-height: 30vh;
+    min-width: 37vw;
+    max-width: 40vw;
+    margin: 1.3rem;
+  }
+
+  min-height: 42vh;
+  max-height: 50vh;
+  min-width: 32vw;
+  max-width: 35vw;
+  margin: clamp(2rem, 2.5rem, 3rem);
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   perspective: 1000px;
@@ -165,7 +206,6 @@
 .showBackCard {
   transform-style: preserve-3d;
   transform: rotateY(180deg);
-
 }
 
 .frontCard,
@@ -184,9 +224,9 @@
   -o-backface-visibility: hidden;
   transform: translate3d(0, 0px, 10px) perspective(500px);
 
-  @include media-mobile {
-    height: 100%;
-  }
+  // @include media-mobile {
+  //   height: 100%;
+  // }
 
 }
 
@@ -229,10 +269,15 @@
     padding: 0.5rem;
   }
 
+  @include media-desktop {
+    font-size: clamp(1em, 1.1em, 1.2em);
+    padding: 0.6rem;
+  }
+  
   width: auto;
   height: auto;
-  font-size: 1.1em;
-  padding: 8px;
+  font-size: clamp(1.1em, 1.2em, 1.4em);
+  padding: 0.7rem;
   font-family: $font-family;
   text-align: center;
   border: none;
