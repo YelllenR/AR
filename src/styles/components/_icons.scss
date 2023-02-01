@@ -1,6 +1,16 @@
-.turnCard{
+.turnCard {
     color: white;
     align-self: flex-end;
     padding-top: 5rem;
+    cursor: pointer;
+}
+
+.expand-arrow {
+    position: relative;
+    left: 50%;
+    top: 4.5em;
+    z-index: 2;
+    color: #121F33;
+    font-size: clamp(0.9em, 1.1em, 1.3em);
     cursor: pointer;
 }

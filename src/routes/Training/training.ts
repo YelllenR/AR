@@ -15,28 +15,28 @@ export const training = [
         svgIcon: "/images/FCC.svg"
     },
 
-    {
-        entity: "FREECODECAMP",
-        field: "web dev",
-        dates: "2020",
-        completionImage: "/images/freecodecamp2.png", 
-        svgIcon: "/images/FCC.svg"
-    },
+    // {
+    //     entity: "FREECODECAMP",
+    //     field: "web dev",
+    //     dates: "2020",
+    //     completionImage: "/images/freecodecamp2.png", 
+    //     svgIcon: "/images/FCC.svg"
+    // },
 
-    {
-        entity: "CITY&GUILDS",
-        field: "Culinary Art",
-        dates: "",
-        completionImage: "", 
-        svgIcon: "/images/C&Q.svg"
-    },
+    // {
+    //     entity: "CITY&GUILDS",
+    //     field: "Culinary Art",
+    //     dates: "",
+    //     completionImage: "", 
+    //     svgIcon: "/images/C&Q.svg"
+    // },
 
-    {
-        entity: "CITY&GUILDS",
-        field: "Culinary Art",
-        dates: "",
-        completionImage: "",
-        svgIcon: "/images/C&Q.svg"
-    }
+    // {
+    //     entity: "CITY&GUILDS",
+    //     field: "Culinary Art",
+    //     dates: "",
+    //     completionImage: "",
+    //     svgIcon: "/images/C&Q.svg"
+    // }
 
 ]; 
