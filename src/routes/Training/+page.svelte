@@ -1,69 +1,110 @@
 <script lang="ts">
-    import { training } from "./training";
+	import { training } from './training';
+	import { onMount } from 'svelte';
 
+	let backOfCard = false;
+	let cardIndex: number | null;
 
+	const seeBackOfCard = (event: Event) => {
+		const target = event.target as HTMLButtonElement;
+
+		if (cardIndex === Number(target.dataset.cardsId)) {
+			cardIndex = null;
+			backOfCard = !backOfCard;
+		} else {
+			backOfCard = !backOfCard;
+			cardIndex = Number(target.dataset.cardsId);
+		}
+	};
+
+	let expandCompletionImage = false;
+	let trainingImageIndex: number | null;
+	let closeModal = false;
+
+	const expandTrainingImage = (expand: Event) => {
+		const imageTarget = expand.target as HTMLButtonElement;
+
+		if (trainingImageIndex === Number(imageTarget.dataset.imageId)) {
+			trainingImageIndex = null;
+			expandCompletionImage = !expandCompletionImage;
+			console.log(trainingImageIndex);
+		} else {
+			expandCompletionImage = !expandCompletionImage;
+			trainingImageIndex = Number(imageTarget.dataset.imageId);
+			console.log(trainingImageIndex);
+		}
+	};
+
+	const closeTrainingModal = (closeTrainingImage: Event) => {
+		const closeImage = closeTrainingImage.target as HTMLButtonElement;
+
+		if (trainingImageIndex === Number(closeImage.dataset.closeId)) {
+			closeModal = !closeModal;
+			trainingImageIndex = null;
+			console.log(trainingImageIndex);
+		} else {
+			closeModal = !closeModal;
+			trainingImageIndex = Number(closeImage.dataset.closeId);
+			console.log(trainingImageIndex);
+		}
+	};
 </script>
 
-<section class="trainingContainer">
-    <div class="trainingCover">
-        <div class="trainingBook">
-            <label for="part-1" class="trainingBook__part trainingBook__part--1">
-                <div class="imageCover"></div>
-            </label>
+<section class="trainingMainContainer">
+	<h2 class="titleTraining">FORMATION</h2>
 
+	<div class="trainingCardsContainer">
+		{#each training as { entity, field, dates, svgIcon, completionImage }, index}
+			<article class="trainingCard">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<div class:backOfCard={cardIndex === index}>
+					<div class="frontTrainingCard">
+						<div class="trainingCard__entityIcon">
+							<img class="iconEntity" src={svgIcon} alt="icon" />
+						</div>
+						<div class="trainingCard__informations">
+							<div class="trainingCard__informations-entity">
+								<h3 class="trainingCard__informations-title">{entity}</h3>
+							</div>
 
-           
-            <label for="part-2" class="trainingBook__part trainingBook__part--3">
-                <div class="trainingBook__part-front">
-                    
-                        <h3 class="contentSchool-entity">{training.FC1.entity}</h3>
-                        <div class="informationsCourse">
+							<h4 class="trainingCard__informations-field">{field}</h4>
+							<p class="trainingCard__informations-dates">{dates}</p>
 
-                        <p class="informationsCourse-field">{training.FC1.field}</p>
-                            <p class="informationsCourse-dates">{training.FC1.dates}</p>
-                    </div>
-                    
-                </div> 
-                
-                    <div class="trainingBook__part-back">
-                    <div class="contentSchool">
-                        <h3 class="contentSchool-entity">{training.FC2.entity}21</h3>
-                        <div class="informationsCourse">
-                            <p class="informationsCourse-field">{training.FC2.field}</p>
-                            <p class="informationsCourse-dates">{training.FC2.dates}</p>
-                            <!-- <img class="informationsCourse-image" src={training.FC2.completionImage} alt="completion document"> -->
-                        </div>
-                    </div>
-                </div>
-            </label>  
+							<!-- svelte-ignore a11y-click-events-have-key-events -->
+							<i
+								class="fas fa-arrow-right turnCard"
+								on:click={seeBackOfCard}
+								data-cards-id={index}
+							/>
+						</div>
+					</div>
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<div class="trainingDatas" on:click={expandTrainingImage}>
+						<!-- <i class="fas fa-expand-arrows-alt expand-arrow" data-image-id={index} /> -->
+						<img
+							class="trainingDatas__trainingCompleted"
+							src={completionImage}
+							alt="completion document"
+							data-image-id={index}
+						/>
+					</div>
 
-       
-            <input type="radio" name="part" id="part-1"/>
-
-            <input type="radio" name="part" id="part-2"/> 
-            
-            <!-- svelte-ignore a11y-label-has-associated-control -->
-            <label class="trainingBook__part trainingBook__part--2" >
-                <div class="trainingBook__part-front">
-                    <div class="part__content">
-                        <h2 class="part__content--title">FORMATIONS</h2>
-                        <p class="part__content--turn">Tournez les pages pour les découvrir</p>
-                    </div>
-                </div>
-
-                <div class="trainingBook__part-back">
-                    <div class="contentSchool">
-                        <h3 class="contentSchool-entity">{training.OC.entity}</h3>
-                        <div class="informationsCourse">
-                            <p class="informationsCourse-field">{training.OC.field}</p>
-                            <p class="informationsCourse-dates">{training.OC.dates}</p>
-                            <img class="informationsCourse-image" src={training.OC.completionImage} alt="completion document">
-                        </div>
-                    </div>
-                </div>
-            </label>
-
-             
- 
-    </div>
+					{#if expandCompletionImage && (trainingImageIndex === index)}
+						<div class="modal">
+							<!-- svelte-ignore a11y-click-events-have-key-events -->
+							<i class="far fa-window-close" on:click={closeTrainingModal} data-close-id={index} />
+							<span class="openModal">
+								<img
+									class="expandedImage"
+									src={completionImage}
+									alt="completion document"
+									data-image-id={index}
+								/>
+							</span>
+						</div>
+					{/if}
+				</div>
+			</article>
+		{/each}
+	</div>
 </section>

@@ -1,7 +1,12 @@
 $dark-background: #121F33;
 $textColor-light-background: #121F33;
-$font-family:  'Montserrat', sans-serif;
-$baseline: 12px; 
+$font-family: 'Montserrat', sans-serif;
+$baseline: 12px;
+
+$cardsShadow: -5px 5px 10px rgb(0, 0, 0); 
+$text-shadow: 0px 4px 3px rgba(0,0,0,0.54); 
+$backCardsShadow: -2px 2px 15px rgb(0, 0, 0);
+$TrainingCardRadius: 1rem; 
 
 /* SCSS HEX */
 $gunmetal: #253443ff;
@@ -47,7 +52,6 @@ $breakpoints: (
     "mobile-max-width": 640px,
     "tablet-min-width": 640px,
     "tablet-max-width": 1007px,
-    "desktop-min-width": 1008px,
+    "desktop-min-width": 1007px,
     "desktop-max-width": 1200px
 );
-
