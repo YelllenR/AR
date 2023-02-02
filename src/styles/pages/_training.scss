@@ -1,111 +1,37 @@
 .trainingMainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    @include flex-column-contentCenter-itemsCenter;
+    @include mainSection-measurementsInViewH-W;
     background-color: #121F33;
 }
 
-@-webkit-keyframes fadeInAndScale {
-    0% {
-        opacity: 0;
-        transform: scale(0) translateY(50%);
-    }
-
-    90% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-@keyframes fadeInAndScale {
-    0% {
-        opacity: 0;
-        transform: scale(0) translateY(50%);
-    }
-
-    90% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
 .trainingCardsContainer {
-    @include media-mobile {
-        width: 100vw;
-    }
-
-    @include media-tablet {
-        width: 70vw;
-    }
-
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 90vw;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5rem;
+    top: 0;
+    @include flex-flexWrap-contentCenter-itemCenter;
+    width: 90%;
+    height: 90%;
+    margin-bottom: $marginAroundTitle;
 
 }
 
 .titleTraining {
-    @include media-mobile {
-        font-size: clamp(1em, 1.3em, 2em);
-        margin: 2rem 1rem 2rem 1rem;
-    }
-
-    @include media-tablet {
-        font-size: clamp(1.5em, 1.9em, 2.1em);
-        margin: 3rem 1rem 2rem 1rem;
-    }
-
-    font-size: clamp(2.1em, 2.3em, 2.5em);
-    margin: 4rem 1rem 3rem 1rem;
+    font-size: $font-size-h2;
+    margin: $marginAroundTitle;
     font-family: $font-family;
     color: $beau-blue;
     text-shadow: $text-shadow;
 }
 
 .trainingCard {
-    @include media-mobile {
-        min-height: 18vh;
-        max-height: 35vh;
-        margin: 1rem;
-        min-width: 70vw;
-        max-width: 75vw;
-    }
+    @include flex-column-contentCenter;
 
-    @include media-tablet {
-        min-height: 30vh;
-        max-height: 35vh;
-        min-width: 50vw;
-        max-width: 60vw;
-    }
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height:20vh;
-    max-height: 40vh;
-    margin: 1.5rem;
-    min-width: 40vw;
-    max-width: 50vw;
+    margin: $marginBetweenCards;
+    width: $trainingCards-width;
+    height: $trainingCards-height;
     background-image: url("/images/cardsBackground.svg");
     background-size: cover;
-    border-radius: 1rem;
+    border-radius: $TrainingCardRadius;
     box-shadow: $cardsShadow;
-    transition: all .3s ease-in-out;
 
     &:hover {
         box-shadow: 0 10px 20px 10px rgba(black, 0.2);
@@ -114,25 +40,12 @@
 
     &__entityIcon {
         position: absolute;
+        top: 0;
+        left: 0;
         transition: all .3s ease-in-out;
 
         .iconEntity {
-            height: 6em;
-
-            svg path {
-                -webkit-animation: fadeInScale .3s ease-in-out forwards;
-                animation: fadeInScale .3s ease-in-out forwards;
-            }
-
-            svg path:nth-child(2) {
-                -webkit-animation-delay: .1s;
-                animation-delay: .1s;
-            }
-
-            svg path:nth-child(3) {
-                -webkit-animation-delay: .2s;
-                animation-delay: .2s;
-            }
+            height: clamp(3rem, 20vh, 5rem);
         }
 
         .trainingCard:hover & {
@@ -144,109 +57,102 @@
 
     &__informations {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-content: flex-end;
-        height: 30em;
+        @include flex-column-contentFlexEnd;
+        height: clamp(10rem, 40vw, 20rem);
 
         &-entity,
         .turnCard {
+            @include flex-column-contentCenter;
             opacity: 0;
             position: absolute;
             right: 25%;
             top: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            transition: all .2s ease-in-out;
             width: 50%;
             height: 30%;
 
             .trainingCard:hover & {
                 opacity: 1;
-                transform: scale(2);
+                transform: scale(1.2);
                 text-align: center;
             }
         }
 
         &-title {
             font-family: $font-family;
-            font-size: clamp(1.1em, 1.2em, 2em);
+            font-size: $font-size-h3;
             color: white;
             text-shadow: $text-shadow;
         }
-
     }
 
+    &__modal {
+        position: absolute;
+        top: 0;
+        left: 17%;
+        width: 60vw;
+
+        @include flex-flexWrap-contentCenter-itemCenter;
+        z-index: 3;
+        background-color: rgba(41, 69, 91, 0.9);
+        border-radius: $TrainingCardRadius;
+    }
 }
 
 .backOfCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    @include flex-column-contentCenter-itemsCenter;
     transform-style: preserve-3d;
-    transform: rotateY(180deg);
+    transform: $rotateY180;
     background-color: $dark-background;
     box-shadow: $backCardsShadow;
     border-radius: $TrainingCardRadius;
-
+    width: $trainingCards-width;
+    height: $trainingCards-height;
 }
 
 .trainingDatas {
+    position: absolute;
     transform: translate3d(0, 0, 0);
-    transform: rotateY(-180deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    width: 40vw; 
-    height: 0;
+    transform: $rotateY-180;
+    @include backface-visibility;
+    width: $trainingCards-width;
+    height: $trainingCards-height;
 
-    
     &__trainingCompleted {
-        position: absolute;
-        top: -29em;
-        left: 0.3em;
-        width: 38vw;
+        // width: $trainingCards-width;
+        // height: $trainingCards-height;
         height: 15vh;
         cursor: pointer;
     }
 }
 
-
-
 .frontTrainingCard {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
+    @include backface-visibility;
     transform: translate3d(0, 0, 0);
 }
 
-.modal {
-    display: inline-block;
-    position: absolute;
+
+
+.openModal {
+    position: relative;
     top: 0;
     left: 0;
-    // height: 20vh;
-    // width: 30vh;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(41, 69, 91, 0.9);
-    border-radius: $TrainingCardRadius;
+    height: 25vh;
+    @include backface-visibility;
+    @include flex-column-contentCenter;
 }
-.openModal{
-    height: 20vh;
-    width: 30vh;
-}
-.expandedImage {
-    transform: rotateY(180deg);
-    height: 80%;
-    // position: relative;
-    // left: 0;
-    // top: 0;
 
-    // border: 1px solid red;
+.imageForModal {
+    height: 22vh;
+    width: 55vw;
+    border: 1px solid yellow;
+    @include flex-column-contentCenter;
+}
+
+.expandedImage {
+
+    max-width: 95%;
+    height: 100%;
+    padding: 0.9em;
+    align-self: center;
 }

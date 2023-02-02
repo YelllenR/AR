@@ -1,33 +1,15 @@
 .experience-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  @include flex-column-contentCenter-itemsCenter;
+  @include mainSection-measurementsInPercentage; 
+
 }
 
 
 .experience-title {
-  @include media-mobile {
-    font-size: clamp(0.5em, 1.3em, 1.5em);
-    margin: 0.5rem;
-  }
-
-  @include media-tablet {
-    font-size: clamp(1.4em, 1.6em, 1.8em);
-    margin: 1rem 0 1rem 0;
-  }
-
-  @include media-desktop {
-    font-size: clamp(1.8em, 2em, 2.3em);
-    margin: 1rem;
-  }
-
   justify-self: center;
   color: $dark-background;
-  margin: 1.2rem;
-  font-size: 2.2em;
+  margin: $marginAroundTitle;
+  font-size: $font-size-h2;
   font-weight: 900;
   font-family: $font-family;
   text-shadow: 2px 2px 0px #FFFFFF,
@@ -38,101 +20,36 @@
 .job-title,
 .company,
 .dateYear {
-
-  @include media-mobile {
-    padding: clamp(0.2rem, 0.4rem, 0.7rem);
-  }
-
-  @include media-tablet {
-    padding: clamp(0.3rem, 0.5rem, 0.9rem);
-  }
-
-  @include media-desktop {
-    padding: clamp(0.8rem, 1rem, 1.2rem);
-  }
-
   font-family: $font-family;
   transform: translateY(-10%) translateZ(80px) scale(0.94);
-  padding: clamp(1rem, 1.2rem, 1.3rem);
+  padding: $padding;
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: 1000px;
 }
 
 .company {
-  @include media-mobile {
-    font-size: clamp(0.7em, 1em, 1.2em);
-  }
-
-  @include media-tablet {
-    font-size: clamp(0.9em, 1.1em, 1.2em);
-  }
-
-  @include media-desktop {
-    font-size: clamp(1em, 1.2em, 1.3em);
-  }
-
-  font-size: clamp(1.3em, 1.4em, 1.5em);
-
+  font-size: $font-size-h4; 
 }
 
 .job-title {
-  @include media-mobile {
-    font-size: clamp(0.7em, 1em, 1.2em);
-  }
-
-  @include media-tablet {
-    font-size: clamp(0.9em, 1.1em, 1.4em);
-  }
-
-  @include media-desktop {
-    font-size: clamp(1em, 1.2em, 1.3em);
-  }
-
-  font-size: clamp(1em, 1.3em, 1.5em);
-  padding: 5px;
+  font-size: $font-size-h3;
+  padding: $padding;
   text-align: center;
 }
 
 .dateYear {
-  @include media-mobile {
-    font-size: clamp(0.7em, 0.9em, 1em);
-  }
-
-  @include media-tablet {
-    font-size: clamp(0.8em, 0.9em, 1em);
-  }
-
-  @include media-desktop {
-    font-size: clamp(1em, 1em, 1.3em);
-  }
-
-  font-size: clamp(0.9em, 1em, 1.1em);
+  font-size: $font-size-p;
   padding: 0.2rem;
   text-align: center;
 }
 
 .dutyLists {
-  @include media-mobile {
-    font-size: clamp(0.7em, 0.8em, 1em);
-    padding: 0.3rem;
-  }
-
-  @include media-tablet {
-    font-size: clamp(0.8em, 0.9em, 1em);
-    padding: 0.3rem;
-  }
-
-  @include media-desktop {
-    font-size: clamp(0.9em, 1.1em, 1.2em);
-    padding: 0.4rem;
-  }
-
   list-style: none;
   font-family: $font-family;
   text-align: justify;
-  font-size: 1.3em;
-  padding: 0.5rem;
+  font-size: $font-size-p;
+  padding: $padding;
 }
 
 
@@ -149,64 +66,35 @@
     width: 95%;
   }
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include flex-flexWrap-contentCenter;
   height: 90%;
-  width: 90%;
-  margin-bottom: 2.5rem;
+  max-width: map-get($breakpoints, desktop-max-width);
+  margin-bottom: 1rem;
 }
 
 
 .CardBox {
-  @include media-mobile {
-    min-height: 5vh;
-    max-height: 14vh;
-    min-width: 70vw;
-    max-width: 75vw;
-    margin: 0.8rem;
-  }
-
-  @include media-tablet {
-    min-height: 15vh;
-    max-height: 18vh;
-    min-width: 40vw;
-    max-width: 43vw;
-    margin: 0.9rem 0.9rem 1rem 0.9rem;
-  }
-
-  @include media-desktop {
-    min-height: 25vh;
-    max-height: 30vh;
-    min-width: 37vw;
-    max-width: 40vw;
-    margin: 1.3rem;
-  }
-
-  min-height: 42vh;
-  max-height: 50vh;
-  min-width: 32vw;
-  max-width: 35vw;
-  margin: clamp(2rem, 2.5rem, 3rem);
+  height: $experienceCards-height;
+  width: $experienceCards-width; 
+  margin: $marginBetweenCards;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   perspective: 1000px;
+
 }
 
 
 .experience {
   position: relative;
-  width: 100%;
-  height: 100%;
+  @include mainSection-measurementsInPercentage;
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
-
 }
 
 .showBackCard {
   transform-style: preserve-3d;
-  transform: rotateY(180deg);
+  transform: $rotateY180;
 }
 
 .frontCard,
@@ -214,76 +102,44 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  @include mainSection-measurementsInPercentage;
   transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   text-align: center;
-  border-radius: 10px;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  transform: translate3d(0, 0px, 10px) perspective(500px);
-
-  // @include media-mobile {
-  //   height: 100%;
-  // }
-
+  border-radius: 0.9rem;
+  @include backface-visibility;
+  transform: translate3d(0, 0px, 0px) perspective(200px);
 }
 
 .frontCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  @include flex-column-contentSpacedArround-itemCenter;
   color: white;
-  padding: 8px;
+  padding: $padding;
   z-index: 2;
   background-color: $dark-background;
-  box-shadow: -5px 5px 15px rgb(0, 0, 0);
+  box-shadow: $cardsShadow;
   border-radius: 16px;
 }
 
 .backCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  @include flex-column-contentSpacedEvenly;
   background-color: $dark-background;
   color: white;
-  transform: rotateY(180deg);
-  border-radius: 8px 8px 0 0;
-  padding: 8px;
+  transform: $rotateY180;
+  padding: $padding;
   box-shadow: 0px 5px 20px $blue-sapphire;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
-
-
 .btn {
-  @include media-mobile {
-    font-size: clamp(0.5em, 0.9em, 1.1em);
-    padding: 0.4rem;
-  }
-
-  @include media-tablet {
-    font-size: clamp(0.5em, 0.9em, 1.1em);
-    padding: 0.5rem;
-  }
-
-  @include media-desktop {
-    font-size: clamp(1em, 1.1em, 1.2em);
-    padding: 0.6rem;
-  }
-  
   width: auto;
   height: auto;
-  font-size: clamp(1.1em, 1.2em, 1.4em);
-  padding: 0.7rem;
+  font-size: $font-size-button;
+  padding: $padding;
   font-family: $font-family;
   text-align: center;
   border: none;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: $charcoal;
   color: white;
   box-shadow: inset -1px 3px 8px 5px #263B4Fff,

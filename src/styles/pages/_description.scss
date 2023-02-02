@@ -1,17 +1,12 @@
 #description {
-    height: 100vh;
-    width: 100vw;
+    @include mainSection-measurementsInViewH-W; 
     background-color: $dark-background;
     mix-blend-mode: overlay;
 }
 
 .descriptionContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
+    @include flex-column-itemsCenter; 
+    @include mainSection-measurementsInPercentage; 
 }
 
 .describe{
