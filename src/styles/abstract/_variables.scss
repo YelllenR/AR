@@ -1,12 +1,52 @@
 $dark-background: #121F33;
 $textColor-light-background: #121F33;
 $font-family: 'Montserrat', sans-serif;
-$baseline: 12px;
+// $baseline: 12px; ???
 
-$cardsShadow: -5px 5px 10px rgb(0, 0, 0); 
-$text-shadow: 0px 4px 3px rgba(0,0,0,0.54); 
+$cardsShadow: -5px 5px 10px rgb(0, 0, 0);
+$text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
 $backCardsShadow: -2px 2px 15px rgb(0, 0, 0);
-$TrainingCardRadius: 1rem; 
+$TrainingCardRadius: 1rem;
+
+/* min/max width & min/max height */
+$trainingCards-width: clamp(17rem, 35vw, 30rem);
+$trainingCards-height: clamp(20rem, 43vh, 30rem);
+
+
+$experienceCards-width: clamp(16rem, 35vw, 30rem); 
+$experienceCards-height: clamp(20rem, 43vh, 30rem);
+$marginBetweenCards: clamp(0.5rem, 40vw, 1rem); 
+
+
+/* font size, padding, margin*/
+$font-size-p: clamp(0.9rem, 2vw, 1rem);
+// $font-size-h1: clamp(1.3rem, 2vw, 1.4em);
+
+$font-size-h2: clamp(1.5rem, 2vw, 2rem);
+$font-size-h3: clamp(1.1rem, 2vw, 1.2em);
+$font-size-h4: clamp(1.1rem, 2vw, 1.2em);
+
+$font-size-button: clamp(0.8rem, 2vw, 1rem);
+$padding: clamp(0.5rem, 1vw, 0.7rem); 
+$marginAroundTitle: clamp(1rem, 2vw, 1.5rem); 
+
+
+/*Breakpoints*/
+$breakpoints: (
+    "mobile-min-width": 320px,
+    "mobile-max-width": 600px,
+    "tablet-min-width": 600px,
+    "tablet-max-width": 1024px,
+    "desktop-min-width": 1024px,
+    "desktop-max-width": 1200px
+);
+
+/* Rotation*/
+$rotateY180: rotateY(180deg);
+$rotateY-180: rotateY(-180deg);
+
+
+
 
 /* SCSS HEX */
 $gunmetal: #253443ff;
@@ -16,15 +56,6 @@ $charcoal-2: #2E495Dff;
 $beau-blue: #C1D1D9ff;
 $pewter-blue: #8AA8B6ff;
 $charcoal-3: #29455Bff;
-
-/* SCSS HSL */
-$gunmetal: hsla(210, 29%, 20%, 1);
-$blue-sapphire: hsla(204, 41%, 29%, 1);
-$charcoal: hsla(209, 35%, 23%, 1);
-$charcoal-2: hsla(206, 34%, 27%, 1);
-$beau-blue: hsla(200, 24%, 80%, 1);
-$pewter-blue: hsla(199, 23%, 63%, 1);
-$charcoal-3: hsla(206, 38%, 26%, 1);
 
 /* SCSS RGB */
 $gunmetal: rgba(37, 52, 67, 1);
@@ -45,13 +76,3 @@ $gradient-bottom-right: linear-gradient(135deg, #253443ff, #2B5068ff, #263B4Fff,
 $gradient-top-left: linear-gradient(225deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
 $gradient-bottom-left: linear-gradient(315deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
 $gradient-radial: radial-gradient(#253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-
-
-$breakpoints: (
-    "mobile-min-width": 320px,
-    "mobile-max-width": 640px,
-    "tablet-min-width": 640px,
-    "tablet-max-width": 1007px,
-    "desktop-min-width": 1007px,
-    "desktop-max-width": 1200px
-);

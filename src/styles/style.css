@@ -4,25 +4,35 @@
   padding: 0;
 }
 
+/* min/max width & min/max height */
+/* font size, padding, margin*/
+/*Breakpoints*/
+/* Rotation*/
 /* SCSS HEX */
-/* SCSS HSL */
 /* SCSS RGB */
 /* SCSS Gradient */
 .turnCard {
   color: white;
   align-self: flex-end;
-  padding-top: 5rem;
+  padding-top: 3rem;
   cursor: pointer;
 }
 
 .expand-arrow {
-  position: relative;
-  left: 50%;
-  top: 4.5em;
+  position: absolute;
+  right: 5%;
+  top: 5%;
   z-index: 2;
-  color: #121F33;
-  font-size: 1.1em;
+  color: rgb(37, 52, 67);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   cursor: pointer;
+}
+
+.fa-window-close {
+  color: white;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  align-self: flex-end;
+  padding: clamp(0.5rem, 1vw, 0.7rem);
 }
 
 #landing-page {
@@ -89,7 +99,7 @@
   width: 100vw;
   text-align: center;
 }
-@media screen and (min-width: 320px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   .texts {
     width: 100vw;
   }
@@ -108,19 +118,19 @@
   padding: 0.7rem;
   font-size: 4.5em;
 }
-@media screen and (min-width: 320px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   .text {
     font-size: 3em;
     padding: 0.3rem;
   }
 }
-@media screen and (min-width: 640px) and (max-width: 1007px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   .text {
     font-size: 3.5em;
     padding: 0.3rem;
   }
 }
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .text {
     font-size: 4em;
     padding: 0.3rem;
@@ -128,8 +138,8 @@
 }
 
 #description {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   background-color: #121F33;
   mix-blend-mode: overlay;
 }
@@ -138,8 +148,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .describe {
@@ -147,7 +157,7 @@
   font-size: 2.5em;
   color: white;
 }
-@media screen and (min-width: 320px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   .describe {
     margin-top: 0.5em;
     font-size: 2em;
@@ -159,36 +169,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .experience-title {
   justify-self: center;
   color: #121F33;
-  margin: 1.2rem;
-  font-size: 2.2em;
+  margin: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(43, 80, 104, 0.15), 0px 5px 10px rgba(37, 52, 67, 0);
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .experience-title {
-    font-size: 1.3em;
-    margin: 0.5rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .experience-title {
-    font-size: 1.6em;
-    margin: 1rem 0 1rem 0;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .experience-title {
-    font-size: 2em;
-    margin: 1rem;
-  }
 }
 
 .job-title,
@@ -196,118 +188,34 @@
 .dateYear {
   font-family: "Montserrat", sans-serif;
   transform: translateY(-10%) translateZ(80px) scale(0.94);
-  padding: 1.2rem;
+  padding: clamp(0.5rem, 1vw, 0.7rem);
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: 1000px;
 }
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .job-title,
-.company,
-.dateYear {
-    padding: 0.4rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .job-title,
-.company,
-.dateYear {
-    padding: 0.5rem;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .job-title,
-.company,
-.dateYear {
-    padding: 1rem;
-  }
-}
 
 .company {
-  font-size: 1.4em;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .company {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .company {
-    font-size: 1.1em;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .company {
-    font-size: 1.2em;
-  }
+  font-size: clamp(1.1rem, 2vw, 1.2em);
 }
 
 .job-title {
-  font-size: 1.3em;
-  padding: 5px;
+  font-size: clamp(1.1rem, 2vw, 1.2em);
+  padding: clamp(0.5rem, 1vw, 0.7rem);
   text-align: center;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .job-title {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .job-title {
-    font-size: 1.1em;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .job-title {
-    font-size: 1.2em;
-  }
 }
 
 .dateYear {
-  font-size: 1em;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   padding: 0.2rem;
   text-align: center;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .dateYear {
-    font-size: 0.9em;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .dateYear {
-    font-size: 0.9em;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .dateYear {
-    font-size: 1em;
-  }
 }
 
 .dutyLists {
   list-style: none;
   font-family: "Montserrat", sans-serif;
   text-align: justify;
-  font-size: 1.3em;
-  padding: 0.5rem;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .dutyLists {
-    font-size: 0.8em;
-    padding: 0.3rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .dutyLists {
-    font-size: 0.9em;
-    padding: 0.3rem;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .dutyLists {
-    font-size: 1.1em;
-    padding: 0.4rem;
-  }
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.7rem);
 }
 
 .experience-box {
@@ -315,61 +223,32 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 90%;
-  width: 90%;
-  margin-bottom: 2.5rem;
+  max-width: 1200px;
+  margin-bottom: 1rem;
 }
-@media screen and (min-width: 320px) and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
   .experience-box {
     width: 90%;
   }
 }
-@media screen and (min-width: 640px) and (max-width: 1007px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   .experience-box {
     width: 95%;
   }
 }
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   .experience-box {
     width: 95%;
   }
 }
 
 .CardBox {
-  min-height: 42vh;
-  max-height: 50vh;
-  min-width: 32vw;
-  max-width: 35vw;
-  margin: 2.5rem;
+  height: clamp(20rem, 43vh, 30rem);
+  width: clamp(16rem, 35vw, 30rem);
+  margin: clamp(0.5rem, 40vw, 1rem);
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   perspective: 1000px;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .CardBox {
-    min-height: 5vh;
-    max-height: 14vh;
-    min-width: 70vw;
-    max-width: 75vw;
-    margin: 0.8rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .CardBox {
-    min-height: 15vh;
-    max-height: 18vh;
-    min-width: 40vw;
-    max-width: 43vw;
-    margin: 0.9rem 0.9rem 1rem 0.9rem;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .CardBox {
-    min-height: 25vh;
-    max-height: 30vh;
-    min-width: 37vw;
-    max-width: 40vw;
-    margin: 1.3rem;
-  }
 }
 
 .experience {
@@ -394,13 +273,13 @@
   width: 100%;
   height: 100%;
   transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
+  text-align: center;
+  border-radius: 0.9rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  text-align: center;
-  border-radius: 10px;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  transform: translate3d(0, 0px, 10px) perspective(500px);
+  transform: translate3d(0, 0px, 0px) perspective(200px);
 }
 
 .frontCard {
@@ -409,10 +288,10 @@
   justify-content: space-around;
   align-items: center;
   color: white;
-  padding: 8px;
+  padding: clamp(0.5rem, 1vw, 0.7rem);
   z-index: 2;
   background-color: #121F33;
-  box-shadow: -5px 5px 15px rgb(0, 0, 0);
+  box-shadow: -5px 5px 10px rgb(0, 0, 0);
   border-radius: 16px;
 }
 
@@ -423,43 +302,24 @@
   background-color: #121F33;
   color: white;
   transform: rotateY(180deg);
-  border-radius: 8px 8px 0 0;
-  padding: 8px;
+  padding: clamp(0.5rem, 1vw, 0.7rem);
   box-shadow: 0px 5px 20px rgb(43, 80, 104);
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
 .btn {
   width: auto;
   height: auto;
-  font-size: 1.2em;
-  padding: 0.7rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.7rem);
   font-family: "Montserrat", sans-serif;
   text-align: center;
   border: none;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: rgb(38, 59, 79);
   color: white;
   box-shadow: inset -1px 3px 8px 5px #263b4f, 2px 2px 10px 0px #0B325E, inset -3px 10px 29px 14px rgba(3, 5, 8, 0.41);
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .btn {
-    font-size: 0.9em;
-    padding: 0.4rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .btn {
-    font-size: 0.9em;
-    padding: 0.5rem;
-  }
-}
-@media screen and (min-width: 1007px) and (max-width: 1200px) {
-  .btn {
-    font-size: 1.1em;
-    padding: 0.6rem;
-  }
 }
 .btn:focus {
   border-style: none;
@@ -474,130 +334,54 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #121F33;
 }
 
-@-webkit-keyframes fadeInAndScale {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(50%);
-  }
-  90% {
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-@keyframes fadeInAndScale {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(50%);
-  }
-  90% {
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
 .trainingCardsContainer {
   position: relative;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
-  width: 90vw;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .trainingCardsContainer {
-    width: 100vw;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .trainingCardsContainer {
-    width: 70vw;
-  }
+  width: 90%;
+  height: 90%;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 .titleTraining {
-  font-size: 2.3em;
-  margin: 4rem 1rem 3rem 1rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin: clamp(1rem, 2vw, 1.5rem);
   font-family: "Montserrat", sans-serif;
   color: rgb(193, 209, 217);
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .titleTraining {
-    font-size: 1.3em;
-    margin: 2rem 1rem 2rem 1rem;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .titleTraining {
-    font-size: 1.9em;
-    margin: 3rem 1rem 2rem 1rem;
-  }
 }
 
 .trainingCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 20vh;
-  max-height: 40vh;
-  margin: 1.5rem;
-  min-width: 40vw;
-  max-width: 50vw;
+  margin: clamp(0.5rem, 40vw, 1rem);
+  width: clamp(17rem, 35vw, 30rem);
+  height: clamp(20rem, 43vh, 30rem);
   background-image: url("/images/cardsBackground.svg");
   background-size: cover;
   border-radius: 1rem;
   box-shadow: -5px 5px 10px rgb(0, 0, 0);
-  transition: all 0.3s ease-in-out;
-}
-@media screen and (min-width: 320px) and (max-width: 640px) {
-  .trainingCard {
-    min-height: 18vh;
-    max-height: 35vh;
-    margin: 1rem;
-    min-width: 70vw;
-    max-width: 75vw;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 1007px) {
-  .trainingCard {
-    min-height: 30vh;
-    max-height: 35vh;
-    min-width: 50vw;
-    max-width: 60vw;
-  }
 }
 .trainingCard:hover {
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.2);
 }
 .trainingCard__entityIcon {
   position: absolute;
+  top: 0;
+  left: 0;
   transition: all 0.3s ease-in-out;
 }
 .trainingCard__entityIcon .iconEntity {
-  height: 6em;
-}
-.trainingCard__entityIcon .iconEntity svg path {
-  -webkit-animation: fadeInScale 0.3s ease-in-out forwards;
-  animation: fadeInScale 0.3s ease-in-out forwards;
-}
-.trainingCard__entityIcon .iconEntity svg path:nth-child(2) {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-.trainingCard__entityIcon .iconEntity svg path:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+  height: clamp(3rem, 20vh, 5rem);
 }
 .trainingCard:hover .trainingCard__entityIcon {
   opacity: 0;
@@ -607,37 +391,49 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   justify-content: flex-end;
-  height: 30em;
+  height: clamp(10rem, 40vw, 20rem);
 }
 .trainingCard__informations-entity,
 .trainingCard__informations .turnCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
   position: absolute;
   right: 25%;
   top: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.2s ease-in-out;
   width: 50%;
   height: 30%;
 }
 .trainingCard:hover .trainingCard__informations-entity,
 .trainingCard:hover .trainingCard__informations .turnCard {
   opacity: 1;
-  transform: scale(2);
+  transform: scale(1.2);
   text-align: center;
 }
 .trainingCard__informations-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2em;
+  font-size: clamp(1.1rem, 2vw, 1.2em);
   color: white;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
 }
+.trainingCard__modal {
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: rgba(41, 69, 91, 0.9);
+  border-radius: 1rem;
+}
 
 .backOfCard {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -647,21 +443,22 @@
   background-color: #121F33;
   box-shadow: -2px 2px 15px rgb(0, 0, 0);
   border-radius: 1rem;
+  width: clamp(17rem, 35vw, 30rem);
+  height: clamp(20rem, 43vh, 30rem);
 }
 
 .trainingDatas {
+  position: absolute;
   transform: translate3d(0, 0, 0);
   transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  width: 40vw;
-  height: 0;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  width: clamp(17rem, 35vw, 30rem);
+  height: clamp(20rem, 43vh, 30rem);
 }
 .trainingDatas__trainingCompleted {
-  position: absolute;
-  top: -29em;
-  left: 0.3em;
-  width: 38vw;
   height: 15vh;
   cursor: pointer;
 }
@@ -674,25 +471,32 @@
   transform: translate3d(0, 0, 0);
 }
 
-.modal {
-  display: inline-block;
-  position: absolute;
+.openModal {
+  position: relative;
   top: 0;
   left: 0;
-  z-index: 2;
+  height: 25vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(41, 69, 91, 0.9);
-  border-radius: 1rem;
 }
 
-.openModal {
-  height: 20vh;
-  width: 30vh;
+.imageForModal {
+  height: 22vh;
+  width: 55vw;
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .expandedImage {
-  transform: rotateY(180deg);
-  height: 80%;
+  max-width: 95%;
+  height: 100%;
+  padding: 0.9em;
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */

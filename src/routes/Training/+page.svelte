@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { training } from './training';
-	import { onMount } from 'svelte';
 
 	let backOfCard = false;
 	let cardIndex: number | null;
@@ -27,11 +26,8 @@
 		if (trainingImageIndex === Number(imageTarget.dataset.imageId)) {
 			trainingImageIndex = null;
 			expandCompletionImage = !expandCompletionImage;
-			console.log(trainingImageIndex);
 		} else {
-			expandCompletionImage = !expandCompletionImage;
 			trainingImageIndex = Number(imageTarget.dataset.imageId);
-			console.log(trainingImageIndex);
 		}
 	};
 
@@ -41,11 +37,11 @@
 		if (trainingImageIndex === Number(closeImage.dataset.closeId)) {
 			closeModal = !closeModal;
 			trainingImageIndex = null;
-			console.log(trainingImageIndex);
+			console.log(Number(closeImage.dataset.closeId));
 		} else {
 			closeModal = !closeModal;
 			trainingImageIndex = Number(closeImage.dataset.closeId);
-			console.log(trainingImageIndex);
+			console.log(Number(closeImage.dataset.closeId));
 		}
 	};
 </script>
@@ -56,12 +52,30 @@
 	<div class="trainingCardsContainer">
 		{#each training as { entity, field, dates, svgIcon, completionImage }, index}
 			<article class="trainingCard">
-				<!-- svelte-ignore a11y-missing-attribute -->
+				{#if trainingImageIndex == index && expandCompletionImage}
+					<div class="trainingCard__modal">
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
+
+						<span class="openModal">
+							<i class="far fa-window-close" on:click={closeTrainingModal} data-close-id={index} />
+							<div class="imageForModal">
+								<img
+									class="expandedImage"
+									src={completionImage}
+									alt="completion document"
+									data-close-id={index}
+								/>
+							</div>
+						</span>
+					</div>
+				{/if}
+
 				<div class:backOfCard={cardIndex === index}>
 					<div class="frontTrainingCard">
 						<div class="trainingCard__entityIcon">
 							<img class="iconEntity" src={svgIcon} alt="icon" />
 						</div>
+
 						<div class="trainingCard__informations">
 							<div class="trainingCard__informations-entity">
 								<h3 class="trainingCard__informations-title">{entity}</h3>
@@ -78,31 +92,17 @@
 							/>
 						</div>
 					</div>
+
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<div class="trainingDatas" on:click={expandTrainingImage}>
-						<!-- <i class="fas fa-expand-arrows-alt expand-arrow" data-image-id={index} /> -->
 						<img
 							class="trainingDatas__trainingCompleted"
 							src={completionImage}
 							alt="completion document"
 							data-image-id={index}
 						/>
+						<i class="fas fa-expand-arrows-alt expand-arrow" data-image-id={index} />
 					</div>
-
-					{#if expandCompletionImage && (trainingImageIndex === index)}
-						<div class="modal">
-							<!-- svelte-ignore a11y-click-events-have-key-events -->
-							<i class="far fa-window-close" on:click={closeTrainingModal} data-close-id={index} />
-							<span class="openModal">
-								<img
-									class="expandedImage"
-									src={completionImage}
-									alt="completion document"
-									data-image-id={index}
-								/>
-							</span>
-						</div>
-					{/if}
 				</div>
 			</article>
 		{/each}
