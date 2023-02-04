@@ -19,11 +19,11 @@
 }
 
 .expand-arrow {
-  position: absolute;
-  right: 5%;
-  top: 5%;
+  position: fixed;
+  right: clamp(1rem, 25vw, 1.5rem);
+  top: clamp(0.5rem, 25vw, 0.5rem);
   z-index: 2;
-  color: rgb(37, 52, 67);
+  color: rgb(193, 209, 217);
   font-size: clamp(0.9rem, 2vw, 1rem);
   cursor: pointer;
 }
@@ -36,8 +36,8 @@
 }
 
 #landing-page {
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #121F33;
 }
 
@@ -334,8 +334,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #121F33;
 }
 
@@ -349,6 +349,21 @@
   width: 90%;
   height: 90%;
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+.trainingCardsContainer__modal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(19rem, 50vw, 35rem);
+  height: clamp(25rem, 50vh, 35rem);
+  z-index: 3;
+  background-color: rgba(41, 69, 91, 0.9);
+  border-radius: 1rem;
 }
 
 .titleTraining {
@@ -364,8 +379,8 @@
   flex-direction: column;
   justify-content: center;
   margin: clamp(0.5rem, 40vw, 1rem);
-  width: clamp(17rem, 35vw, 30rem);
-  height: clamp(20rem, 43vh, 30rem);
+  width: clamp(17rem, 25vw, 30rem);
+  height: clamp(20rem, 33vh, 30rem);
   background-image: url("/images/cardsBackground.svg");
   background-size: cover;
   border-radius: 1rem;
@@ -418,18 +433,19 @@
   color: white;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
 }
-.trainingCard__modal {
-  position: absolute;
-  top: 0;
-  left: 17%;
-  width: 60vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  background-color: rgba(41, 69, 91, 0.9);
-  border-radius: 1rem;
+.trainingCard__informations-field {
+  align-self: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.2em);
+  text-align: center;
+}
+.trainingCard__informations-dates {
+  align-self: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.7rem);
 }
 
 .backOfCard {
@@ -443,23 +459,29 @@
   background-color: #121F33;
   box-shadow: -2px 2px 15px rgb(0, 0, 0);
   border-radius: 1rem;
-  width: clamp(17rem, 35vw, 30rem);
-  height: clamp(20rem, 43vh, 30rem);
+  width: clamp(17rem, 25vw, 30rem);
+  height: clamp(20rem, 33vh, 30rem);
 }
 
 .trainingDatas {
   position: absolute;
+  top: auto;
   transform: translate3d(0, 0, 0);
   transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  width: clamp(17rem, 35vw, 30rem);
-  height: clamp(20rem, 43vh, 30rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: clamp(17rem, 25vw, 30rem);
+  height: clamp(20rem, 33vh, 30rem);
 }
 .trainingDatas__trainingCompleted {
-  height: 15vh;
+  align-self: center;
+  width: clamp(15rem, 20vw, 25rem);
+  height: clamp(15rem, 35vh, 25rem);
   cursor: pointer;
 }
 
@@ -475,7 +497,8 @@
   position: relative;
   top: 0;
   left: 0;
-  height: 25vh;
+  height: clamp(25rem, 50vh, 35rem);
+  border: 1px solid red;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -486,8 +509,8 @@
 }
 
 .imageForModal {
-  height: 22vh;
-  width: 55vw;
+  height: clamp(20rem, 15vh, 30rem);
+  width: clamp(20rem, 15vw, 30rem);
   border: 1px solid yellow;
   display: flex;
   flex-direction: column;
@@ -495,8 +518,8 @@
 }
 
 .expandedImage {
-  max-width: 95%;
-  height: 100%;
+  width: clamp(20rem, 15vw, 30rem);
+  height: clamp(20rem, 15vh, 30rem);
   padding: 0.9em;
   align-self: center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,8 @@
 .trainingMainContainer {
     @include flex-column-contentCenter-itemsCenter;
-    @include mainSection-measurementsInViewH-W;
+    @include mainSection-measurementsInPercentage;
     background-color: #121F33;
+   
 }
 
 .trainingCardsContainer {
@@ -12,6 +13,19 @@
     height: 90%;
     margin-bottom: $marginAroundTitle;
 
+
+    &__modal {
+        @include flex-flexWrap-contentCenter-itemCenter;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $trainingCardsModal-width;
+        height: $trainingCardsModal-height;
+        z-index: 3;
+        background-color: rgba(41, 69, 91, 0.9);
+        border-radius: $TrainingCardRadius;
+    }
 }
 
 .titleTraining {
@@ -83,19 +97,24 @@
             color: white;
             text-shadow: $text-shadow;
         }
+
+        &-field{
+            align-self: center;
+            color: white;
+            font-family: $font-family;
+            font-size: $font-size-h4;
+            text-align: center;
+        }
+
+        &-dates{
+            align-self: center;
+            color: white;
+            font-family: $font-family;
+            font-size: $font-size-p;
+            padding: $padding;
+        }
     }
 
-    &__modal {
-        position: absolute;
-        top: 0;
-        left: 17%;
-        width: 60vw;
-
-        @include flex-flexWrap-contentCenter-itemCenter;
-        z-index: 3;
-        background-color: rgba(41, 69, 91, 0.9);
-        border-radius: $TrainingCardRadius;
-    }
 }
 
 .backOfCard {
@@ -112,16 +131,18 @@
 
 .trainingDatas {
     position: absolute;
+    top: auto;
     transform: translate3d(0, 0, 0);
     transform: $rotateY-180;
     @include backface-visibility;
+    @include flex-column-contentCenter;
     width: $trainingCards-width;
     height: $trainingCards-height;
 
     &__trainingCompleted {
-        // width: $trainingCards-width;
-        // height: $trainingCards-height;
-        height: 15vh;
+        align-self: center;
+        width: $trainingCardsPicture-width;
+        height: $trainingCardsPicture-height;
         cursor: pointer;
     }
 }
@@ -131,28 +152,26 @@
     transform: translate3d(0, 0, 0);
 }
 
-
-
 .openModal {
     position: relative;
     top: 0;
     left: 0;
-    height: 25vh;
+    height: $trainingCardsModal-height;
+    border: 1px solid red;
     @include backface-visibility;
     @include flex-column-contentCenter;
 }
 
 .imageForModal {
-    height: 22vh;
-    width: 55vw;
+    height: $trainingImageModal-height;
+    width: $trainingImageModal-width;
     border: 1px solid yellow;
     @include flex-column-contentCenter;
 }
 
 .expandedImage {
-
-    max-width: 95%;
-    height: 100%;
+    width: $trainingImageModal-width;
+    height: $trainingImageModal-height;
     padding: 0.9em;
     align-self: center;
 }

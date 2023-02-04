@@ -53,7 +53,7 @@
 		{#each training as { entity, field, dates, svgIcon, completionImage }, index}
 			<article class="trainingCard">
 				{#if trainingImageIndex == index && expandCompletionImage}
-					<div class="trainingCard__modal">
+					<div class="trainingCardsContainer__modal">
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 						<span class="openModal">
