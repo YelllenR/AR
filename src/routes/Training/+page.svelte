@@ -37,11 +37,9 @@
 		if (trainingImageIndex === Number(closeImage.dataset.closeId)) {
 			closeModal = !closeModal;
 			trainingImageIndex = null;
-			console.log(Number(closeImage.dataset.closeId));
 		} else {
 			closeModal = !closeModal;
 			trainingImageIndex = Number(closeImage.dataset.closeId);
-			console.log(Number(closeImage.dataset.closeId));
 		}
 	};
 </script>
@@ -53,7 +51,7 @@
 		{#each training as { entity, field, dates, svgIcon, completionImage }, index}
 			<article class="trainingCard">
 				{#if trainingImageIndex == index && expandCompletionImage}
-					<div class="trainingCard__modal">
+					<div class="trainingMainContainer__modal">
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 
 						<span class="openModal">
@@ -79,17 +77,16 @@
 						<div class="trainingCard__informations">
 							<div class="trainingCard__informations-entity">
 								<h3 class="trainingCard__informations-title">{entity}</h3>
+								<!-- svelte-ignore a11y-click-events-have-key-events -->
+								<i
+									class="fas fa-arrow-right turnCard"
+									on:click={seeBackOfCard}
+									data-cards-id={index}
+								/>
 							</div>
 
 							<h4 class="trainingCard__informations-field">{field}</h4>
 							<p class="trainingCard__informations-dates">{dates}</p>
-
-							<!-- svelte-ignore a11y-click-events-have-key-events -->
-							<i
-								class="fas fa-arrow-right turnCard"
-								on:click={seeBackOfCard}
-								data-cards-id={index}
-							/>
 						</div>
 					</div>
 

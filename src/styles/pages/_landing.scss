@@ -1,6 +1,5 @@
 #landing-page {
-    height: 100%;
-    width: 100%;
+    @include mainSection-measurementsInViewH-W; 
     background-color: $dark-background;
 }
 

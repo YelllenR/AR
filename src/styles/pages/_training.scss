@@ -1,17 +1,43 @@
 .trainingMainContainer {
     @include flex-column-contentCenter-itemsCenter;
-    @include mainSection-measurementsInViewH-W;
     background-color: #121F33;
+    position: relative;
+    overflow: hidden;
+
+    &__modal {
+        @include flex-flexWrap-contentCenter-itemCenter;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-height: 65%;
+        z-index: 3;
+        background-color: rgba(41, 69, 91, 0.9);
+        border-radius: $TrainingCardRadius;
+
+        @include media-mobile {
+            top: auto;
+            left: 50%;
+            width: 95%;
+            max-height: 25%;
+            transform: translate(-50%, 10%);
+        }
+
+        @include media-tablet {
+            top: auto;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, 18%);
+        }
+    }
 }
 
 .trainingCardsContainer {
-    position: relative;
-    top: 0;
     @include flex-flexWrap-contentCenter-itemCenter;
     width: 90%;
     height: 90%;
     margin-bottom: $marginAroundTitle;
-
 }
 
 .titleTraining {
@@ -58,21 +84,18 @@
     &__informations {
         position: relative;
         @include flex-column-contentFlexEnd;
-        height: clamp(10rem, 40vw, 20rem);
+        height: clamp(20rem, 40vw, 25rem);
 
         &-entity,
         .turnCard {
-            @include flex-column-contentCenter;
+            align-self: center;
             opacity: 0;
-            position: absolute;
-            right: 25%;
-            top: 25%;
-            width: 50%;
-            height: 30%;
+            width: auto;
+            height: 45%;
 
             .trainingCard:hover & {
                 opacity: 1;
-                transform: scale(1.2);
+                transform: scale(1.1);
                 text-align: center;
             }
         }
@@ -83,19 +106,24 @@
             color: white;
             text-shadow: $text-shadow;
         }
+
+        &-field {
+            align-self: center;
+            color: white;
+            font-family: $font-family;
+            font-size: $font-size-h4;
+            text-align: center;
+        }
+
+        &-dates {
+            align-self: center;
+            color: white;
+            font-family: $font-family;
+            font-size: $font-size-p;
+            padding: $padding;
+        }
     }
 
-    &__modal {
-        position: absolute;
-        top: 0;
-        left: 17%;
-        width: 60vw;
-
-        @include flex-flexWrap-contentCenter-itemCenter;
-        z-index: 3;
-        background-color: rgba(41, 69, 91, 0.9);
-        border-radius: $TrainingCardRadius;
-    }
 }
 
 .backOfCard {
@@ -106,22 +134,24 @@
     background-color: $dark-background;
     box-shadow: $backCardsShadow;
     border-radius: $TrainingCardRadius;
-    width: $trainingCards-width;
-    height: $trainingCards-height;
+    width: 100%;
+    height: 100%;
 }
 
 .trainingDatas {
     position: absolute;
+    top: auto;
     transform: translate3d(0, 0, 0);
     transform: $rotateY-180;
     @include backface-visibility;
-    width: $trainingCards-width;
+    @include flex-column-contentCenter;
+    width: 99%;
     height: $trainingCards-height;
 
     &__trainingCompleted {
-        // width: $trainingCards-width;
-        // height: $trainingCards-height;
-        height: 15vh;
+        align-self: center;
+        width: 80%;
+        height: 85%;
         cursor: pointer;
     }
 }
@@ -131,28 +161,24 @@
     transform: translate3d(0, 0, 0);
 }
 
-
-
 .openModal {
     position: relative;
     top: 0;
     left: 0;
-    height: 25vh;
-    @include backface-visibility;
+    height: 100%;
+    width: 100%;
     @include flex-column-contentCenter;
 }
 
 .imageForModal {
-    height: 22vh;
-    width: 55vw;
-    border: 1px solid yellow;
+    height: 100%;
+    width: 100%;
     @include flex-column-contentCenter;
 }
 
 .expandedImage {
-
-    max-width: 95%;
-    height: 100%;
-    padding: 0.9em;
+    width: 100%;
+    height: 90%;
+    padding: 1rem;
     align-self: center;
 }

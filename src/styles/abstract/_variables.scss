@@ -9,8 +9,14 @@ $backCardsShadow: -2px 2px 15px rgb(0, 0, 0);
 $TrainingCardRadius: 1rem;
 
 /* min/max width & min/max height */
-$trainingCards-width: clamp(17rem, 35vw, 30rem);
-$trainingCards-height: clamp(20rem, 43vh, 30rem);
+$trainingCards-width: clamp(20rem, 35vw, 30rem);
+$trainingCards-height: clamp(20rem, 33vh, 30rem);
+
+// $trainingCardsPicture-width: clamp(15rem, 20vw, 25rem); 
+// $trainingCardsPicture-height: clamp(15rem, 35vh, 25rem); 
+
+$trainingCardsModal-width: clamp(30rem, 25vw, 65rem);
+$trainingCardsModal-height: clamp(25rem, 50vh, 35rem);
 
 
 $experienceCards-width: clamp(16rem, 35vw, 30rem); 
@@ -33,7 +39,7 @@ $marginAroundTitle: clamp(1rem, 2vw, 1.5rem);
 
 /*Breakpoints*/
 $breakpoints: (
-    "mobile-min-width": 320px,
+    "mobile-min-width": 300px,
     "mobile-max-width": 600px,
     "tablet-min-width": 600px,
     "tablet-max-width": 1024px,
