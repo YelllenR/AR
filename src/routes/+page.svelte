@@ -1,25 +1,20 @@
 <script lang="ts">
-    import Description from "./description.svelte"; 
-    // import Projects from "./Projects/+page.svelte";
-    import Landing from "./Landing/+page.svelte";
-    import Experiences from "./Experiences/+page.svelte"; 
-    import Training from "./Training/+page.svelte"; 
+	import Description from './description.svelte';
+	// import Projects from "./Projects/+page.svelte";
+	import Landing from './Landing/+page.svelte';
+	import Experiences from './Experiences/+page.svelte';
+	import Training from './Training/+page.svelte';
+
 </script>
 
 <svelte:head>
-    <title> Aurélie ROSE </title>
+	<title>Aurélie ROSE</title>
 </svelte:head>
 
+<Landing />
 
+<Description />
 
-<Landing></Landing>
-
-<Description></Description>
-
-<Experiences></Experiences>
-<Training></Training>
+<Experiences />
+<Training />
 <!-- <Projects></Projects> -->
-
-
-
-
