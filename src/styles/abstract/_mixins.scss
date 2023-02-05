@@ -51,7 +51,11 @@
     justify-content: space-evenly;
 };
 
-
+@mixin flex-row-contentCenter-itemCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @mixin media-mobile {
     @media screen and (min-width: map-get($breakpoints, mobile-min-width)) and (max-width: map-get($breakpoints, mobile-max-width)) {

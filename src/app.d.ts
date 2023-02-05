@@ -6,6 +6,7 @@ declare namespace App {
 	// interface Locals {}
 	// interface PageData {}
 	// interface Platform {}
+	svelte-carousel; 
 }
 
 

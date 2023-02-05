@@ -105,7 +105,7 @@
   @include mainSection-measurementsInPercentage;
   transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   text-align: center;
-  border-radius: 0.9rem;
+  border-radius: $CardRadius; 
   @include backface-visibility;
   transform: translate3d(0, 0px, 0px) perspective(200px);
 }
@@ -117,7 +117,7 @@
   z-index: 2;
   background-color: $dark-background;
   box-shadow: $cardsShadow;
-  border-radius: 16px;
+  border-radius: $CardRadius;
 }
 
 .backCard {
@@ -127,7 +127,7 @@
   transform: $rotateY180;
   padding: $padding;
   box-shadow: 0px 5px 20px $blue-sapphire;
-  border-radius: 1rem;
+  border-radius: $CardRadius;
 }
 
 .btn {
