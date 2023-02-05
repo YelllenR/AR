@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
-	import PageTransitions from '../../components/pageTransitions.svelte';
+	// import PageTransitions from '../../components/pageTransitions.svelte';
 
 	const texts = ['Aurélie', '', 'ROSE'];
 	const click = 'cliquez ici';
