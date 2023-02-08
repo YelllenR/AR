@@ -1,6 +1,6 @@
 export const projects = [
     {
-        projectId: 0,
+        projectId: 1,
         projectTitle: "Booki",
         projectDescription: "Transformation d'une maquette en site web avec HTML & CSS",
         projectPicture: "/images/Booki.png",
@@ -8,7 +8,7 @@ export const projects = [
     },
 
     {
-        projectId: 1,
+        projectId: 2,
         projectTitle: "Ohmyfood",
         projectDescription: "Dynamisation d'une page web avec des animations CSS3",
         projectPicture: "/images/ohmyfood.png",
@@ -16,7 +16,7 @@ export const projects = [
     },
 
     {
-        projectId: 2,
+        projectId: 3,
         projectTitle: "La panthère",
         projectDescription: "Optimisation d'un site web existant",
         projectPicture: "/images/LaPanthere.png",
@@ -24,7 +24,7 @@ export const projects = [
     },
 
     {
-        projectId: 3,
+        projectId: 4,
         projectTitle: "Kanap",
         projectDescription: "Construction un site e-commerce en JavaScript",
         projectPicture: "/images/Kanap.png",
@@ -32,15 +32,15 @@ export const projects = [
     },
 
     {
-        projectId: 4,
+        projectId: 5,
         projectTitle: "PIIQUANTE",
         projectDescription: "Construction d'une API sécurisée pour une application d'avis gastronomiques",
-        projectPicture: "/images/PIIQUANTE.png",
+        projectPicture: "/images/PIIQUANTESAUCE.png",
         projectStacks: "Node, Express, MongoDB"
     },
 
     {
-        projectId: 5,
+        projectId: 6,
         projectTitle: "Groupomania",
         projectDescription: "Création d'un réseau social d’entreprise",
         projectPicture: "/images/Groupomania.png",

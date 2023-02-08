@@ -1,7 +1,6 @@
 $dark-background: #121F33;
 $textColor-light-background: #121F33;
 $font-family: 'Montserrat', sans-serif;
-// $baseline: 12px; ???
 
 $cardsShadow: -5px 5px 10px rgb(0, 0, 0);
 $text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
@@ -18,25 +17,27 @@ $marginBetweenCards: clamp(0.5rem, 40vw, 1rem);
 $trainingCards-width: clamp(20rem, 35vw, 30rem);
 $trainingCards-height: clamp(20rem, 33vh, 30rem);
 
-// $trainingCardsPicture-width: clamp(15rem, 20vw, 25rem); 
-// $trainingCardsPicture-height: clamp(15rem, 35vh, 25rem); 
-
 $trainingCardsModal-width: clamp(30rem, 25vw, 65rem);
 $trainingCardsModal-height: clamp(25rem, 50vh, 35rem);
 
 $projectCard-imageGallery-width: clamp(30rem, 25vw, 65rem);
 $projectCard-imageGallery-height: clamp(30rem, 25vh, 65rem);
 
-$projectCard-projectContainer-width: clamp(20rem, 20vw, 40rem);
-$projectCard-projectContainer-height: clamp(20rem, 20vh, 40rem);
+$projectCard-projectContainer-width: clamp(40rem, 30vw, 50rem);
+$projectCard-projectContainer-height: clamp(40rem, 30vh, 50rem);
 
+$projectCard-projectImage-width: clamp(30rem, 35vw, 50rem);
+$projectCard-projectImage-height: clamp(25rem, 33vh, 50rem);
+
+$dotHeight: clamp(1rem, 5vh, 2rem); 
+$dotWidth: clamp(1.5rem, 5vw, 3.5rem); 
 /* font size, padding, margin*/
 $font-size-p: clamp(0.9rem, 2vw, 1rem);
 $font-size-h1: clamp(2rem, 10vw, 4rem);
 
 $font-size-h2: clamp(1.5rem, 2vw, 2rem);
 $font-size-h3: clamp(1.1rem, 2vw, 1.2em);
-$font-size-h4: clamp(1.1rem, 2vw, 1.2em);
+$font-size-h4: clamp(1rem, 2vw, 1.1em);
 
 $font-size-button: clamp(0.8rem, 2vw, 1rem);
 $padding: clamp(0.5rem, 1vw, 0.7rem);
@@ -56,8 +57,6 @@ $breakpoints: (
 /* Rotation*/
 $rotateY180: rotateY(180deg);
 $rotateY-180: rotateY(-180deg);
-
-
 
 
 /* SCSS HEX */
