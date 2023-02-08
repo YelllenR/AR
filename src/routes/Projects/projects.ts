@@ -35,7 +35,7 @@ export const projects = [
         projectId: 5,
         projectTitle: "PIIQUANTE",
         projectDescription: "Construction d'une API sécurisée pour une application d'avis gastronomiques",
-        projectPicture: "/images/PIIQUANTE.png",
+        projectPicture: "/images/PIIQUANTESAUCE.png",
         projectStacks: "Node, Express, MongoDB"
     },
 

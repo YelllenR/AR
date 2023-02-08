@@ -1,57 +1,30 @@
 <script lang="ts">
 	import { projects } from './projects';
 	import { onMount } from 'svelte';
-	import { mount_component } from 'svelte/internal';
 
-	let slideStartIndex = 1;
-	let projectSlides: string | any[];
-	let dots: any;
+	let projectSlides: NodeListOf<Element> | any[];
+	let dots: NodeListOf<Element> | any[];
+
+	let id: number | null;
 
 	onMount(() => {
-		projectSlides = Array.from(document.getElementsByClassName('projectItem'));
+		projectSlides = Array.from(document.querySelectorAll('.projectItem'));
+		dots = Array.from(document.querySelectorAll('.dot'));
 
-		dots = document.getElementsByClassName('dot');
+		projectSlides.forEach(() => {
+			projectSlides[0].classList.add('showGalery');
+		});
 	});
 
-	const displaySlide = (n: number) => {
-		let index;
+	function displaySlide(idProject: Event) {
+		const targetProject = idProject.target as HTMLButtonElement;
 
-		// onMount(() => {
-			if (n > projectSlides.length) {
-				return (slideStartIndex = 1);
-			}
-
-			if (n < 1) {
-				return (slideStartIndex = projectSlides.length);
-			}
-
-			for (index = 0; index < projectSlides.length; index++) {
-				projectSlides[index].style.display = 'none';
-			}
-
-			for (index = 0; index < dots.length; index++) {
-				dots[index].className = dots[index].className.replace(' active', '');
-			}
-
-			projectSlides[slideStartIndex - 1].style.display = 'block';
-			dots[slideStartIndex - 1].className += ' active';
-		// });
-	};
-
-
-	displaySlide(slideStartIndex);
-
-	const actualSlide = (n: number) => {
-		displaySlide((slideStartIndex = n));
-		console.log("ok actual")
-	};
-
-	const addSlides = (n: number) => {
-		displaySlide((slideStartIndex += n));
-		console.log("ok add")
-	};
-
-
+		if (id === Number(targetProject.dataset.projectid)) {
+			id = null;
+		} else {
+			id = Number(targetProject.dataset.projectId);
+		}
+	}
 </script>
 
 <section class="projectMainContainer">
@@ -60,31 +33,23 @@
 
 		<div class="projectCarousel">
 			<div class="carouselContainer">
-				{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks }}
-					<article class="projectData projectItem">
-						<h3 class="projectData__projectName">{projectTitle}</h3>
-						<p class="projectData__projectDescription">{projectDescription}</p>
-
-						<div class="stacksContainer">
-							<h4 class="stacksTitle">Stacks utilisés</h4>
-							<p class="stacks">{projectStacks}</p>
-						</div>
-
-						<div class="projectData__imageProjectsGallery">
-							<img class="projectVisual" src={projectPicture} alt="project visual" />
+				{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks }, index}
+					<article class="projectItem fade" class:showGalery={id === index}>
+						<h3 class="projectItem__projectName">{projectTitle}</h3>
+						<p class="projectItem__projectDescription">{projectDescription}</p>
+						<p class="stacks">{projectStacks}</p>
+						<div class="projectItem__imageProjectsGallery">
+							<img class="projectItem__projectVisual" src={projectPicture} alt="project visual" />
 						</div>
 					</article>
 				{/each}
-			</div>
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<i class="fas fa-arrow-right nextSlide" on:click={() => addSlides(1)} />
-			<i class="fas fa-arrow-left previousSlide" />
 
-			<div class="dotContainer">
-				{#each projects as { projectId }, index}
-					<!-- svelte-ignore a11y-click-events-have-key-events -->
-					<span class="dot" on:click={() => actualSlide(index)} />
-				{/each}
+				<div class="dotContainer">
+					{#each projects as { projectId }, index}
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
+						<span class="dot" on:click={displaySlide} data-project-id={index}>{projectId} </span>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
