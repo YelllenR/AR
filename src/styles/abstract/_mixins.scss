@@ -6,8 +6,6 @@
     align-items: center;
 }
 
-;
-
 @mixin flex-column-contentCenter-itemsCenter {
     display: flex;
     flex-direction: column;
@@ -15,15 +13,12 @@
     align-items: center;
 }
 
-;
-
 @mixin flex-column-contentFlexEnd {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-;
 
 @mixin flex-column-contentCenter {
     display: flex;
@@ -31,7 +26,7 @@
     justify-content: center;
 }
 
-;
+
 
 @mixin flex-flexWrap-contentCenter {
     display: flex;
@@ -57,7 +52,7 @@
     align-items: center;
 }
 
-;
+
 
 @mixin flex-column-contentSpacedEvenly {
     display: flex;
@@ -81,7 +76,7 @@
     }
 }
 
-;
+
 
 @mixin mobile-maxOnly {
     @media screen and (max-width: map-get($breakpoints, mobile-max-width)) {
@@ -89,9 +84,7 @@
             @content
         }
     }
-}
-
-;
+};
 
 @mixin media-tablet {
     @media screen and (min-width: map-get($breakpoints, tablet-min-width)) and (max-width: map-get($breakpoints, tablet-max-width)) {
@@ -99,9 +92,8 @@
             @content
         }
     }
-}
+};
 
-;
 
 @mixin media-desktop {
     @media screen and (min-width: map-get($breakpoints, desktop-min-width)) and (max-width: map-get($breakpoints, desktop-max-width)) {
@@ -111,7 +103,7 @@
     }
 }
 
-;
+
 
 //--- widths and height /
 

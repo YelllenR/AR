@@ -1,4 +1,6 @@
-.stacksContainer{
+.stacksMainContainer{
     @include mainSection-measurementsInPercentage; 
     border: 1px solid red;
+
+    @include flex-column-contentCenter-itemsCenter;
 }
