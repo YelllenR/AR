@@ -3,9 +3,12 @@ $textColor-light-background: #121F33;
 $font-family: 'Montserrat', sans-serif;
 
 $cardsShadow: -5px 5px 10px rgb(0, 0, 0);
+$cardsShadowImage: -5px 5px 20px rgb(43, 80, 104, 0.5);
 $text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
 $backCardsShadow: -2px 2px 15px rgb(0, 0, 0);
 $CardRadius: 1rem;
+$cardsShadowDots: -5px 5px 20px rgb(138, 168, 182, 0.5);
+
 
 /* min/max width & min/max height */
 
@@ -23,14 +26,15 @@ $trainingCardsModal-height: clamp(25rem, 50vh, 35rem);
 $projectCard-imageGallery-width: clamp(30rem, 25vw, 65rem);
 $projectCard-imageGallery-height: clamp(30rem, 25vh, 65rem);
 
-$projectCard-projectContainer-width: clamp(40rem, 30vw, 50rem);
+$projectCard-projectContainer-width: clamp(70%, 30vw, 80%);
 $projectCard-projectContainer-height: clamp(40rem, 30vh, 50rem);
 
-$projectCard-projectImage-width: clamp(30rem, 35vw, 50rem);
-$projectCard-projectImage-height: clamp(25rem, 33vh, 50rem);
+$projectCard-projectImage-width: clamp(20rem, 25vw, 55rem);
 
-$dotHeight: clamp(1rem, 5vh, 2rem); 
-$dotWidth: clamp(1.5rem, 5vw, 3.5rem); 
+$projectCard-projectImage-height: clamp(45rem, 25vh, 60rem);
+
+$dotHeight: clamp(1rem, 5vh, 1.5rem);
+$dotWidth: clamp(1.5rem, 5vw, 2rem);
 /* font size, padding, margin*/
 $font-size-p: clamp(0.9rem, 2vw, 1rem);
 $font-size-h1: clamp(2rem, 10vw, 4rem);

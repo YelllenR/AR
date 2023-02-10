@@ -39,15 +39,15 @@
 						<p class="projectItem__projectDescription">{projectDescription}</p>
 						<p class="stacks">{projectStacks}</p>
 						<div class="projectItem__imageProjectsGallery">
-							<img class="projectItem__projectVisual" src={projectPicture} alt="project visual" />
+							<img class="projectVisual" src={projectPicture} alt="project visual" />
 						</div>
 					</article>
 				{/each}
 
 				<div class="dotContainer">
-					{#each projects as { projectId }, index}
+					{#each projects as { dotText }, index}
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
-						<span class="dot" on:click={displaySlide} data-project-id={index}>{projectId} </span>
+						<span class="dot" on:click={displaySlide} data-project-id={index}>{dotText}</span>
 					{/each}
 				</div>
 			</div>
