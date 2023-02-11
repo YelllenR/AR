@@ -1,0 +1,42 @@
+.contactMainSection {
+    @include mainSection-measurementsInViewH-W;
+    background-color: $dark-background;
+    @include flex-column-contentCenter-itemsCenter;
+}
+
+.contactContainer {
+    @include flex-column-contentCenter;
+    height: 50%;
+    width: 90%;
+}
+
+.imageContact {
+    background-image: url('/images/imageForContact.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    width: 50%;
+    border-radius: 1rem;
+}
+
+
+.contactInformations {
+    @include flex-column-contentCenter;
+    width: 50%;
+}
+
+.phone, .location, .email, .github, .linkedin {
+    @include flex-row-space-itemCenter;
+    margin: 0.6rem;
+}
+
+.contact,
+.contactData {
+    color: $pewter-blue;
+}
+
+.contactDataHref {
+    color: $pewter-blue;
+    text-decoration: none;
+}

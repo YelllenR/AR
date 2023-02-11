@@ -6,8 +6,7 @@
 
 .titleStacks {
     color: $pewter-blue;
-    font-family: $font-family;
-    font-size: $font-size-h2;
+
     text-shadow: $text-shadow;
     margin: 1.5rem 0 0.7rem 0;
     text-align: center;
@@ -40,22 +39,16 @@
 
 .lang,
 .name {
-    font-family: $font-family;
-    font-size: $font-size-h5;
     color: $pewter-blue;
     padding-bottom: 1rem;
 }
 
 .databaseTool {
-    font-family: $font-family;
-    font-size: $font-size-p;
     color: $pewter-blue;
     padding: 0 0.3rem 1rem 0.3rem;
 }
 
 .nameDatabase {
-    font-family: $font-family;
     color: $pewter-blue;
-    font-size: $font-size-h5;
     padding: 0 0.3rem 1rem 0.3rem;
 }

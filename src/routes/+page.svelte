@@ -5,6 +5,7 @@
 	import Training from './Training/+page.svelte';
 	import Projects from './Projects/+page.svelte';
 	import Stacks from './Stacks/+page.svelte';
+	import Contact from './Contact/+page.svelte';
 </script>
 
 <svelte:head>
@@ -19,3 +20,4 @@
 <Training />
 <Projects />
 <Stacks />
+<Contact />

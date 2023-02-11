@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
   import { onMount } from "svelte";
   import { createEventDispatcher } from 'svelte';
 
@@ -57,4 +57,4 @@
       <slot />
     </div>
   {/if}
-</div>
+</div> -->

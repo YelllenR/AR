@@ -9,9 +9,7 @@
   justify-self: center;
   color: $dark-background;
   margin: $marginAroundTitle;
-  font-size: $font-size-h2;
   font-weight: 900;
-  font-family: $font-family;
   text-shadow: 2px 2px 0px #FFFFFF,
   5px 4px 0px rgba(43, 80, 104, 0.15),
   0px 5px 10px rgba(37, 52, 67, 0);
@@ -20,7 +18,6 @@
 .job-title,
 .company,
 .dateYear {
-  font-family: $font-family;
   transform: translateY(-10%) translateZ(80px) scale(0.94);
   padding: $padding;
   box-sizing: border-box;
@@ -28,27 +25,21 @@
   perspective: 1000px;
 }
 
-.company {
-  font-size: $font-size-h4; 
-}
+
 
 .job-title {
-  font-size: $font-size-h3;
   padding: $padding;
   text-align: center;
 }
 
 .dateYear {
-  font-size: $font-size-p;
   padding: 0.2rem;
   text-align: center;
 }
 
 .dutyLists {
   list-style: none;
-  font-family: $font-family;
   text-align: justify;
-  font-size: $font-size-p;
   padding: $padding;
 }
 
@@ -135,7 +126,6 @@
   height: auto;
   font-size: $font-size-button;
   padding: $padding;
-  font-family: $font-family;
   text-align: center;
   border: none;
   cursor: pointer;
