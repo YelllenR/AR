@@ -1,7 +1,5 @@
 <script lang="ts">
-    import CardsAnimationsOnScroll from "../../lib/animate/cardsAnimationsOnScroll.svelte";
     import { company } from "./experiences";
-	
 
     let flipCard = false;
     let cardSelected: number | null;
@@ -28,9 +26,7 @@
     <h2 class="experience-title">EXPERIENCES</h2>
 
     <div class="experience-box">
-       
-        <!-- <CardsAnimationsOnScroll animation={'from-left 1.5s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-        </CardsAnimationsOnScroll> -->
+    
 
         {#each company as {title, timeline, duty, name}, i}
         <div class="CardBox">

@@ -68,6 +68,12 @@
     align-items: center;
 }
 
+@mixin flex-row-space-itemCenter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin media-mobile {
     @media screen and (min-width: map-get($breakpoints, mobile-min-width)) and (max-width: map-get($breakpoints, mobile-max-width)) {
         & {
