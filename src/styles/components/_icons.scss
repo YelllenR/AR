@@ -21,3 +21,17 @@
     align-self: flex-end;
     padding: clamp(0.5rem, 2vw, 0.7rem);
 }
+
+
+.imgIcon {
+    height: 20px;
+    width: 20px;
+    background-color: $beau-blue;
+}
+
+
+.iconStack,
+.iconPreprocessor {
+    color: $beau-blue;
+    font-size: $font-size-icon;
+}

@@ -4,6 +4,7 @@
 	import Experiences from './Experiences/+page.svelte';
 	import Training from './Training/+page.svelte';
 	import Projects from './Projects/+page.svelte';
+	import Stacks from './Stacks/+page.svelte';
 </script>
 
 <svelte:head>
@@ -17,3 +18,4 @@
 <Experiences />
 <Training />
 <Projects />
+<Stacks />

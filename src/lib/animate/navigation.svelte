@@ -1,7 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
-	import type ScrollIndex from "./cardsAnimationsOnScroll.svelte";
+	import type ScrollIndex from "./animationsOnScroll.svelte";
 
     const pages = [
         '/', 

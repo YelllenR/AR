@@ -40,8 +40,11 @@ $font-size-p: clamp(0.9rem, 2vw, 1rem);
 $font-size-h1: clamp(2rem, 10vw, 4rem);
 
 $font-size-h2: clamp(1.5rem, 2vw, 2rem);
-$font-size-h3: clamp(1.1rem, 2vw, 1.2em);
-$font-size-h4: clamp(1rem, 2vw, 1.1em);
+$font-size-h3: clamp(1.1rem, 2vw, 1.2rem);
+$font-size-h4: clamp(1rem, 2vw, 1.1rem);
+$font-size-h5: clamp(0.9rem, 2vw, 1rem);
+
+$font-size-icon: clamp(1.5rem, 2vw, 1.9rem);
 
 $font-size-button: clamp(0.8rem, 2vw, 1rem);
 $padding: clamp(0.5rem, 1vw, 0.7rem);
