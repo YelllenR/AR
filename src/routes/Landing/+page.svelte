@@ -2,29 +2,30 @@
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
-	// import PageTransitions from '../../components/pageTransitions.svelte';
+	import Description from './description.svelte';
 
 	const texts = ['Aurélie', '', 'ROSE'];
-	const click = 'cliquez ici';
+	let textAnimationEnd = false;
 </script>
 
 <section id="landing-page">
-	<div class="container__background">
-		<div class="content">
-			<AnimationStart>
+	<AnimationStart>
+		<div class="container">
+			<div class="content">
 				<div class="texts">
 					{#each texts as text, i}
 						<div class="overflow">
-							<span class="text" in:fly={{ y: 100, delay: 350 * i, easing: backOut }}>
+							<span
+								class="text"
+								in:fly={{ y: 250, duration: 900, delay: 600 * i, easing: backOut }}
+							>
 								{text}
 							</span>
 						</div>
 					{/each}
 				</div>
-				<button class="nextPageButton" in:fly={{ x: 100, delay: 600, easing: backOut }}>{click}</button>
-			</AnimationStart>
-
+				<Description />
+			</div>
 		</div>
-		
-	</div>
+	</AnimationStart>
 </section>
