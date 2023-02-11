@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Landing from './Landing/+page.svelte';
-	import Description from './Description/+page.svelte';
 	import Experiences from './Experiences/+page.svelte';
 	import Training from './Training/+page.svelte';
 	import Projects from './Projects/+page.svelte';
@@ -13,9 +12,6 @@
 </svelte:head>
 
 <Landing />
-
-<Description />
-
 <Experiences />
 <Training />
 <Projects />

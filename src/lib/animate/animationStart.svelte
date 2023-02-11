@@ -1,24 +1,18 @@
 <script lang="ts">
-    import { onMount, tick } from 'svelte'
-    import { afterNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-    let animation = false
+	let animation = false;
+	let fade = false;
 
-    onMount(() => {
-        animation = true 
-
-    }); 
-
-	async function play() {
-		animation = false
-		await tick()
-		animation = true; 
-	}
-
-
+	onMount(() => {
+		animation = true;
+	});
 
 </script>
 
 {#if animation}
-    <slot/>
+	<slot></slot>
 {/if}
+
+
+
