@@ -13,138 +13,54 @@
     }
 }
 
-.projectCarousel {
-    height: 80%;
+.cardContainer {
+    @include flex-flexWrap-Start-itemCenter;
+    height: 90%;
     width: 100%;
-
+    margin-top: 1rem;
+    overflow: hidden;
 }
 
-.carouselContainer {
-    max-width: 1000px;
-    position: relative;
-    margin-bottom: 1rem;
+
+.cardItems {
+    width: $ProjectCards-width;
+    height: $ProjectCards-height-after;
     @include flex-column-contentCenter-itemsCenter;
-}
-
-.projectItem {
-    display: none;
-    width: 95%;
-    margin: 1rem;
-
-    &__projectName {
-        color: $pewter-blue;
-        margin-top: 1rem;
-    }
-
-    &__projectDescription {
-
-        color: $pewter-blue;
-        padding: $padding;
-        text-align: center;
-    }
-
-    &__imageProjectsGallery {
-        border-radius: $CardRadius;
-        @include flex-column-contentCenter-itemsCenter;
-        width: 90%;
-        height: 60%;
-    }
-
+    @include projectCardShadowDesign;
+    text-align: center;
+    margin: 2rem 1rem 2rem 1rem;
 
 }
 
-.projectVisual {
-    width: 80%;
-    height: $projectCard-projectImage-height;
-    margin-top: $marginAroundTitle;
-    border-radius: 1rem;
-    -o-object-fit: contain;
-    object-fit: contain;
-    box-shadow: $cardsShadowImage;
-
-    @include mobile-maxOnly {
-        height: 45vh;
-        width: 90%;
-        -o-object-fit: cover;
-        object-fit: contain;
-    }
-
-    @include media-tablet {
-        height: 55vh;
-        width: 80%;
-        -o-object-fit: contain;
-        object-fit: contain;
-    }
-
+.logoOfProject {
+    height: 10%;
+    width: 20%; 
 }
 
 
-.stacks {
-    color: $pewter-blue;
+.projectData {
+    @include shadowTextInProjectCard;
+    height: 90%;
+    @include flex-column-contentSpacedEvenly;
+}
+
+.projectName, 
+.projectDescription, 
+.stacks{
     padding: $padding;
-    text-align: center;
 }
 
-.showGalery {
-    display: block;
-    @include flex-column-contentCenter-itemsCenter;
-    width: 100%;
-    height: auto;
-}
-
-.dotContainer {
-    position: absolute;
-    bottom: 0.2rem;
-    cursor: pointer;
-    width: 90%;
-    height: 2rem;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    @include flex-row-contentCenter-itemCenter;
-}
-
-.dot {
-    height: $dotHeight;
-    width: $dotWidth;
+.githubLink {
     background-color: $dark-background;
-    border-radius: 30%;
-    margin: 0.5rem;
-    text-align: center;
-    padding: 0.1rem;
-    box-shadow: $cardsShadowDots;
-    transition: background-color 0.6s ease;
+    @include buttonShadow;
     color: $text-color;
-
-    &:hover,
+    font-family: $font-family;
+    font-size: $font-size-button;
+    padding: $padding;
+    border-radius: $button-radius;
+    cursor: pointer;
+    
     &:active {
-        background-color: $charcoal-3;
-        transform: scale(1.2);
-    }
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    animation-name: fade;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
+        @include buttonShadowaActive;
     }
 }

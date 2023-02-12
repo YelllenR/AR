@@ -45,6 +45,14 @@
 
 ;
 
+
+@mixin flex-flexWrap-Start-itemCenter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 @mixin flex-column-contentSpacedArround-itemCenter {
     display: flex;
     flex-direction: column;
@@ -90,7 +98,9 @@
             @content
         }
     }
-};
+}
+
+;
 
 @mixin media-tablet {
     @media screen and (min-width: map-get($breakpoints, tablet-min-width)) and (max-width: map-get($breakpoints, tablet-max-width)) {
@@ -98,7 +108,9 @@
             @content
         }
     }
-};
+}
+
+;
 
 
 @mixin media-desktop {
@@ -109,6 +121,8 @@
     }
 }
 
+;
+
 
 
 //--- widths and height /
@@ -117,6 +131,8 @@
     width: 100vw;
     height: 100vh;
 }
+
+;
 
 @mixin mainSection-measurementsInPercentage {
     width: 100%;
@@ -130,4 +146,88 @@
     backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
+}
+
+
+@mixin glassCard {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(37, 52, 67, 0.75);
+    border: 1px solid rgba(73, 85, 98, 0.432);
+}
+
+@mixin cardShadow {
+    background: linear-gradient(145deg, #132137, #101c2e);
+    box-shadow: 10px 10px 20px #0d1624,
+        -10px -10px 20px #172842;
+}
+
+@mixin shadowCardTraining {
+    background: linear-gradient(145deg, rgba(35, 59, 78, 0.666), #101c2e);
+    box-shadow: 5px 5px 20px #0d1624,
+        -5px -5px 20px #172842;
+}
+
+@mixin shadowCardBackTraining {
+    box-shadow: inset 4px 4px 10px #0d1624,
+        inset -4px -4px 10px #172842;
+}
+
+@mixin glassCardTraining {
+    -webkit-backdrop-filter: blur(10%) saturate(180%);
+    backdrop-filter: blur(10%) saturate(180%);
+    background-color: rgba(35, 59, 78, 0.666);
+    border: 2px solid rgba(35, 59, 78, 0.552);
+}
+
+@mixin buttonShadow {
+    transition: all .5s;
+    border: 1px solid $dark-background;
+    box-shadow: 6px 6px 12px #172740a7,
+        -6px -6px 12px #1b2f4bfc;
+}
+
+@mixin buttonShadowaActive {
+    color: rgb(196, 196, 196);
+    box-shadow: inset 4px 4px 12px #172740a7,
+        inset -4px -4px 12px #1b2f4bfc;
+}
+
+
+@mixin parallaxImage {
+    background-position: center;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@mixin closeModal {
+    background-color: #0d1624;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 1.5px 1.5px 3px #0d1624, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0d1624, inset 0px -0px 0px #5f5e5e;
+}
+
+
+@mixin projectCardShadowDesign {
+    background-color: #16273f;
+    text-align: center;
+    border: 10px solid #16273f;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 10px #121f334a, inset -5px -5px 10px #121f33e0;
+    transition: 0.5s;
+}
+
+@mixin shadowTextInProjectCard {
+    color: $text-color;
+    background-color: #16273f;
+    margin: 5px 20px;
+    border-radius: 8px;
+    // box-shadow: 8px 8px 10px #121f334a, -8px -8px 10px #121f33e0;
+    box-shadow: inset 5px 5px 10px #121f334a, inset -5px -5px 10px #121f33e0;
+    transition: all 0.5s;
 }

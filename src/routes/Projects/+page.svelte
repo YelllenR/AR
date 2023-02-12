@@ -1,28 +1,17 @@
 <script lang="ts">
 	import { projects } from './projects';
-	import { onMount } from 'svelte';
 
-	let projectSlides: NodeListOf<Element> | any[];
-	let dots: NodeListOf<Element> | any[];
+	let informations = false;
+	let clickedOnCardProject: number | null;
 
-	let id: number | null;
-
-	onMount(() => {
-		projectSlides = Array.from(document.querySelectorAll('.projectItem'));
-		dots = Array.from(document.querySelectorAll('.dot'));
-
-		projectSlides.forEach(() => {
-			projectSlides[0].classList.add('showGalery');
-		});
-	});
-
-	function displaySlide(idProject: Event) {
+	function displayInformations(idProject: Event) {
 		const targetProject = idProject.target as HTMLButtonElement;
-
-		if (id === Number(targetProject.dataset.projectid)) {
-			id = null;
+		if (clickedOnCardProject === Number(targetProject.dataset.projectid)) {
+			clickedOnCardProject = null;
+			informations = true;
 		} else {
-			id = Number(targetProject.dataset.projectId);
+			clickedOnCardProject = Number(targetProject.dataset.projectId);
+			informations = true;
 		}
 	}
 </script>
@@ -31,26 +20,22 @@
 	<div class="projectContainer">
 		<h2 class="projectContainer__title">PROJECTS</h2>
 
-		<div class="projectCarousel">
-			<div class="carouselContainer">
-				{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks }, index}
-					<article class="projectItem fade" class:showGalery={id === index}>
-						<h3 class="projectItem__projectName">{projectTitle}</h3>
-						<p class="projectItem__projectDescription">{projectDescription}</p>
-						<p class="stacks">{projectStacks}</p>
-						<div class="projectItem__imageProjectsGallery">
-							<img class="projectVisual" src={projectPicture} alt="project visual" />
-						</div>
-					</article>
-				{/each}
+		<div class="cardContainer">
+			{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks, link }, index}
+				<article class="cardItems" class:showInformations={clickedOnCardProject === index}>
+					<!-- <img class="logoOfProject" src={projectPicture} alt="project visual" /> -->
 
-				<div class="dotContainer">
-					{#each projects as { dotText }, index}
-						<!-- svelte-ignore a11y-click-events-have-key-events -->
-						<span class="dot" on:click={displaySlide} data-project-id={index}>{dotText}</span>
-					{/each}
-				</div>
-			</div>
+					<div class="projectData">
+						<h3 class="projectName">{projectTitle}</h3>
+						
+						<p class="projectDescription">{projectDescription}</p>
+						<p class="stacks">{projectStacks}</p>
+						<a href={link} target="blank">
+							<button class="githubLink">Repo github</button>
+						</a>
+					</div>
+				</article>
+			{/each}
 		</div>
 	</div>
 </section>

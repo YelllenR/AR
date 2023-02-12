@@ -5,8 +5,7 @@
 }
 
 .titleStacks {
-    color: $pewter-blue;
-
+    color: $text-color;
     text-shadow: $text-shadow;
     margin: 1.5rem 0 0.7rem 0;
     text-align: center;
@@ -39,16 +38,16 @@
 
 .lang,
 .name {
-    color: $pewter-blue;
+    color: $text-color;
     padding-bottom: 1rem;
 }
 
 .databaseTool {
-    color: $pewter-blue;
+    color: $text-color;
     padding: 0 0.3rem 1rem 0.3rem;
 }
 
 .nameDatabase {
-    color: $pewter-blue;
+    color: $text-color;
     padding: 0 0.3rem 1rem 0.3rem;
 }

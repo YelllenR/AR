@@ -1,18 +1,17 @@
 .experience-container {
   @include flex-column-contentCenter-itemsCenter;
-  @include mainSection-measurementsInPercentage; 
-
+  @include mainSection-measurementsInPercentage;
+  background-color: $dark-background;
 }
 
 
 .experience-title {
   justify-self: center;
   color: $dark-background;
-  margin: $marginAroundTitle;
+  margin: 1.5rem;
   font-weight: 900;
-  text-shadow: 2px 2px 0px #FFFFFF,
-  5px 4px 0px rgba(43, 80, 104, 0.15),
-  0px 5px 10px rgba(37, 52, 67, 0);
+  color: $text-color;
+  text-shadow: $text-shadow;
 }
 
 .job-title,
@@ -66,7 +65,7 @@
 
 .CardBox {
   height: $experienceCards-height;
-  width: $experienceCards-width; 
+  width: $experienceCards-width;
   margin: $marginBetweenCards;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -96,55 +95,40 @@
   @include mainSection-measurementsInPercentage;
   transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   text-align: center;
-  border-radius: $CardRadius; 
+  border-radius: $CardRadius;
   @include backface-visibility;
   transform: translate3d(0, 0px, 0px) perspective(200px);
 }
 
 .frontCard {
   @include flex-column-contentSpacedArround-itemCenter;
-  color: white;
+  color: $text-color;
   padding: $padding;
   z-index: 2;
-  background-color: $dark-background;
-  box-shadow: $cardsShadow;
   border-radius: $CardRadius;
+  @include cardShadow;
 }
 
 .backCard {
   @include flex-column-contentSpacedEvenly;
-  background-color: $dark-background;
   color: white;
   transform: $rotateY180;
   padding: $padding;
-  box-shadow: 0px 5px 20px $blue-sapphire;
   border-radius: $CardRadius;
+  text-align: center;
+  @include glassCard;
 }
 
 .btn {
-  width: auto;
-  height: auto;
-  font-size: $font-size-button;
+  color: $text-color;
   padding: $padding;
-  text-align: center;
-  border: none;
+  font-size: $font-size-button;
+  border-radius: $button-radius;
   cursor: pointer;
-  border-radius: 0.5rem;
-  background-color: $charcoal;
-  color: white;
-  box-shadow: inset -1px 3px 8px 5px #263B4Fff,
-  2px 2px 10px 0px #0B325E,
-  inset -3px 10px 29px 14px rgba(3, 5, 8, 0.41);
-
-
-
-  &:focus {
-    border-style: none;
-    box-shadow: inset -1px 3px 8px 5px #263B4Fff, 2px 2px 10 px 0px #0B325E, inset -3px 10px 29px 14px rgba(41, 69, 91, 0.41);
-
-  }
+  background: $dark-background;
+  @include buttonShadow;
 
   &:active {
-    border-style: none;
+    @include buttonShadowaActive;
   }
 }

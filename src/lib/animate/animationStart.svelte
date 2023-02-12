@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 
 	let animation = false;
-	let fade = false;
 
 	onMount(() => {
 		animation = true;
