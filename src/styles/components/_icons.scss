@@ -1,8 +1,16 @@
 .turnCard {
-    color: white;
+    color: $text-color;
     align-self: flex-end;
-    padding-top: 1rem;
+    padding: 1rem;
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 100%;
+    box-shadow: 1.5px 1.5px 3px #0d1624, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0d1624, inset 0px -0px 0px #5f5e5e;
+    transition: all ease 0.2s;
+
+    &:active {
+        box-shadow: 0px 0px 0px #0d1624, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0d1624, inset -1.5px -1.5px 3px #5f5e5e;
+    }
 }
 
 .expand-arrow {
@@ -10,16 +18,18 @@
     right: clamp(1rem, 25vw, 1.5rem);
     top: clamp(0.5rem, 20vw, 0.5rem);
     z-index: 2;
-    color: $beau-blue;
+    color: $text-color;
     font-size: $font-size-p;
     cursor: pointer;
+    @include closeModal;
 }
 
 .fa-window-close {
-    color: white;
+    color: $text-color;
     font-size: $font-size-p;
     align-self: flex-end;
     padding: clamp(0.5rem, 2vw, 0.7rem);
+    @include closeModal;
 }
 
 
@@ -37,7 +47,7 @@
 }
 
 
-.contactIcon{
+.contactIcon {
     color: $pewter-blue;
     font-size: $font-size-icon;
 }

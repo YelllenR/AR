@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TransitionConfig } from 'svelte/transition';
-    import AnimationStart from '$lib/animate/animationStart.svelte';
-    
+	import AnimationStart from '$lib/animate/animationStart.svelte';
+	import { description } from './description';
 	type TypewriterParams = { speed?: number };
 
 	type Typewriter = (node: Element, params?: TypewriterParams) => TransitionConfig;
@@ -26,5 +26,13 @@
 		<AnimationStart>
 			<h2 in:typewriter class="describe">Informations personnelles</h2>
 		</AnimationStart>
+
+		<div class="contentDescriptions">
+			{#each description as { HarskillsTitle, SoftskillsTitle, Harskills, Softskills, spokenLang, interestList, interestTitle }}
+				<AnimationStart>
+					<h3 class="softskills">{SoftskillsTitle}</h3>
+				</AnimationStart>
+			{/each}
+		</div>
 	</div>
 </section>

@@ -2,10 +2,8 @@
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
-	import Description from './description.svelte';
 
 	const texts = ['Aurélie', '', 'ROSE'];
-	let textAnimationEnd = false;
 </script>
 
 <section id="landing-page">
@@ -24,7 +22,6 @@
 						</div>
 					{/each}
 				</div>
-				<Description />
 			</div>
 		</div>
 	</AnimationStart>

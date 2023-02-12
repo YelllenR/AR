@@ -20,7 +20,6 @@
     border-radius: 1rem;
 }
 
-
 .contactInformations {
     @include flex-column-contentCenter;
     width: 50%;
@@ -33,10 +32,10 @@
 
 .contact,
 .contactData {
-    color: $pewter-blue;
+    color: $text-color;
 }
 
 .contactDataHref {
-    color: $pewter-blue;
+    color: $text-color;
     text-decoration: none;
 }
