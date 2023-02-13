@@ -1,19 +1,16 @@
 <script lang="ts">
-	import Landing from './Landing/+page.svelte';
-	import Description from './Description/+page.svelte'
-	import Experiences from './Experiences/+page.svelte';
-	import Training from './Training/+page.svelte';
-	import Projects from './Projects/+page.svelte';
-	import Stacks from './Stacks/+page.svelte';
-	import Contact from './Contact/+page.svelte';
+	import Landing from '../components/landing.svelte';
+	import Description from '../components/description.svelte';
+	import Experiences from '../components/experience.svelte';
+	import Training from '../components/training.svelte';
+	import Projects from '../components/projects.svelte';
+	import Stacks from '../components/stacks.svelte';
+	import Contact from '../components/contact.svelte';
+
 </script>
 
-<svelte:head>
-	<title>Aurélie ROSE</title>
-</svelte:head>
-
 <Landing />
-<Description/>
+<Description />
 <Experiences />
 <Training />
 <Projects />

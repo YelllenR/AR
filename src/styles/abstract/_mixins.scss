@@ -203,6 +203,14 @@
     background-size: cover;
 }
 
+@mixin parallaxImageContact {
+    background-position: center;
+    height: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @mixin closeModal {
     background-color: #0d1624;
@@ -227,7 +235,6 @@
     background-color: #16273f;
     margin: 5px 20px;
     border-radius: 8px;
-    // box-shadow: 8px 8px 10px #121f334a, -8px -8px 10px #121f33e0;
     box-shadow: inset 5px 5px 10px #121f334a, inset -5px -5px 10px #121f33e0;
     transition: all 0.5s;
 }

@@ -1,17 +1,46 @@
 #description {
-    @include mainSection-measurementsInViewH-W; 
+    @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
-    mix-blend-mode: overlay;
 }
 
 .descriptionContainer {
-    @include flex-column-itemsCenter; 
-    @include mainSection-measurementsInPercentage; 
+    @include flex-column-itemsCenter;
+    @include mainSection-measurementsInPercentage;
 }
 
-// .describe{
-//     @include media-mobile{
-//         margin-top: 0.5em;
-//     }
 
-// }
+.informationsContainer {
+    height: 85%;
+    width: 100%;
+    @include flex-row-space-itemCenter;
+}
+
+.identityImage {
+    height: 25%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.skillsDescriptions{
+   @include flex-column-contentSpacedEvenly;
+    height: 85%;
+    width: 90%;
+}
+
+.describe{
+    color: $text-color;
+    margin-top: 2rem;
+}
+
+.skills, .hobbyTitle{
+    color: $text-color;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.spokenLang, .SkillsList, .hobbies{
+    color: $text-color;
+    text-align: center;
+    padding: 0 0 0.5rem 1rem;
+}
+

@@ -10,19 +10,14 @@
     width: 90%;
 }
 
-.imageContact {
-    background-image: url('/images/imageForContact.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 50%;
-    width: 50%;
-    border-radius: 1rem;
-}
+
 
 .contactInformations {
-    @include flex-column-contentCenter;
-    width: 50%;
+    @include flex-column-contentSpacedEvenly;
+
+    width: 90%;
+    height: 50%;
+    overflow-y: scroll;
 }
 
 .phone, .location, .email, .github, .linkedin {
@@ -38,4 +33,11 @@
 .contactDataHref {
     color: $text-color;
     text-decoration: none;
+}
+
+.img{
+    height: 10%;
+    width: 100%;
+    background-image: url('/images/imageForContact.png');
+    @include parallaxImageContact;
 }

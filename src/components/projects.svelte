@@ -23,8 +23,6 @@
 		<div class="cardContainer">
 			{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks, link }, index}
 				<article class="cardItems" class:showInformations={clickedOnCardProject === index}>
-					<!-- <img class="logoOfProject" src={projectPicture} alt="project visual" /> -->
-
 					<div class="projectData">
 						<h3 class="projectName">{projectTitle}</h3>
 						

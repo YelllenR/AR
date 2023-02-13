@@ -1,13 +1,13 @@
 <script lang="ts">
-	// import { page } from '$app/stores';
 	import '../styles/style.css';
-	// import PageTransitions from '../components/pageTransitions.svelte';
-	// import Navigation from '$lib/animate/navigation.svelte';
+	// import Transitions from '$lib/animate/transitions.svelte';
 </script>
 
-<!-- <Navigation /> -->
+<svelte:head>
+	<title>Aurélie ROSE</title>
+</svelte:head>
+
+
 <main id="main-container">
-	<!-- <PageTransitions url={$page.url}> -->
 	<slot />
-	<!-- </PageTransitions> -->
 </main>
