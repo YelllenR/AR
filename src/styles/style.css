@@ -65,7 +65,7 @@
 }
 
 .contactIcon {
-  color: rgb(138, 168, 182);
+  color: #c1d1d9;
   font-size: clamp(1.5rem, 2vw, 1.9rem);
 }
 
@@ -749,21 +749,13 @@ p, li {
   width: 90%;
 }
 
-.imageContact {
-  background-image: url("/images/imageForContact.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 50%;
-  width: 50%;
-  border-radius: 1rem;
-}
-
 .contactInformations {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 50%;
+  overflow-y: scroll;
 }
 
 .phone, .location, .email, .github, .linkedin {
@@ -781,4 +773,16 @@ p, li {
 .contactDataHref {
   color: #c1d1d9;
   text-decoration: none;
+}
+
+.img {
+  height: 10%;
+  width: 100%;
+  background-image: url("/images/imageForContact.png");
+  background-position: center;
+  height: 30%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
