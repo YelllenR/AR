@@ -1,13 +1,19 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import { backOut } from 'svelte/easing';
+	import { fly, slide } from 'svelte/transition';
+	import { backInOut, backOut } from 'svelte/easing';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
+	import Description from '../Description/+page.svelte';
+	import Experiences from '../Experiences/+page.svelte';
+	import Training from '../Training/+page.svelte';
+	import Projects from '../Projects/+page.svelte';
+	import Stacks from '../Stacks/+page.svelte';
+	import Contact from '../Contact/+page.svelte';
 
 	const texts = ['Aurélie', '', 'ROSE'];
 </script>
 
-<section id="landing-page">
-	<AnimationStart>
+<AnimationStart>
+	<section id="landing-page">
 		<div class="container">
 			<div class="content">
 				<div class="texts">
@@ -15,7 +21,7 @@
 						<div class="overflow">
 							<span
 								class="text"
-								in:fly={{ y: 250, duration: 900, delay: 600 * i, easing: backOut }}
+								in:fly={{ y: 250, duration: 800, delay: 300 * i, easing: backOut }}
 							>
 								{text}
 							</span>
@@ -24,5 +30,13 @@
 				</div>
 			</div>
 		</div>
-	</AnimationStart>
-</section>
+	</section>
+</AnimationStart>
+
+<!-- <Description />
+<Experiences />
+
+<Training />
+<Projects />
+<Stacks />
+<Contact /> -->

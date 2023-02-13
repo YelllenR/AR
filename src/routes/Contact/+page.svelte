@@ -6,7 +6,7 @@
 	<h2 class="contact">COORDONNEES</h2>
 
 	<div class="contactContainer">
-		<div class="imageContact" />
+		
 		<div class="contactInformations">
 			{#each contactInformations as { phone, phoneIcon, email, sendEmail, emailIcon, location, locationIcon, githubLink, githubIcon, linkedInIcon, linkedInLink }}
 				<div class="phone">

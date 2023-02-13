@@ -2,6 +2,7 @@
 	import type { TransitionConfig } from 'svelte/transition';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
 	import { description } from './description';
+	import { fade, blur, fly, slide, scale, draw } from 'svelte/transition';
 	type TypewriterParams = { speed?: number };
 
 	type Typewriter = (node: Element, params?: TypewriterParams) => TransitionConfig;
@@ -9,7 +10,7 @@
 	const typewriter: Typewriter = (node, { speed = 1 } = {}) => {
 		const describe = node.textContent ?? '';
 		const duration = describe.length / (speed * 0.01);
-		const delay = 1000;
+		const delay = 100;
 		return {
 			duration,
 			delay,
@@ -21,18 +22,39 @@
 	};
 </script>
 
-<section id="description" class="invisible">
+<section id="description">
 	<div class="descriptionContainer">
-		<AnimationStart>
-			<h2 in:typewriter class="describe">Informations personnelles</h2>
-		</AnimationStart>
-
-		<div class="contentDescriptions">
-			{#each description as { HarskillsTitle, SoftskillsTitle, Harskills, Softskills, spokenLang, interestList, interestTitle }}
+		<h2 in:typewriter class="describe">Informations personnelles</h2>
+		<div class="informationsContainer">
+			<div class="skillsDescriptions">
 				<AnimationStart>
-					<h3 class="softskills">{SoftskillsTitle}</h3>
+					{#each description as { skillsList, skillsTitle }}
+						<div class="containerOfSkills">
+							<h3 transition:typewriter class="skills">{skillsTitle}</h3>
+							<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="SkillsList">{skillsList}</p>
+						</div>
+					{/each}
 				</AnimationStart>
-			{/each}
+
+				<AnimationStart>
+					<h3 in:typewriter class="spokenLang">Anglais courant</h3>
+				</AnimationStart>
+
+				<div class="otherDescriptions">
+					<AnimationStart>
+						<h3 in:typewriter class="hobbyTitle">Centre d'intérêts</h3>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Sport : Course à pied, squash
+						</p>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Lecture : Psychologie
+						</p>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Musique : Classique, Blues, Rock
+						</p>
+					</AnimationStart>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

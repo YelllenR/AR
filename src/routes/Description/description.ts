@@ -1,32 +1,22 @@
 export const description = [
     {
-        SoftskillsTitle: "Qualités personnelles",
-        Softskills: {
-            one: "Curiosité et ouverture d’esprit",
-            two: "Forte capacité d’adaptation",
-            three: "Aisance relationnelle",
-            four: "Persévérance"
-        }
+        skillsTitle: "Qualités personnelles",
+        skillsList: [
+            `Curiosité et ouverture d’esprit`,
+            `Forte capacité d’adaptation`,
+            `Aisance relationnelle`,
+            `Persévérance`
+        ]
     },
     {
-        HarskillsTitle: "Compétences clés",
-        Harskills: {
-            one: "Gestion de projet",
-            two: "Optimisation du référencement naturel web",
-            three: "Rédaction et mise en place de process",
-            four: "Compréhension des besoins business et résolution de problèmes"
-        }
+        skillsTitle: "Compétences clés",
+        skillsList: [
+            `Gestion de projet`,
+            `Optimisation du référencement naturel web`,
+            `Rédaction et mise en place de process`,
+            `Compréhension des besoins business et résolution de problèmes`
+        ]
 
     },
-    {
-        spokenLang: "Anglais courant"
-    },
-    {
-        interestTitle: "Centre d’intérêts",
-        interestList: {
-            Sport: "Course à pied, squash",
-            Lecture: "Psychologie",
-            Musique: "Classique, Blues, Bock",
-        }
-    }
-]
+
+];
