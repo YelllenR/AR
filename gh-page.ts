@@ -3,7 +3,7 @@ import { publish } from 'gh-pages';
 publish(
     'build', 
     {
-        branch: 'gh-pages',
+        branch: 'master',
         repo: 'https://github.com/YelllenR/AR',
         user: {
             name: 'Aurélie ROSE'
