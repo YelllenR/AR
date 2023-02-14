@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../styles/style.css';
-	// import Transitions from '$lib/animate/transitions.svelte';
+	export const prerender = true
 </script>
 
 <svelte:head>
