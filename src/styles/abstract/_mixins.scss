@@ -82,6 +82,12 @@
     align-items: center;
 }
 
+@mixin flex-row-spaceEvenly-itemCenter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @mixin media-mobile {
     @media screen and (min-width: map-get($breakpoints, mobile-min-width)) and (max-width: map-get($breakpoints, mobile-max-width)) {
         & {
@@ -180,6 +186,13 @@
     border: 2px solid rgba(35, 59, 78, 0.552);
 }
 
+@mixin glassContactBox {
+    -webkit-backdrop-filter: blur(40%) saturate(10%);
+    backdrop-filter: blur(10%) saturate(90%);
+    background-color: rgba(35, 59, 78, 0.766);
+    border: 2px solid rgba(35, 59, 78, 0.552);
+}
+
 @mixin buttonShadow {
     transition: all .5s;
     border: 1px solid $dark-background;
@@ -205,9 +218,8 @@
 
 @mixin parallaxImageContact {
     background-position: center;
-    height: 30%;
+    height: 100%;
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }

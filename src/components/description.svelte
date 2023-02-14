@@ -2,7 +2,7 @@
 	import type { TransitionConfig } from 'svelte/transition';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
 	import { description } from './description';
-	import { fade, blur, fly, slide, scale, draw } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 	import { inview } from 'svelte-inview';
 
 	let isInView: boolean;
@@ -32,9 +32,14 @@
 	on:change={({ detail }) => {
 		isInView = detail.inView;
 	}}
+	
 >
 	{#if isInView}
-		<div class="descriptionContainer" in:slide={{ duration: 600, delay: 800 }} out:slide={{ duration: 900}}>
+		<div
+			class="descriptionContainer"
+			in:slide={{ duration: 600, delay: 800 }}
+			out:slide={{ duration: 600, delay: 600 }}
+		>
 			<h2 in:typewriter class="describe">Informations personnelles</h2>
 			<div class="informationsContainer">
 				<div class="skillsDescriptions">
