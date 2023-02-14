@@ -121,7 +121,7 @@ p, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/bg.jpg");
+  background-image: url("src/lib/images/bg.jpg");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
@@ -472,7 +472,7 @@ p, li {
   background-color: #121F33;
   position: relative;
   overflow: hidden;
-  background-image: url("/images/cardsBackground.svg");
+  background-image: url("src/lib/images/cardsBackground.svg");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
@@ -758,7 +758,7 @@ p, li {
 .sideOne {
   width: 50%;
   border-radius: 30% 0 0 0;
-  background-image: url("/images/bg.jpg");
+  background-image: url("src/lib/images/bg.jpg");
   background-position: center;
   height: 100%;
   background-attachment: fixed;

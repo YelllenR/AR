@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { projects } from './projects';
+	import img from '../lib/images/bg.jpg'; 
+
 
 	let informations = false;
 	let clickedOnCardProject: number | null;
@@ -19,9 +21,9 @@
 <section class="projectMainContainer">
 	<div class="projectContainer">
 		<h2 class="projectContainer__title">PROJECTS</h2>
-
+		
 		<div class="cardContainer">
-			{#each projects as { projectTitle, projectDescription, projectPicture, projectStacks, link }, index}
+			{#each projects as { projectTitle, projectDescription, projectStacks, link }, index}
 				<article class="cardItems" class:showInformations={clickedOnCardProject === index}>
 					<div class="projectData">
 						<h3 class="projectName">{projectTitle}</h3>
@@ -31,6 +33,7 @@
 						<a href={link} target="blank">
 							<button class="githubLink">Repo github</button>
 						</a>
+
 					</div>
 				</article>
 			{/each}

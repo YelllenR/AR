@@ -1,42 +1,53 @@
+import FCCImage1 from '$lib/images/freecodecamp1.png';
+import FCCIcon from '$lib/images/FCC.svg';
+
+import FCCImage2 from '$lib/images/freecodecamp2.png';
+import OCimage from '$lib/images/OC-diplome.png';
+import OCIcon from '$lib/images/OC.svg';
+import CQIcon from '$lib/images/C&Q.svg';
+
+import CQ1 from '$lib/images/cq1.jpg';
+import CQ2 from '$lib/images/cq2.jpg';
+
+
 export const training = [
     {
         entity: "OPENCLASSROOMS",
         field: "Développeur Web",
         dates: "Avril 2022 à Novembre 2022",
-        completionImage: "/images/OC-diplome.png", 
-        svgIcon: "/images/OC.svg"
+        completionImage: OCimage,
+        svgIcon: OCIcon
     },
 
     {
         entity: "FREECODECAMP",
         field: "JavaScript Algorithms and Data Structures",
         dates: "2022",
-        completionImage: "/images/freecodecamp2.png", 
-        svgIcon: "/images/FCC.svg"
+        completionImage: FCCImage2,
+        svgIcon: FCCIcon
     },
 
     {
         entity: "FREECODECAMP",
         field: "Responsive Web Design",
         dates: "2020",
-        completionImage: "/images/freecodecamp1.png", 
-        svgIcon: "/images/FCC.svg"
+        completionImage: FCCImage1,
+        svgIcon: FCCIcon
     },
 
     {
         entity: "CITY&GUILDS",
         field: "Culinary Art",
-        dates: "",
-        completionImage: "", 
-        svgIcon: "/images/C&Q.svg"
+        dates: "2014",
+        completionImage: CQ1,
+        svgIcon: CQIcon
     },
 
     {
         entity: "CITY&GUILDS",
         field: "Culinary Art",
-        dates: "",
-        completionImage: "",
-        svgIcon: "/images/C&Q.svg"
+        dates: "2014",
+        completionImage: CQ2,
+        svgIcon: CQIcon
     }
-
 ]; 

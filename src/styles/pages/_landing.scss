@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/bg.jpg');
+    background-image: url('src/lib/images/bg.jpg');
     @include parallaxImage;
 }
 

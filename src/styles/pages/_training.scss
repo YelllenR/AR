@@ -3,7 +3,7 @@
     background-color: #121F33;
     position: relative;
     overflow: hidden;
-    background-image: url("/images/cardsBackground.svg");
+    background-image: url("src/lib/images/cardsBackground.svg");
     @include parallaxImage;
 
     &__modal {
