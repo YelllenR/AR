@@ -8,8 +8,8 @@ export const contactInformations = [
         location: "Bron, France",
         locationIcon: "far fa-compass contactIcon",
         githubLink: "https://github.com/YelllenR",
-        githubIcon: "fab fa-github-square contactIcon",
+        githubIcon: "fab fa-github-square githubIcon",
         linkedInLink: "https://www.linkedin.com/in/aur%C3%A9lie-rose-045a08259/",
-        linkedInIcon: "fab fa-linkedin contactIcon"
+        linkedInIcon: "fab fa-linkedin  contactIcon"
     }
 ];

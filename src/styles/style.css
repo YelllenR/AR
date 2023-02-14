@@ -60,11 +60,18 @@
 
 .iconStack,
 .iconPreprocessor {
-  color: rgb(193, 209, 217);
+  color: #c1d1d9;
   font-size: clamp(1.5rem, 2vw, 1.9rem);
 }
 
 .contactIcon {
+  align-self: center;
+  color: #c1d1d9;
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.githubIcon {
+  margin-right: 10%;
   color: #c1d1d9;
   font-size: clamp(1.5rem, 2vw, 1.9rem);
 }
@@ -741,26 +748,44 @@ p, li {
   align-items: center;
 }
 
-.contactContainer {
+.containerOverallContactElement {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50%;
+  height: 60%;
   width: 90%;
+  margin-top: 5%;
+}
+
+.sideOne {
+  width: 50%;
+  border-radius: 30% 0 0 0;
+  background-image: url("/images/bg.jpg");
+  background-position: center;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contactInformations {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 90%;
-  height: 50%;
-  overflow-y: scroll;
+  width: 50%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(40%) saturate(10%);
+  backdrop-filter: blur(10%) saturate(90%);
+  background-color: rgba(35, 59, 78, 0.766);
+  border: 2px solid rgba(35, 59, 78, 0.552);
+  border-radius: 0 0 30% 0;
 }
 
-.phone, .location, .email, .github, .linkedin {
+.phone,
+.location,
+.email,
+.github,
+.linkedin {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0.6rem;
 }
@@ -773,16 +798,4 @@ p, li {
 .contactDataHref {
   color: #c1d1d9;
   text-decoration: none;
-}
-
-.img {
-  height: 10%;
-  width: 100%;
-  background-image: url("/images/imageForContact.png");
-  background-position: center;
-  height: 30%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

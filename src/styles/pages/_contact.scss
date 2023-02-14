@@ -4,24 +4,35 @@
     @include flex-column-contentCenter-itemsCenter;
 }
 
-.contactContainer {
-    @include flex-column-contentCenter;
-    height: 50%;
+.containerOverallContactElement {
+    display: flex;
+    height: 60%;
     width: 90%;
+    margin-top: 5%;
 }
 
-
+.sideOne{
+    width: 50%;
+    border-radius: 30% 0 0 0; 
+    background-image: url('/images/bg.jpg');
+    @include parallaxImageContact;
+}
 
 .contactInformations {
     @include flex-column-contentSpacedEvenly;
+    width: 50%;
+    height: 100%;
+    @include glassContactBox;
+    border-radius: 0 0 30% 0; 
 
-    width: 90%;
-    height: 50%;
-    overflow-y: scroll;
 }
 
-.phone, .location, .email, .github, .linkedin {
-    @include flex-row-space-itemCenter;
+.phone,
+.location,
+.email,
+.github,
+.linkedin {
+    @include flex-row-spaceEvenly-itemCenter;
     margin: 0.6rem;
 }
 
@@ -35,9 +46,3 @@
     text-decoration: none;
 }
 
-.img{
-    height: 10%;
-    width: 100%;
-    background-image: url('/images/imageForContact.png');
-    @include parallaxImageContact;
-}

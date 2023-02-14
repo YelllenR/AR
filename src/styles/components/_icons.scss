@@ -42,13 +42,19 @@
 
 .iconStack,
 .iconPreprocessor {
-    color: $beau-blue;
+    color: $text-color;
     font-size: $font-size-icon;
 }
 
 
 .contactIcon {
+    align-self: center;
     color: $text-color;
     font-size: $font-size-icon;
 }
 
+.githubIcon{
+    margin-right: 10%;
+    color: $text-color;
+    font-size: $font-size-icon;
+}
