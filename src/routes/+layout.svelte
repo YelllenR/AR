@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../styles/style.css';
-	export const prerender = true
+
 </script>
 
 <svelte:head>
