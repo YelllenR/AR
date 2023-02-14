@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>Aurélie ROSE</title>
-	<link rel="icon" href="src/lib/images/icon.svg" />
+
 </svelte:head>
 
 
