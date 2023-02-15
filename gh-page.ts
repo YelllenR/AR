@@ -1,14 +1,10 @@
 import { publish } from 'gh-pages';
 
-
 publish(
     'build',
     {
         branch: 'gh-pages',
-        repo: 'https://github.com/YelllenR/AR',
-        user: {
-            name: 'YelllenR'
-        },
+        repo: 'https://github.com/YelllenR/AR', 
         dotfiles: true
     },
     () => {
