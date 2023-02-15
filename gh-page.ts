@@ -1,10 +1,10 @@
 import { publish } from 'gh-pages';
-const ghpages = require('gh-pages');
 
-ghpages.publish(
-    'build', 
+
+publish(
+    'build',
     {
-        branch: 'master',
+        branch: 'gh-pages',
         repo: 'https://github.com/YelllenR/AR',
         user: {
             name: 'YelllenR'
