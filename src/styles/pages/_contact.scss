@@ -14,7 +14,7 @@
 .sideOne{
     width: 50%;
     border-radius: 30% 0 0 0; 
-    background-image: url('src/lib/images/bg.jpg');
+    background-image: url('../lib/images/bg.jpg');
     @include parallaxImageContact;
 }
 

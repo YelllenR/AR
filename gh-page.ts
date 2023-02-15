@@ -6,7 +6,7 @@ publish(
         branch: 'master',
         repo: 'https://github.com/YelllenR/AR',
         user: {
-            name: 'Aurélie ROSE'
+            name: 'YelllenR'
         },
         dotfiles: true
     },
