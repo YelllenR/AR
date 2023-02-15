@@ -75,14 +75,14 @@
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
-      "__layout-da46b06b.js",
+      "/__layout-da46b06b.js",
       "src/routes/+layout.svelte"
     ]
   },
   "_singletons-fa56d0cb.js": {
     "file": "/project/immutable/chunks/singletons-fa56d0cb.js",
     "imports": [
-      "_index-fb1ee084.js"
+      "/_index-fb1ee084.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
@@ -90,7 +90,7 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-fb1ee084.js",
+      "/_index-fb1ee084.js",
       "_singletons-fa56d0cb.js"
     ]
   },
@@ -99,21 +99,21 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-fb1ee084.js"
+      "/_index-fb1ee084.js"
     ],
     "css": [
       "/project/immutable/assets/_layout-eed928dc.css"
     ],
     "assets": [
-      "/project/immutable/assets/bg-ada5a597.jpg",
-      "/project/immutable/assets/cardsBackground-f4d7e13a.svg"
+      "project/immutable/assets/bg-ada5a597.jpg",
+      "project/immutable/assets/cardsBackground-f4d7e13a.svg"
     ]
   },
   "_index-fb1ee084.js": {
-    "file": "/project/immutable/chunks/index-fb1ee084.js"
+    "file": "project/immutable/chunks/index-fb1ee084.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "AR/project/immutable/start-9d3e9bfb.js",
+    "file": "project/immutable/start-9d3e9bfb.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -127,7 +127,7 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "/project/immutable/components/pages/_page.svelte-df21903d.js",
+    "file": "project/immutable/components/pages/_page.svelte-df21903d.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
