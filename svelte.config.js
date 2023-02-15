@@ -12,7 +12,15 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
+			precompress: false,
+			strict: true
 		}),
+
+		// paths: {
+		// 	base: dev ? '' : '/AR',
+		// },
+
+		// appDir: 'build'
 	}
 
 };
