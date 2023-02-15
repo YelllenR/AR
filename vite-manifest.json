@@ -134,11 +134,11 @@
       "_index-fb1ee084.js"
     ],
     "assets": [
-      "AR/project/immutable/assets/freecodecamp1-f0ac0469.png",
-      "AR/project/immutable/assets/FCC-6e0a4381.svg",
-      "AR/project/immutable/assets/freecodecamp2-16129119.png",
-      "AR/project/immutable/assets/OC-diplome-3061c014.png",
-      "AR/project/immutable/assets/OC-acf8758a.svg"
+      "project/immutable/assets/freecodecamp1-f0ac0469.png",
+      "project/immutable/assets/FCC-6e0a4381.svg",
+      "project/immutable/assets/freecodecamp2-16129119.png",
+      "project/immutable/assets/OC-diplome-3061c014.png",
+      "project/immutable/assets/OC-acf8758a.svg"
     ]
   }
 }
