@@ -20,7 +20,7 @@ const config = {
 			base: dev ? '' : '/AR',
 		},
 
-		appDir: 'internal'
+		appDir: 'build'
 	}
 
 };
