@@ -4,10 +4,6 @@ import FCCIcon from '$lib/images/FCC.svg';
 import FCCImage2 from '$lib/images/freecodecamp2.png';
 import OCimage from '$lib/images/OC-diplome.png';
 import OCIcon from '$lib/images/OC.svg';
-import CQIcon from '$lib/images/C&Q.svg';
-
-import CQ1 from '$lib/images/cq1.jpg';
-import CQ2 from '$lib/images/cq2.jpg';
 
 
 export const training = [
@@ -24,7 +20,8 @@ export const training = [
         field: "JavaScript Algorithms and Data Structures",
         dates: "2022",
         completionImage: FCCImage2,
-        svgIcon: FCCIcon
+        svgIcon: FCCIcon, 
+        class:"fcc2"
     },
 
     {
@@ -32,22 +29,7 @@ export const training = [
         field: "Responsive Web Design",
         dates: "2020",
         completionImage: FCCImage1,
-        svgIcon: FCCIcon
-    },
-
-    {
-        entity: "CITY&GUILDS",
-        field: "Culinary Art",
-        dates: "2014",
-        completionImage: CQ1,
-        svgIcon: CQIcon
-    },
-
-    {
-        entity: "CITY&GUILDS",
-        field: "Culinary Art",
-        dates: "2014",
-        completionImage: CQ2,
-        svgIcon: CQIcon
+        svgIcon: FCCIcon, 
+        class:"fcc2"
     }
 ]; 
