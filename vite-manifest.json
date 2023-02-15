@@ -113,7 +113,7 @@
     "file": "/project/immutable/chunks/index-fb1ee084.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "/project/immutable/start-9d3e9bfb.js",
+    "file": "AR/project/immutable/start-9d3e9bfb.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -127,7 +127,7 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "/project/immutable/components/pages/_page.svelte-df21903d.js",
+    "file": "AR/project/immutable/components/pages/_page.svelte-df21903d.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
