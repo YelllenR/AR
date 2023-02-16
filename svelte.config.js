@@ -23,7 +23,7 @@ const config = {
 			base: '/AR'
 		},
 		csp: {
-			mode: "auto",
+			// mode: "auto",
 			directives: {
 
 				'script-src': [
