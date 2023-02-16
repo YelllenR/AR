@@ -5,7 +5,7 @@ import preprocess from 'svelte-preprocess';
 
 const config = {
 	preprocess: preprocess({
-		scss: true
+		css: true
 	}),
 	kit: {
 		adapter: adapter({
