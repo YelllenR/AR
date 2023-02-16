@@ -4,11 +4,11 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 
 const config = {
+	appDir: 'public',
+	
 	preprocess: preprocess({
 		css: true
 	}),
-	appDir: 'build',
-
 	kit: {
 		adapter: adapter({
 			pages: 'build',
