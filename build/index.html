@@ -9,7 +9,7 @@
 	<script src="https://kit.fontawesome.com/67fa93fe08.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="content-security-policy"
-		content="font-src * 'self' data:; img-src * 'self' data:; script-src 'self' 'sha256-ueSrpIf7C+1R/VBINfD+jwxNqgjNYeblfhh9hiRBM8o='; style-src 'self'">
+		content="font-src * 'self' data:; img-src * 'self' data:; script-src 'self' *; style-src 'self'">
 	<link href="/AR/app/immutable/assets/layout-eed928dc.css" rel="stylesheet">
 	<link rel="modulepreload" href="/AR/app/immutable/start-18062624.js">
 	<link rel="modulepreload" href="/AR/app/immutable/chunks/index-fb1ee084.js">
@@ -20,22 +20,6 @@
 	<link rel="modulepreload" href="/AR/app/immutable/components/pages/page.svelte-03468950.js">
 	<link rel="modulepreload" href="/AR/app/immutable/modules/pages/page.ts-dc85b7cd.js">
 	<link rel="modulepreload" href="/AR/app/immutable/chunks/page-da46b06b.js">
-
-	<script type="module" data-sveltekit-hydrate="1ktxj86">
-		import { start } from "/AR/app/immutable/start-18062624.js";
-
-		start({
-			env: {},
-			paths: { "base": "/AR", "assets": "/AR" },
-			target: document.querySelector('[data-sveltekit-hydrate="1ktxj86"]').parentNode,
-			version: "1676551671607",
-			hydrate: {
-				node_ids: [0, 2],
-				data: [null, null],
-				form: null
-			}
-		});
-	</script>
 	<title>Aurélie ROSE</title><!-- HEAD_svelte-1oe8yhu_START --><!-- HEAD_svelte-1oe8yhu_END -->
 </head>
 
@@ -336,5 +320,20 @@
 		</main>
 	</div>
 </body>
+<script type="module" data-sveltekit-hydrate="1ktxj86">
+	import { start } from "/AR/app/immutable/start-18062624.js";
+
+	start({
+		env: {},
+		paths: { "base": "/AR", "assets": "/AR" },
+		target: document.querySelector('[data-sveltekit-hydrate="1ktxj86"]').parentNode,
+		version: "1676551671607",
+		hydrate: {
+			node_ids: [0, 2],
+			data: [null, null],
+			form: null
+		}
+	});
+</script>
 
 </html>
