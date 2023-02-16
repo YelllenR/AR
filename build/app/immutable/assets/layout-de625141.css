@@ -133,7 +133,7 @@ li {
     .container {
         height: 100%;
         background-image: url(./bg-ada5a597.jpg);
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-attachment: unset;
     }
@@ -889,7 +889,7 @@ li {
         height: 100%;
         width: 50%;
         background-image: url(./bg-ada5a597.jpg);
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-attachment: unset;
     }
