@@ -16,20 +16,22 @@ const config = {
 			fallback: null
 		}),
 
-		// prerender: {
-		// 	externaliseScriptsAndStyles: true
-		// },
+		prerender: {
+			externaliseScriptsAndStyles: true
+		},
 		paths: {
 			base: '/AR'
 		},
 		csp: {
 			mode: "auto",
 			directives: {
-				'default-src': ['*'],
-				'script-src': ['strict-dynamic'],
 
 				'script-src': [
-					'self',
+					'*',
+					'data:',
+					'unsafe-eval',
+					'unsafe-inline'
+
 				],
 				'img-src': [
 					"*",
@@ -42,7 +44,11 @@ const config = {
 					"data:",
 				],
 				'style-src': [
-					'self'
+					'self',
+					'*',
+					'data:',
+					'unsafe-eval',
+					'unsafe-inline'
 				],
 			}
 		}

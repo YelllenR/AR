@@ -135,6 +135,46 @@ p, li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    .container .container {
+      background-size: 0 0;
+    }
+    .container::before {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: inherit;
+      background-repeat: inherit;
+      position: fixed;
+      z-index: -1;
+    }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    .container .container {
+      background-size: 0 0;
+    }
+    .container::before {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: inherit;
+      background-repeat: inherit;
+      position: fixed;
+      z-index: -1;
+    }
+  }
+}
 
 .content {
   height: 100vh;
@@ -784,6 +824,26 @@ p, li {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  @supports (-webkit-overflow-scrolling: touch) {
+    .sideOne .sideOne {
+      background-size: 0 0;
+    }
+    .sideOne::before {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: inherit;
+      background-repeat: inherit;
+      position: fixed;
+      z-index: -1;
+    }
+  }
 }
 
 .contactInformations {
