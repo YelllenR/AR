@@ -1,11 +1,31 @@
 .trainingMainContainer {
     @include flex-column-contentCenter-itemsCenter;
- 
+
     background-color: #121F33;
     position: relative;
     overflow: hidden;
     background-image: url("../lib/images/cardsBackground.svg");
-    @include parallaxImage;
+
+    // @include parallaxImage;
+    @supports (-webkit-overflow-scrolling: touch) {
+        .trainingMainContainer {
+            background-size: 0 0;
+        }
+
+        &::before {
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: inherit;
+            background-size: cover;
+            background-position: inherit;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: -1;
+        }
+    }
 
     &__modal {
         @include flex-flexWrap-contentCenter-itemCenter;
@@ -17,7 +37,7 @@
         max-height: 95%;
         z-index: 3;
         @include glassCardTraining;
-        
+
 
         @include media-mobile {
             top: auto;
@@ -80,6 +100,7 @@
         @include flex-column-contentFlexEnd;
         height: clamp(20rem, 15vw, 25rem);
         border-radius: $CardRadius;
+
         &-entity,
         .turnCard {
             align-self: center;
@@ -149,7 +170,9 @@
     @include backface-visibility;
     transform: translate3d(0, 0, 0);
     border-radius: $CardRadius;
-    &:hover, :active {
+
+    &:hover,
+    :active {
         @include shadowCardTraining;
     }
 }

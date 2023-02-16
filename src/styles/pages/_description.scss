@@ -6,7 +6,9 @@
 
 .descriptionContainer {
     @include flex-column-itemsCenter;
-    @include mainSection-measurementsInPercentage;
+    @include mainSection-measurementsInViewH-W;
+
+
 }
 
 
@@ -14,6 +16,8 @@
     height: 85%;
     width: 100%;
     @include flex-row-space-itemCenter;
+
+
 }
 
 .identityImage {
@@ -22,26 +26,51 @@
     border-radius: 50%;
 }
 
-.skillsDescriptions{
-   @include flex-column-contentSpacedEvenly;
+.skillsDescriptions {
+    @include flex-column-contentSpacedEvenly;
     height: 85%;
     width: 90%;
+
+    @include media-tablet {
+        height: 97%;
+    }
 }
 
-.describe{
+.describe {
     color: $text-color;
     margin-top: 2rem;
+
+    @include media-mobile {
+        margin-top: 1rem;
+        padding: 0 0.3rem 0 0.3rem;
+        text-align: center;
+    }
+
+    @include media-tablet {
+        margin-top: 0.5rem;
+        padding: 0 0.3rem 0 0.3rem;
+    }
 }
 
-.skills, .hobbyTitle{
+.skills,
+.hobbyTitle {
     color: $text-color;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
     text-align: center;
+
+    @include media-tablet {
+        padding: 0.3rem;
+    }
 }
 
-.spokenLang, .SkillsList, .hobbies{
+.spokenLang,
+.SkillsList,
+.hobbies {
     color: $text-color;
     text-align: center;
-    padding: 0 0 0.5rem 1rem;
-}
+    padding: 0.5rem;
 
+    @include media-tablet {
+        padding: 0.2rem;
+    }
+}
