@@ -6,15 +6,25 @@ const dev = process.argv.includes('dev');
 
 const config = {
 
-	preprocess: preprocess(),
+	preprocess: preprocess({
+		scss: true
+	}),
 	kit: {
 
-		target: '#svelte',
 		adapter: adapter({
-			pages: 'build',  // path to public directory
-			assets: 'build',  // path to public directory
+			pages: 'build',
+			assets: 'build',
 			fallback: null
-		})
+		}),
+		paths: {
+			base: '/AR'
+		},
+		prerender: {
+			crawl: true,
+			enabled: true,
+			onError: 'continue',
+			default: true
+		},
 	}
 };
 export default config;

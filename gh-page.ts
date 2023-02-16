@@ -5,9 +5,13 @@ publish(
     {
         branch: 'gh-pages',
         repo: 'https://github.com/YelllenR/AR', 
+        user: {
+            name: 'Aurélie ROSE', 
+            email: 'aurelie@rosedarbon.com'
+        },
         dotfiles: true
     },
     () => {
-        console.log('Deploy Complete!');
+        console.log('Deploy done!!!');
     }
 );
