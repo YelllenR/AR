@@ -7,6 +7,7 @@ const config = {
 	preprocess: preprocess({
 		css: true
 	}),
+
 	kit: {
 		adapter: adapter({
 			pages: 'build',
@@ -16,7 +17,13 @@ const config = {
 		paths: {
 			base: '/AR'
 		},
+		csp: {
+			mode: "hash",
 
+			directives: {
+				'script-src': ['self']
+			}
+		}
 	}
 };
 export default config;
