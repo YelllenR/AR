@@ -15,13 +15,20 @@ const config = {
 			assets: 'build',
 			fallback: null
 		}),
+
+		prerender: {
+			externaliseScriptsAndStyles: true
+		},
 		paths: {
 			base: '/AR'
 		},
 		csp: {
 			mode: "hash",
 			directives: {
-				'script-src': ['self'],
+				'script-src': [
+					'*',
+					'self'
+				],
 				'img-src': [
 					"*",
 					'self',
