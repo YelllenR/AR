@@ -23,11 +23,13 @@ const config = {
 			base: '/AR'
 		},
 		csp: {
-			mode: "hash",
+			mode: "auto",
 			directives: {
+				'default-src': ['*'],
+				'script-src': ['strict-dynamic'],
+
 				'script-src': [
-					'*',
-					'self'
+					'self',
 				],
 				'img-src': [
 					"*",
