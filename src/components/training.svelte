@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import { training } from './training';
 
 	let backOfCard = false;

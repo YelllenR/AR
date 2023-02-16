@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import { PrerenderOption } from '@sveltejs/kit';
 
 /** @type {import('@sveltejs/kit').Config} */
 
@@ -17,9 +18,9 @@ const config = {
 			base: '/AR'
 		},
 		prerender: {
-			crawl: true,
-			enabled: true,
-			onError: 'continue',
+			// crawl: true,
+			// enabled: true,
+			// onError: 'continue',
 			default: true
 		},
 	}

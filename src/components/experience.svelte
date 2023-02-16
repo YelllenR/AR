@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import { company } from './experiences';
 
 	let flipCard = false;

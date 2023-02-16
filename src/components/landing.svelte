@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import { fly, slide } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import { inview } from 'svelte-inview';

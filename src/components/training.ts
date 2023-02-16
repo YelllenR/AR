@@ -4,7 +4,7 @@ import FCCIcon from '$lib/images/FCC.svg';
 import FCCImage2 from '$lib/images/freecodecamp2.png';
 import OCimage from '$lib/images/OC-diplome.png';
 import OCIcon from '$lib/images/OC.svg';
-
+export const prerender = true;
 
 export const training = [
     {

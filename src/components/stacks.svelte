@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import {
 		languages,
 		framework,
@@ -8,7 +9,7 @@
 	} from './stacks';
 
 	import { inview } from 'svelte-inview';
-	import { fly, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	let isInView: boolean;
 </script>

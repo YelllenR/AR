@@ -1,8 +1,7 @@
 <script lang="ts">
+	export const prerender = true;
 	import { projects } from './projects';
-	import img from '../lib/images/bg.jpg'; 
-
-
+	// import img from '../lib/images/bg.jpg'; 
 	let informations = false;
 	let clickedOnCardProject: number | null;
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import type { TransitionConfig } from 'svelte/transition';
 	import AnimationStart from '$lib/animate/animationStart.svelte';
 	import { description } from './description';
