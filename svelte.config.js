@@ -7,6 +7,7 @@ const config = {
 	preprocess: preprocess({
 		css: true
 	}),
+	appDir: 'build',
 
 	kit: {
 		adapter: adapter({
@@ -20,7 +21,20 @@ const config = {
 		csp: {
 			mode: "hash",
 			directives: {
-				'script-src': ['self']
+				'script-src': ['self'],
+				'img-src': [
+					"*",
+					'self',
+					"data:",
+				],
+				'font-src': [
+					"*",
+					'self',
+					"data:",
+				],
+				'style-src': [
+					'self'
+				],
 			}
 		}
 	}
