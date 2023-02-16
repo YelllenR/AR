@@ -16,7 +16,7 @@ const config = {
 			fallback: null
 		}),
 		paths: {
-			base: '/AR/'
+			base: '/AR'
 		},
 		csp: {
 			mode: "hash",
