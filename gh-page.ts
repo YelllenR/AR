@@ -6,7 +6,7 @@ publish(
         branch: 'gh-pages',
         repo: 'https://github.com/YelllenR/AR', 
         user: {
-            name: 'Aurélie ROSE', 
+            name: 'YelllenR', 
             email: 'aurelie@rosedarbon.com'
         },
         dotfiles: true
