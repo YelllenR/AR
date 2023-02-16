@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
-import { PrerenderOption } from '@sveltejs/kit';
 
 /** @type {import('@sveltejs/kit').Config} */
 
