@@ -1,6 +1,7 @@
 #landing-page {
     @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
+    overflow: hidden;
 }
 
 .container {

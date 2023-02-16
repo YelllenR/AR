@@ -16,9 +16,9 @@ const config = {
 			fallback: null
 		}),
 
-		prerender: {
-			externaliseScriptsAndStyles: true
-		},
+		// prerender: {
+		// 	externaliseScriptsAndStyles: true
+		// },
 		paths: {
 			base: '/AR'
 		},

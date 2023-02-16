@@ -2,6 +2,7 @@
   @include flex-column-contentCenter-itemsCenter;
   @include mainSection-measurementsInPercentage;
   background-color: $dark-background;
+  overflow: hidden;
 }
 
 

@@ -2,6 +2,7 @@
     @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
     @include flex-column-itemsCenter;
+    overflow: hidden;
 }
 
 .titleStacks {
@@ -19,12 +20,11 @@
 .overallToolsContainer {
     @include flex-row-space-itemCenter;
     flex-wrap: wrap;
-    height: 20%;
+    height: 27%;
     width: 90%;
 
     &__data {
         @include flex-column-contentCenter-itemsCenter;
-
         width: auto;
         margin: 1rem;
     }
@@ -32,7 +32,7 @@
 
 .databaseContainer {
     @include flex-row-space-itemCenter;
-    height: 10%;
+    height: 15%;
     width: 45%;
 }
 

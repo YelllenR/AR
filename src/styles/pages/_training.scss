@@ -1,8 +1,9 @@
 .trainingMainContainer {
     @include flex-column-contentCenter-itemsCenter;
+ 
     background-color: #121F33;
     position: relative;
-
+    overflow: hidden;
     background-image: url("../lib/images/cardsBackground.svg");
     @include parallaxImage;
 
@@ -16,7 +17,7 @@
         max-height: 95%;
         z-index: 3;
         @include glassCardTraining;
-        border-radius: $CardRadius;
+        
 
         @include media-mobile {
             top: auto;
@@ -78,7 +79,7 @@
         position: relative;
         @include flex-column-contentFlexEnd;
         height: clamp(20rem, 15vw, 25rem);
-
+        border-radius: $CardRadius;
         &-entity,
         .turnCard {
             align-self: center;
@@ -147,8 +148,8 @@
 .frontTrainingCard {
     @include backface-visibility;
     transform: translate3d(0, 0, 0);
-
-    &:hover {
+    border-radius: $CardRadius;
+    &:hover, :active {
         @include shadowCardTraining;
     }
 }

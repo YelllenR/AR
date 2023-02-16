@@ -5,7 +5,6 @@
 
 <svelte:head>
 	<title>Aurélie ROSE</title>
-
 </svelte:head>
 
 
