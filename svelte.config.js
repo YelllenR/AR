@@ -16,12 +16,7 @@ const config = {
 		paths: {
 			base: '/AR'
 		},
-		prerender: {
-			// crawl: true,
-			// enabled: true,
-			// onError: 'continue',
-			default: true
-		},
+
 	}
 };
 export default config;
