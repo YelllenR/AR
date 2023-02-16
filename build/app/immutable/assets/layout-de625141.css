@@ -128,12 +128,14 @@ li {
     background-size: cover;
 }
 
-@media screen and (min-width: 300px) and (max-width:600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
 
-    .container .container {
+    .container {
+        height: 100%;
+        background-image: url(./bg-ada5a597.jpg);
         background-size: contain;
         background-position: center;
-        background-attachment: local;
+        background-attachment: unset;
     }
 }
 
@@ -882,23 +884,14 @@ li {
     background-size: cover
 }
 
-@supports (-webkit-overflow-scrolling: touch) {
-    .sideOne .sideOne {
-        background-size: cover
-    }
-
-    .sideOne:before {
-        content: "";
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-image: inherit;
-        background-size: cover;
-        background-position: inherit;
-        background-repeat: no-repeat;
-        position: fixed;
-        z-index: -1
+@media screen and (min-width: 300px) and (max-width: 600px){
+    .sideOne {
+        height: 100%;
+        width: 50%;
+        background-image: url(./bg-ada5a597.jpg);
+        background-size: contain;
+        background-position: center;
+        background-attachment: unset;
     }
 }
 
