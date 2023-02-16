@@ -19,7 +19,6 @@ const config = {
 		},
 		csp: {
 			mode: "hash",
-
 			directives: {
 				'script-src': ['self']
 			}

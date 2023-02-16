@@ -1,6 +1,7 @@
 <script lang="ts">
 	export const prerender = true;
 	import { contactInformations } from './contact';
+
 </script>
 
 <section class="contactMainSection">

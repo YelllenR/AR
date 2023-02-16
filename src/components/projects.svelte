@@ -5,6 +5,7 @@
 	let informations = false;
 	let clickedOnCardProject: number | null;
 
+
 	function displayInformations(idProject: Event) {
 		const targetProject = idProject.target as HTMLButtonElement;
 		if (clickedOnCardProject === Number(targetProject.dataset.projectid)) {
