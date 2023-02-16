@@ -251,24 +251,3 @@
     transition: all 0.5s;
 }
 
-@mixin parallaxOnMobile {
-    @supports (-webkit-overflow-scrolling: touch) {
-        .cover-header {
-            background-size: 0 0;
-        }
-
-        &:before {
-            content: "";
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-image: inherit;
-            background-size: cover;
-            background-position: inherit;
-            background-repeat: inherit;
-            position: fixed;
-            z-index: -1;
-        }
-    }
-}

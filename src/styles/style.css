@@ -128,24 +128,12 @@ p, li {
   justify-content: center;
   align-items: center;
   background-image: url("../lib/images/bg.jpg");
-}
-@supports (-webkit-overflow-scrolling: touch) {
-  .container .container {
-    background-size: 0 0;
-  }
-  .container::before {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-position: inherit;
-    background-repeat: no-repeat;
-    position: fixed;
-    z-index: -1;
-  }
+  background-position: center;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content {
