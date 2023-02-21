@@ -30,11 +30,13 @@
 
     @include media-tablet {
         margin: 0.5rem;
-        height: clamp(20%, 15vh, 45%);
+        height: clamp(15%, 15vh, 45%);
     }
 
     @include media-mobile {
         margin: 0.5rem;
+        width: 90%;
+        height: clamp(20%, 15vh, 45%);
     }
 
     &__data {
@@ -44,7 +46,8 @@
         text-shadow: $text-shadow;
 
         @include media-mobile {
-            margin: 0.5rem
+            margin: 0.5rem; 
+            padding: 0.5rem;
         }
 
         @include media-tablet {
@@ -53,6 +56,7 @@
         }
     }
 }
+
 
 .databaseContainer {
     @include flex-row-space-itemCenter;

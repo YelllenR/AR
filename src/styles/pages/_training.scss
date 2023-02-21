@@ -113,7 +113,14 @@
         &-dates {
             align-self: center;
             color: white;
-            padding: $padding;
+            padding: 0 0.3rem;
+        }
+
+        &-duration{
+            align-self: center;
+            color: white;
+            padding: 0.3rem;
+            font-style: italic;
         }
     }
 

@@ -49,12 +49,12 @@
 	<h2 class="titleTraining">FORMATION</h2>
 
 	<div class="trainingCardsContainer">
-		{#each training as { entity, field, dates, svgIcon, completionImage }, index}
+		{#each training as { entity, field, dates, svgIcon, completionImage, duration }, index}
+
 			<article class="trainingCard">
 				{#if trainingImageIndex == index && expandCompletionImage}
 					<div class="trainingMainContainer__modal">
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
-
 						<span class="openModal">
 							<i class="far fa-window-close" on:click={closeTrainingModal} data-close-id={index} />
 							<div class="imageForModal">
@@ -88,6 +88,7 @@
 
 							<h4 class="trainingCard__informations-field">{field}</h4>
 							<p class="trainingCard__informations-dates">{dates}</p>
+							<p class="trainingCard__informations-duration">{duration}</p>
 						</div>
 					</div>
 

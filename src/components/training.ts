@@ -12,7 +12,8 @@ export const training = [
         field: "Développeur Web",
         dates: "Avril 2022 à Novembre 2022",
         completionImage: OCimage,
-        svgIcon: OCIcon
+        svgIcon: OCIcon,
+        duration: "1500 heures"
     },
 
     {
@@ -21,7 +22,8 @@ export const training = [
         dates: "2022",
         completionImage: FCCImage2,
         svgIcon: FCCIcon,
-        class: "fcc2"
+        class: "fcc2",
+        duration: "300 heures"
     },
 
     {
@@ -30,6 +32,7 @@ export const training = [
         dates: "2020",
         completionImage: FCCImage1,
         svgIcon: FCCIcon,
-        class: "fcc2"
+        class: "fcc2",
+        duration: "300 heures"
     }
 ]; 

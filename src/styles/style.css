@@ -503,8 +503,13 @@ p, li {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.5s;
+  transition: transform 450ms cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition-delay: 200ms;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .showBackCard {
@@ -519,13 +524,8 @@ p, li {
   top: 0;
   width: 100%;
   height: 100%;
-  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   text-align: center;
   border-radius: 1rem;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   transform: translate3d(0, 0px, 0px) perspective(200px);
 }
 
@@ -540,14 +540,10 @@ p, li {
   border-radius: 1rem;
   background: linear-gradient(145deg, #132137, #101c2e);
   box-shadow: 10px 10px 20px #0d1624, -10px -10px 20px #172842;
-}
-@media screen and (min-width: 300px) and (max-width: 600px) {
-  .frontCard {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-  }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .backCard {
@@ -564,14 +560,10 @@ p, li {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(37, 52, 67, 0.75);
   border: 1px solid rgba(73, 85, 98, 0.432);
-}
-@media screen and (min-width: 300px) and (max-width: 600px) {
-  .backCard {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-  }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .btn {
@@ -728,7 +720,13 @@ p, li {
 .trainingCard__informations-dates {
   align-self: center;
   color: white;
-  padding: clamp(0.5rem, 1vw, 0.7rem);
+  padding: 0 0.3rem;
+}
+.trainingCard__informations-duration {
+  align-self: center;
+  color: white;
+  padding: 0.3rem;
+  font-style: italic;
 }
 
 .backOfCard {
@@ -868,7 +866,7 @@ p, li {
   .toolsContainer,
   .overallToolsContainer {
     margin: 0.5rem;
-    height: clamp(20%, 15vh, 45%);
+    height: clamp(15%, 15vh, 45%);
   }
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -878,6 +876,8 @@ p, li {
   .toolsContainer,
   .overallToolsContainer {
     margin: 0.5rem;
+    width: 90%;
+    height: clamp(20%, 15vh, 45%);
   }
 }
 .programmingLangContainer__data,
@@ -900,6 +900,7 @@ p, li {
   .toolsContainer__data,
   .overallToolsContainer__data {
     margin: 0.5rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {

@@ -79,8 +79,10 @@
   position: relative;
   @include mainSection-measurementsInPercentage;
   text-align: center;
-  transition: transform 0.5s;
+  transition: transform 450ms cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition-delay: 200ms;
   transform-style: preserve-3d;
+  @include backface-visibility;
 }
 
 .showBackCard {
@@ -94,10 +96,8 @@
   left: 0;
   top: 0;
   @include mainSection-measurementsInPercentage;
-  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   text-align: center;
   border-radius: $CardRadius;
-  @include backface-visibility;
   transform: translate3d(0, 0px, 0px) perspective(200px);
 }
 
@@ -108,10 +108,7 @@
   z-index: 2;
   border-radius: $CardRadius;
   @include cardShadow;
-
-  @include media-mobile {
-    @include backface-visibility
-  }
+  @include backface-visibility;
 }
 
 .backCard {
@@ -122,10 +119,7 @@
   border-radius: $CardRadius;
   text-align: center;
   @include glassCard;
-
-  @include media-mobile {
-    @include backface-visibility
-  }
+  @include backface-visibility
 }
 
 .btn {
