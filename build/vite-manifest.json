@@ -1,6 +1,6 @@
 {
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "app/immutable/chunks/0-e4657917.js",
+    "file": "app/immutable/chunks/0-f431c152.js",
     "imports": [
       "layout-da46b06b.js",
       "src/routes/+layout.svelte"
@@ -17,7 +17,7 @@
     "src": ".svelte-kit/generated/nodes/1.js"
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "app/immutable/chunks/2-7a73a520.js",
+    "file": "app/immutable/chunks/2-32a14855.js",
     "imports": [
       "src/routes/+page.svelte"
     ],
@@ -42,7 +42,7 @@
       ".svelte-kit/generated/nodes/1.js",
       ".svelte-kit/generated/nodes/2.js"
     ],
-    "file": "app/immutable/start-63eadfb3.js",
+    "file": "app/immutable/start-69faad77.js",
     "imports": [
       "index-fb1ee084.js",
       "singletons-a0b3075b.js"
@@ -88,7 +88,7 @@
     "src": "src/lib/images/freecodecamp2.png"
   },
   "src/routes/+layout.css": {
-    "file": "app/immutable/assets/layout-bed349ac.css",
+    "file": "app/immutable/assets/layout-09284445.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.svelte": {
@@ -97,9 +97,9 @@
       "app/immutable/assets/cardsBackground-f4d7e13a.svg"
     ],
     "css": [
-      "app/immutable/assets/layout-bed349ac.css"
+      "app/immutable/assets/layout-09284445.css"
     ],
-    "file": "app/immutable/components/pages/layout.svelte-00a32107.js",
+    "file": "app/immutable/components/pages/layout.svelte-3a4c5db0.js",
     "imports": [
       "index-fb1ee084.js"
     ],
@@ -122,7 +122,7 @@
       "app/immutable/assets/OC-diplome-3061c014.png",
       "app/immutable/assets/OC-f66e4dfe.svg"
     ],
-    "file": "app/immutable/components/pages/page.svelte-402c8548.js",
+    "file": "app/immutable/components/pages/page.svelte-2935fa0f.js",
     "imports": [
       "index-fb1ee084.js"
     ],
