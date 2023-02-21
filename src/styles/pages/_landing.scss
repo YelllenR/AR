@@ -8,34 +8,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../lib/images/bg.jpg');
+    background-image: url('../../lib/images/bg.jpg');
     @include parallaxImage;
 
-    // @include media-mobile{
-
-    // }
-
-    // @include media-tablet{
-    //     @supports (-webkit-overflow-scrolling: touch) {
-    //         .container{
-    //             background-size: 0 0;
-    //         }
-
-    //         &::before {
-    //             content: "";
-    //             top: 0;
-    //             left: 0;
-    //             bottom: 0;
-    //             right: 0;
-    //             background-image: inherit;
-    //             background-size: cover;
-    //             background-position: inherit;
-    //             background-repeat: inherit;
-    //             position: fixed;
-    //             z-index: -1;
-    //         }
-    //     }
-    // }
+    @include media-mobile {
+        background-size: contain;
+        background-position: center;
+        background-attachment: unset;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .content {

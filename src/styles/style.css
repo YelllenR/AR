@@ -127,13 +127,22 @@ p, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../../lib/images/bg.jpg");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .container {
+    background-size: contain;
+    background-position: center;
+    background-attachment: unset;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .content {
@@ -825,29 +834,16 @@ p, li {
 .sideOne {
   width: 50%;
   border-radius: 30% 0 0 0;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../../lib/images/bg.jpg");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
-@supports (-webkit-overflow-scrolling: touch) {
-  .sideOne .sideOne {
-    background-size: 0 0;
-  }
-  .sideOne::before {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-position: inherit;
-    background-repeat: no-repeat;
-    position: fixed;
-    z-index: -1;
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .sideOne {
+    background-image: url("../../lib/images/bg.jpg");
   }
 }
 

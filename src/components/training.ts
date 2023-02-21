@@ -4,7 +4,7 @@ import FCCIcon from '$lib/images/FCC.svg';
 import FCCImage2 from '$lib/images/freecodecamp2.png';
 import OCimage from '$lib/images/OC-diplome.png';
 import OCIcon from '$lib/images/OC.svg';
-export const prerender = true;
+
 
 export const training = [
     {
@@ -20,8 +20,8 @@ export const training = [
         field: "JavaScript Algorithms and Data Structures",
         dates: "2022",
         completionImage: FCCImage2,
-        svgIcon: FCCIcon, 
-        class:"fcc2"
+        svgIcon: FCCIcon,
+        class: "fcc2"
     },
 
     {
@@ -29,7 +29,7 @@ export const training = [
         field: "Responsive Web Design",
         dates: "2020",
         completionImage: FCCImage1,
-        svgIcon: FCCIcon, 
-        class:"fcc2"
+        svgIcon: FCCIcon,
+        class: "fcc2"
     }
 ]; 

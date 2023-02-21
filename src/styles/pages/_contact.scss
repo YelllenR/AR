@@ -14,51 +14,13 @@
 .sideOne {
     width: 50%;
     border-radius: 30% 0 0 0;
-    background-image: url('../lib/images/bg.jpg');
+    background-image: url('../../lib/images/bg.jpg');
     @include parallaxImageContact;
 
 
-    @supports (-webkit-overflow-scrolling: touch) {
-        .sideOne {
-            background-size: 0 0;
-        }
-
-        &::before {
-            content: "";
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-image: inherit;
-            background-size: cover;
-            background-position: inherit;
-            background-repeat: no-repeat;
-            position: fixed;
-            z-index: -1;
-        }
+    @include media-mobile{
+        background-image: url('../../lib/images/bg.jpg');
     }
-
-    // @include media-tablet {
-    //     @supports (-webkit-overflow-scrolling: touch) {
-    //         .sideOne {
-    //             background-size: 0 0;
-    //         }
-
-    //         &::before {
-    //             content: "";
-    //             top: 0;
-    //             left: 0;
-    //             bottom: 0;
-    //             right: 0;
-    //             background-image: inherit;
-    //             background-size: cover;
-    //             background-position: inherit;
-    //             background-repeat: inherit;
-    //             position: fixed;
-    //             z-index: -1;
-    //         }
-    //     }
-    // }
 }
 
 .contactInformations {
