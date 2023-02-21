@@ -5,7 +5,7 @@ import preprocess from 'svelte-preprocess';
 
 const config = {
 	appDir: 'build',
-	outDir:".",
+	outDir: "app",
 	preprocess: preprocess({
 		css: true
 	}),
@@ -20,7 +20,7 @@ const config = {
 		// 	base: '/AR'
 		// },
 		csp: {
-	
+
 			directives: {
 
 				'script-src': [
