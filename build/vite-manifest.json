@@ -1,144 +1,132 @@
 {
-  "src/lib/images/bg.jpg": {
-    "file": "project/immutable/assets/bg-ada5a597.jpg",
-    "src": "src/lib/images/bg.jpg"
-  },
-  "src/lib/images/FCC.svg": {
-    "file": "project/immutable/assets/FCC-6e0a4381.svg",
-    "src": "src/lib/images/FCC.svg"
-  },
-  "src/lib/images/freecodecamp1.png": {
-    "file": "project/immutable/assets/freecodecamp1-f0ac0469.png",
-    "src": "src/lib/images/freecodecamp1.png"
-  },
-  "src/lib/images/OC.svg": {
-    "file": "project/immutable/assets/OC-acf8758a.svg",
-    "src": "src/lib/images/OC.svg"
-  },
-  "src/lib/images/OC-diplome.png": {
-    "file": "project/immutable/assets/OC-diplome-3061c014.png",
-    "src": "src/lib/images/OC-diplome.png"
-  },
-  "src/lib/images/freecodecamp2.png": {
-    "file": "project/immutable/assets/freecodecamp2-16129119.png",
-    "src": "src/lib/images/freecodecamp2.png"
-  },
-  "src/lib/images/cardsBackground.svg": {
-    "file": "project/immutable/assets/cardsBackground-f4d7e13a.svg",
-    "src": "src/lib/images/cardsBackground.svg"
-  },
-  "src/routes/+layout.css": {
-    "file": "project/immutable/assets/_layout-eed928dc.css",
-    "src": "src/routes/+layout.css"
-  },
-  "src/routes/+layout.ts": {
-    "file": "project/immutable/modules/pages/_layout.ts-9cbb603b.js",
-    "src": "src/routes/+layout.ts",
-    "isEntry": true,
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "app/immutable/chunks/0-9f943134.js",
     "imports": [
-      "__layout-da46b06b.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "project/immutable/chunks/2-53503be0.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
+      "layout-da46b06b.js",
+      "src/routes/+layout.svelte"
+    ],
     "isDynamicEntry": true,
-    "imports": [
-      "__page-da46b06b.js",
-      "src/routes/+page.svelte"
-    ]
-  },
-  "__page-da46b06b.js": {
-    "file": "project/immutable/chunks/_page-da46b06b.js"
-  },
-  "__layout-da46b06b.js": {
-    "file": "project/immutable/chunks/_layout-da46b06b.js"
+    "src": ".svelte-kit/generated/nodes/0.js"
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "project/immutable/chunks/1-fb9effb0.js",
-    "src": ".svelte-kit/generated/nodes/1.js",
-    "isDynamicEntry": true,
+    "file": "app/immutable/chunks/1-ca39daeb.js",
     "imports": [
       "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
-    ]
-  },
-  "src/routes/+page.ts": {
-    "file": "project/immutable/modules/pages/_page.ts-dc85b7cd.js",
-    "src": "src/routes/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "__page-da46b06b.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/0.js": {
-    "file": "project/immutable/chunks/0-129e2de9.js",
-    "src": ".svelte-kit/generated/nodes/0.js",
+    ],
     "isDynamicEntry": true,
-    "imports": [
-      "__layout-da46b06b.js",
-      "src/routes/+layout.svelte"
-    ]
+    "src": ".svelte-kit/generated/nodes/1.js"
   },
-  "_singletons-fa56d0cb.js": {
-    "file": "project/immutable/chunks/singletons-fa56d0cb.js",
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "app/immutable/chunks/2-222e64ec.js",
     "imports": [
-      "_index-fb1ee084.js"
-    ]
-  },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "project/immutable/components/error.svelte-235b4633.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-fb1ee084.js",
-      "_singletons-fa56d0cb.js"
-    ]
-  },
-  "src/routes/+layout.svelte": {
-    "file": "project/immutable/components/pages/_layout.svelte-4533307c.js",
-    "src": "src/routes/+layout.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-fb1ee084.js"
+      "src/routes/+page.svelte"
     ],
-    "css": [
-      "project/immutable/assets/_layout-eed928dc.css"
-    ],
-    "assets": [
-      "project/immutable/assets/bg-ada5a597.jpg",
-      "project/immutable/assets/cardsBackground-f4d7e13a.svg"
-    ]
+    "isDynamicEntry": true,
+    "src": ".svelte-kit/generated/nodes/2.js"
   },
-  "_index-fb1ee084.js": {
-    "file": "project/immutable/chunks/index-fb1ee084.js"
+  "layout-da46b06b.js": {
+    "file": "app/immutable/chunks/layout-da46b06b.js"
+  },
+  "index-da3d4620.js": {
+    "file": "app/immutable/chunks/index-da3d4620.js"
+  },
+  "singletons-715b6ea9.js": {
+    "file": "app/immutable/chunks/singletons-715b6ea9.js",
+    "imports": [
+      "index-da3d4620.js"
+    ]
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "project/immutable/start-9d3e9bfb.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
-    "isEntry": true,
-    "imports": [
-      "_index-fb1ee084.js",
-      "_singletons-fa56d0cb.js"
-    ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
       ".svelte-kit/generated/nodes/1.js",
       ".svelte-kit/generated/nodes/2.js"
-    ]
+    ],
+    "file": "app/immutable/start-00bc5575.js",
+    "imports": [
+      "index-da3d4620.js",
+      "singletons-715b6ea9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "app/immutable/components/error.svelte-9341fb2d.js",
+    "imports": [
+      "index-da3d4620.js",
+      "singletons-715b6ea9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "src/lib/images/FCC.svg": {
+    "file": "app/immutable/assets/FCC-b5b12ab1.svg",
+    "src": "src/lib/images/FCC.svg"
+  },
+  "src/lib/images/OC-diplome.webp": {
+    "file": "app/immutable/assets/OC-diplome-1928f028.webp",
+    "src": "src/lib/images/OC-diplome.webp"
+  },
+  "src/lib/images/OC.svg": {
+    "file": "app/immutable/assets/OC-f66e4dfe.svg",
+    "src": "src/lib/images/OC.svg"
+  },
+  "src/lib/images/bg.webp": {
+    "file": "app/immutable/assets/bg-fbcd7ca8.webp",
+    "src": "src/lib/images/bg.webp"
+  },
+  "src/lib/images/cardsBackground.svg": {
+    "file": "app/immutable/assets/cardsBackground-f4d7e13a.svg",
+    "src": "src/lib/images/cardsBackground.svg"
+  },
+  "src/lib/images/freecodecamp1.webp": {
+    "file": "app/immutable/assets/freecodecamp1-5fff0120.webp",
+    "src": "src/lib/images/freecodecamp1.webp"
+  },
+  "src/lib/images/freecodecamp2.webp": {
+    "file": "app/immutable/assets/freecodecamp2-a1d613da.webp",
+    "src": "src/lib/images/freecodecamp2.webp"
+  },
+  "src/routes/+layout.css": {
+    "file": "app/immutable/assets/layout-8081fe18.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+layout.svelte": {
+    "assets": [
+      "app/immutable/assets/bg-fbcd7ca8.webp",
+      "app/immutable/assets/cardsBackground-f4d7e13a.svg"
+    ],
+    "css": [
+      "app/immutable/assets/layout-8081fe18.css"
+    ],
+    "file": "app/immutable/components/pages/layout.svelte-c06618be.js",
+    "imports": [
+      "index-da3d4620.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+layout.ts": {
+    "file": "app/immutable/modules/pages/layout.ts-9cbb603b.js",
+    "imports": [
+      "layout-da46b06b.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.ts"
   },
   "src/routes/+page.svelte": {
-    "file": "project/immutable/components/pages/_page.svelte-df21903d.js",
-    "src": "src/routes/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-fb1ee084.js"
-    ],
     "assets": [
-      "project/immutable/assets/freecodecamp1-f0ac0469.png",
-      "project/immutable/assets/FCC-6e0a4381.svg",
-      "project/immutable/assets/freecodecamp2-16129119.png",
-      "project/immutable/assets/OC-diplome-3061c014.png",
-      "project/immutable/assets/OC-acf8758a.svg"
-    ]
+      "app/immutable/assets/freecodecamp1-5fff0120.webp",
+      "app/immutable/assets/FCC-b5b12ab1.svg",
+      "app/immutable/assets/freecodecamp2-a1d613da.webp",
+      "app/immutable/assets/OC-diplome-1928f028.webp",
+      "app/immutable/assets/OC-f66e4dfe.svg"
+    ],
+    "file": "app/immutable/components/pages/page.svelte-32f96a88.js",
+    "imports": [
+      "index-da3d4620.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
   }
 }

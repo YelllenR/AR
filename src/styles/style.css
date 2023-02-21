@@ -4,17 +4,20 @@
   padding: 0;
 }
 
+#app, body {
+  overflow-x: hidden;
+}
+
 /* min/max width & min/max height */
 /* font size, padding, margin*/
 /*Breakpoints*/
 /* Rotation*/
 /* SCSS HEX */
-/* SCSS RGB */
-/* SCSS Gradient */
 .turnCard {
   color: #c1d1d9;
   align-self: flex-end;
   padding: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
   background-color: transparent;
   border-radius: 100%;
@@ -55,7 +58,7 @@
 .imgIcon {
   height: 20px;
   width: 20px;
-  background-color: rgb(193, 209, 217);
+  background-color: #c1d1d9;
 }
 
 .iconStack,
@@ -68,10 +71,10 @@
   align-self: center;
   color: #c1d1d9;
   font-size: clamp(1.5rem, 2vw, 1.9rem);
+  padding-right: 0.5rem;
 }
 
 .githubIcon {
-  margin-right: 10%;
   color: #c1d1d9;
   font-size: clamp(1.5rem, 2vw, 1.9rem);
 }
@@ -88,7 +91,7 @@ li {
 }
 
 h1 {
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: clamp(2rem, 12vw, 4rem);
 }
 
 h2 {
@@ -115,19 +118,31 @@ p, li {
   width: 100vw;
   height: 100vh;
   background-color: #121F33;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../lib/images/bg.webp");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .container {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-attachment: unset;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .content {
@@ -155,7 +170,7 @@ p, li {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
   margin: 0.2rem;
   padding: clamp(0.3rem, 1vw, 0.5rem);
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: clamp(2rem, 12vw, 4rem);
 }
 @keyframes textAnimation {
   0% {
@@ -175,6 +190,7 @@ p, li {
   width: 100%;
   height: 100%;
   background-color: #121F33;
+  overflow: hidden;
 }
 
 .projectContainer {
@@ -195,14 +211,14 @@ p, li {
   justify-content: center;
   align-items: flex-start;
   height: 90%;
-  width: 100%;
+  width: 95%;
   margin-top: 1rem;
   overflow: hidden;
 }
 
 .cardItems {
   width: clamp(20rem, 35vw, 30rem);
-  height: clamp(10rem, 33vh, 30rem);
+  height: clamp(20rem, 33vh, 30rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,12 +230,7 @@ p, li {
   box-shadow: inset 5px 5px 10px rgba(18, 31, 51, 0.2901960784), inset -5px -5px 10px rgba(18, 31, 51, 0.8784313725);
   transition: 0.5s;
   text-align: center;
-  margin: 2rem 1rem 2rem 1rem;
-}
-
-.logoOfProject {
-  height: 10%;
-  width: 20%;
+  margin: 1rem;
 }
 
 .projectData {
@@ -233,6 +244,7 @@ p, li {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .projectName,
@@ -262,14 +274,27 @@ p, li {
   width: 100vw;
   height: 100vh;
   background-color: #121F33;
+  overflow: hidden;
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  #description {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .descriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .descriptionContainer {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .informationsContainer {
@@ -278,6 +303,11 @@ p, li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .informationsContainer {
+    height: 95%;
+  }
 }
 
 .identityImage {
@@ -290,25 +320,103 @@ p, li {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   height: 85%;
   width: 90%;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .skillsDescriptions {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .skillsDescriptions {
+    height: 95%;
+  }
 }
 
 .describe {
   color: #c1d1d9;
   margin-top: 2rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .describe {
+    margin-top: 1rem;
+    padding: 0 0.3rem 0 0.3rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .describe {
+    margin-top: 0.5rem;
+    padding: 0 0.3rem 0 0.3rem;
+  }
 }
 
-.skills, .hobbyTitle {
+.subtitle {
   color: #c1d1d9;
-  padding-bottom: 0.5rem;
+  font-weight: 500;
   text-align: center;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .subtitle {
+    padding: 0.3rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .subtitle {
+    padding: 0.3rem;
+  }
 }
 
-.spokenLang, .SkillsList, .hobbies {
+.skills,
+.hobbyTitle {
+  color: #c1d1d9;
+  padding: 0.5rem;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .skills,
+  .hobbyTitle {
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .skills,
+  .hobbyTitle {
+    padding: 0.3rem;
+  }
+}
+
+.spokenLang,
+.SkillsList,
+.hobbies {
   color: #c1d1d9;
   text-align: center;
-  padding: 0 0 0.5rem 1rem;
+  padding: 0.5rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .spokenLang,
+  .SkillsList,
+  .hobbies {
+    padding: 0.2rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .spokenLang,
+  .SkillsList,
+  .hobbies {
+    padding: 0.2rem;
+  }
+}
+
+.listOfSkills,
+.SkillsList {
+  list-style-type: none;
 }
 
 .experience-container {
@@ -319,6 +427,7 @@ p, li {
   width: 100%;
   height: 100%;
   background-color: #121F33;
+  overflow: hidden;
 }
 
 .experience-title {
@@ -354,6 +463,11 @@ p, li {
   list-style: none;
   text-align: justify;
   padding: clamp(0.5rem, 1vw, 0.7rem);
+}
+
+ul {
+  height: auto;
+  width: auto;
 }
 
 .experience-box {
@@ -394,8 +508,12 @@ p, li {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.5s;
+  transition: transform 400ms cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .showBackCard {
@@ -410,14 +528,14 @@ p, li {
   top: 0;
   width: 100%;
   height: 100%;
-  transition: transform 300ms cubic-bezier(0.4, 0.2, 0.2, 1);
   text-align: center;
   border-radius: 1rem;
+  transform: translate3d(0, 0px, 0px) perspective(200px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  transform: translate3d(0, 0px, 0px) perspective(200px);
+  transition-delay: 300ms;
 }
 
 .frontCard {
@@ -437,6 +555,7 @@ p, li {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   color: white;
   transform: rotateY(180deg);
   padding: clamp(0.5rem, 1vw, 0.7rem);
@@ -471,6 +590,7 @@ p, li {
   align-items: center;
   background-color: #121F33;
   position: relative;
+  overflow: hidden;
   background-image: url("../lib/images/cardsBackground.svg");
   background-position: center;
   height: 100%;
@@ -478,6 +598,17 @@ p, li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .trainingMainContainer {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-attachment: unset;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .trainingMainContainer__modal {
   display: flex;
@@ -495,7 +626,6 @@ p, li {
   backdrop-filter: blur(10%) saturate(180%);
   background-color: rgba(35, 59, 78, 0.666);
   border: 2px solid rgba(35, 59, 78, 0.552);
-  border-radius: 1rem;
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .trainingMainContainer__modal {
@@ -503,7 +633,7 @@ p, li {
     left: 50%;
     width: 95%;
     height: 35%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 2%);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -511,7 +641,7 @@ p, li {
     top: auto;
     left: 50%;
     width: 90%;
-    transform: translate(-50%, 18%);
+    transform: translate(-50%, 2%);
   }
 }
 
@@ -564,6 +694,7 @@ p, li {
   flex-direction: column;
   justify-content: flex-end;
   height: clamp(20rem, 15vw, 25rem);
+  border-radius: 1rem;
 }
 .trainingCard__informations-entity,
 .trainingCard__informations .turnCard {
@@ -590,7 +721,13 @@ p, li {
 .trainingCard__informations-dates {
   align-self: center;
   color: white;
-  padding: clamp(0.5rem, 1vw, 0.7rem);
+  padding: 0 0.3rem;
+}
+.trainingCard__informations-duration {
+  align-self: center;
+  color: white;
+  padding: 0.3rem;
+  font-style: italic;
 }
 
 .backOfCard {
@@ -640,6 +777,7 @@ p, li {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
+  border-radius: 1rem;
 }
 .frontTrainingCard:hover {
   background: linear-gradient(145deg, rgba(35, 59, 78, 0.666), #101c2e);
@@ -692,6 +830,7 @@ p, li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .titleStacks {
@@ -700,6 +839,11 @@ p, li {
   margin: 1.5rem 0 0.7rem 0;
   text-align: center;
   padding: 0 0.5rem 0 0.5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .titleStacks {
+    margin: 1rem 0 0.5rem 0;
+  }
 }
 
 .programmingLangContainer,
@@ -711,8 +855,30 @@ p, li {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  height: 20%;
+  height: 27%;
   width: 90%;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .programmingLangContainer,
+  .frameworksContainer,
+  .DevAndTemplateTools,
+  .toolsContainer,
+  .overallToolsContainer {
+    margin: 0.5rem;
+    height: clamp(15%, 15vh, 45%);
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .programmingLangContainer,
+  .frameworksContainer,
+  .DevAndTemplateTools,
+  .toolsContainer,
+  .overallToolsContainer {
+    margin: 0.5rem;
+    width: 90%;
+    height: clamp(20%, 15vh, 45%);
+  }
 }
 .programmingLangContainer__data,
 .frameworksContainer__data,
@@ -725,14 +891,47 @@ p, li {
   align-items: center;
   width: auto;
   margin: 1rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .programmingLangContainer__data,
+  .frameworksContainer__data,
+  .DevAndTemplateTools__data,
+  .toolsContainer__data,
+  .overallToolsContainer__data {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .programmingLangContainer__data,
+  .frameworksContainer__data,
+  .DevAndTemplateTools__data,
+  .toolsContainer__data,
+  .overallToolsContainer__data {
+    margin: auto;
+    height: clamp(15%, 15vh, 45%);
+  }
 }
 
 .databaseContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10%;
+  height: 15%;
   width: 45%;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.54);
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .databaseContainer {
+    margin: 0.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .databaseContainer {
+    margin: 0.5rem;
+    height: clamp(15%, 15vh, 45%);
+  }
 }
 
 .lang,
@@ -740,15 +939,29 @@ p, li {
   color: #c1d1d9;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .lang,
+  .name {
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .lang,
+  .name {
+    padding-bottom: 0.5rem;
+  }
+}
 
 .databaseTool {
   color: #c1d1d9;
-  padding: 0 0.3rem 1rem 0.3rem;
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
 }
 
 .nameDatabase {
   color: #c1d1d9;
-  padding: 0 0.3rem 1rem 0.3rem;
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
 }
 
 .contactMainSection {
@@ -760,6 +973,22 @@ p, li {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .contactMainSection {
+    background-image: url("../lib/images/bg.webp");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .contactMainSection {
+    background-image: url("../lib/images/bg.webp");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
 
 .containerOverallContactElement {
   display: flex;
@@ -767,22 +996,38 @@ p, li {
   width: 90%;
   margin-top: 5%;
 }
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .containerOverallContactElement {
+    height: 80%;
+  }
+}
 
 .sideOne {
   width: 50%;
   border-radius: 30% 0 0 0;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../lib/images/bg.webp");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .sideOne {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .sideOne {
+    display: none;
+  }
+}
 
 .contactInformations {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   width: 50%;
   height: 100%;
   -webkit-backdrop-filter: blur(40%) saturate(10%);
@@ -791,6 +1036,20 @@ p, li {
   border: 2px solid rgba(35, 59, 78, 0.552);
   border-radius: 0 0 30% 0;
 }
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .contactInformations {
+    width: 100%;
+    height: 90%;
+    border-radius: 10%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .contactInformations {
+    width: 100%;
+    height: 95%;
+    border-radius: 5%;
+  }
+}
 
 .phone,
 .location,
@@ -798,9 +1057,19 @@ p, li {
 .github,
 .linkedin {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 0.6rem;
+  width: 80%;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .phone,
+  .location,
+  .email,
+  .github,
+  .linkedin {
+    width: 60%;
+  }
 }
 
 .contact,

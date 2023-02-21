@@ -2,6 +2,20 @@
     @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
     @include flex-column-contentCenter-itemsCenter;
+
+    @include media-mobile {
+        background-image: url('../lib/images/bg.webp');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    @include media-tablet {
+        background-image: url('../lib/images/bg.webp');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
 }
 
 .containerOverallContactElement {
@@ -9,13 +23,25 @@
     height: 60%;
     width: 90%;
     margin-top: 5%;
+
+    @include media-tablet{
+        height: 80%;
+    }
 }
 
-.sideOne{
+.sideOne {
     width: 50%;
-    border-radius: 30% 0 0 0; 
-    background-image: url('../lib/images/bg.jpg');
+    border-radius: 30% 0 0 0;
+    background-image: url('../lib/images/bg.webp');
     @include parallaxImageContact;
+    
+    @include media-mobile {
+        display: none;
+    }
+
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .contactInformations {
@@ -23,8 +49,19 @@
     width: 50%;
     height: 100%;
     @include glassContactBox;
-    border-radius: 0 0 30% 0; 
+    border-radius: 0 0 30% 0;
 
+    @include media-mobile {
+        width: 100%;
+        height: 90%;
+        border-radius: 10%;
+    }
+
+    @include media-tablet {
+        width: 100%;
+        height: 95%;
+        border-radius: 5%;
+    }
 }
 
 .phone,
@@ -34,6 +71,11 @@
 .linkedin {
     @include flex-row-spaceEvenly-itemCenter;
     margin: 0.6rem;
+    width: 80%;
+    @include media-mobile {
+        width: 60%;
+    }
+
 }
 
 .contact,
@@ -45,4 +87,3 @@
     color: $text-color;
     text-decoration: none;
 }
-

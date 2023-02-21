@@ -1,10 +1,15 @@
 .trainingMainContainer {
     @include flex-column-contentCenter-itemsCenter;
+
     background-color: #121F33;
     position: relative;
-
+    overflow: hidden;
     background-image: url("../lib/images/cardsBackground.svg");
     @include parallaxImage;
+
+    @include media-mobile {
+        @include parallaxImageMobile;
+    }
 
     &__modal {
         @include flex-flexWrap-contentCenter-itemCenter;
@@ -16,21 +21,21 @@
         max-height: 95%;
         z-index: 3;
         @include glassCardTraining;
-        border-radius: $CardRadius;
+
 
         @include media-mobile {
             top: auto;
             left: 50%;
             width: 95%;
             height: 35%;
-            transform: translate(-50%, 10%);
+            transform: translate(-50%, 2%);
         }
 
         @include media-tablet {
             top: auto;
             left: 50%;
             width: 90%;
-            transform: translate(-50%, 18%);
+            transform: translate(-50%, 2%);
         }
     }
 }
@@ -78,6 +83,7 @@
         position: relative;
         @include flex-column-contentFlexEnd;
         height: clamp(20rem, 15vw, 25rem);
+        border-radius: $CardRadius;
 
         &-entity,
         .turnCard {
@@ -85,6 +91,7 @@
             opacity: 0;
             width: auto;
             height: 40%;
+
 
             .trainingCard:hover & {
                 opacity: 1;
@@ -107,7 +114,14 @@
         &-dates {
             align-self: center;
             color: white;
-            padding: $padding;
+            padding: 0 0.3rem;
+        }
+
+        &-duration{
+            align-self: center;
+            color: white;
+            padding: 0.3rem;
+            font-style: italic;
         }
     }
 
@@ -147,6 +161,7 @@
 .frontTrainingCard {
     @include backface-visibility;
     transform: translate3d(0, 0, 0);
+    border-radius: $CardRadius;
 
     &:hover {
         @include shadowCardTraining;

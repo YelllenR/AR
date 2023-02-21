@@ -1,14 +1,15 @@
 <script lang="ts">
+	export const prerender = true;
 	import {
-		languages,
-		framework,
+		languageList,
+		frameworkList,
 		DevAndTemplateTools,
 		DatabaseAndTool,
 		AdministrationTools
 	} from './stacks';
 
 	import { inview } from 'svelte-inview';
-	import { fly, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	let isInView: boolean;
 </script>
@@ -23,8 +24,8 @@
 	{#if isInView}
 		<h2 class="titleStacks">Langages Framework et outils</h2>
 
-		<div class="programmingLangContainer"  in:slide={{ duration: 400, delay: 500 }}>
-			{#each languages as { name, icon, imageIcon, iconPreprocessor }}
+		<div class="programmingLangContainer" in:slide={{ duration: 400, delay: 500 }}>
+			{#each languageList as { name, icon, imageIcon, iconPreprocessor }}
 				<div class="programmingLangContainer__data">
 					<h5 class="lang">{name}</h5>
 
@@ -41,10 +42,12 @@
 					{/if}
 				</div>
 			{/each}
+
+
 		</div>
 
 		<div class="frameworksContainer" in:slide={{ duration: 500, delay: 600 }}>
-			{#each framework as { frameworkName, icon, imageIcon }}
+			{#each frameworkList as { frameworkName, icon, imageIcon }}
 				<div class="frameworksContainer__data">
 					<h5 class="name">{frameworkName}</h5>
 

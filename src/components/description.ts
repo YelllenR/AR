@@ -1,6 +1,7 @@
 export const description = [
     {
         skillsTitle: "Qualités personnelles",
+        skillsSubTitle: "Ce qui me caractérise :",
         skillsList: [
             `Curiosité et ouverture d’esprit`,
             `Forte capacité d’adaptation`,
@@ -10,6 +11,7 @@ export const description = [
     },
     {
         skillsTitle: "Compétences clés",
+        skillsSubTitle: "Les différentes compétences développées durant mon parcours professionnel :",
         skillsList: [
             `Gestion de projet`,
             `Optimisation du référencement naturel web`,

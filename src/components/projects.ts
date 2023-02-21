@@ -1,3 +1,6 @@
+export const prerender = true;
+
+
 export const projects = [
     {
         projectId: 1,
@@ -33,7 +36,7 @@ export const projects = [
 
     {
         projectId: 5,
-        projectTitle: "PIIQUANTE",
+        projectTitle: "Piiquante",
         projectDescription: "Construction d'une API sécurisée pour une application d'avis gastronomiques",
         projectStacks: "Node, Express, MongoDB",
         link: "https://github.com/YelllenR/P6-PIIQUANTE"

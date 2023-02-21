@@ -1,8 +1,8 @@
-import FCCImage1 from '$lib/images/freecodecamp1.png';
+import FCCImage1 from '$lib/images/freecodecamp1.webp';
 import FCCIcon from '$lib/images/FCC.svg';
 
-import FCCImage2 from '$lib/images/freecodecamp2.png';
-import OCimage from '$lib/images/OC-diplome.png';
+import FCCImage2 from '$lib/images/freecodecamp2.webp';
+import OCimage from '$lib/images/OC-diplome.webp';
 import OCIcon from '$lib/images/OC.svg';
 
 
@@ -12,7 +12,8 @@ export const training = [
         field: "Développeur Web",
         dates: "Avril 2022 à Novembre 2022",
         completionImage: OCimage,
-        svgIcon: OCIcon
+        svgIcon: OCIcon,
+        duration: "1500 heures"
     },
 
     {
@@ -20,8 +21,9 @@ export const training = [
         field: "JavaScript Algorithms and Data Structures",
         dates: "2022",
         completionImage: FCCImage2,
-        svgIcon: FCCIcon, 
-        class:"fcc2"
+        svgIcon: FCCIcon,
+        class: "fcc2",
+        duration: "300 heures"
     },
 
     {
@@ -29,7 +31,8 @@ export const training = [
         field: "Responsive Web Design",
         dates: "2020",
         completionImage: FCCImage1,
-        svgIcon: FCCIcon, 
-        class:"fcc2"
+        svgIcon: FCCIcon,
+        class: "fcc2",
+        duration: "300 heures"
     }
 ]; 

@@ -2,6 +2,7 @@
     @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
     @include flex-column-itemsCenter;
+    overflow: hidden;
 }
 
 .titleStacks {
@@ -10,6 +11,10 @@
     margin: 1.5rem 0 0.7rem 0;
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
+
+    @include media-tablet {
+        margin: 1rem 0 0.5rem 0;
+    }
 }
 
 .programmingLangContainer,
@@ -19,35 +24,78 @@
 .overallToolsContainer {
     @include flex-row-space-itemCenter;
     flex-wrap: wrap;
-    height: 20%;
+    height: 27%;
     width: 90%;
+    text-shadow: $text-shadow;
+
+    @include media-tablet {
+        margin: 0.5rem;
+        height: clamp(15%, 15vh, 45%);
+    }
+
+    @include media-mobile {
+        margin: 0.5rem;
+        width: 90%;
+        height: clamp(20%, 15vh, 45%);
+    }
 
     &__data {
         @include flex-column-contentCenter-itemsCenter;
-
         width: auto;
         margin: 1rem;
+        text-shadow: $text-shadow;
+
+        @include media-mobile {
+            margin: 0.5rem; 
+            padding: 0.5rem;
+        }
+
+        @include media-tablet {
+            margin: auto;
+            height: clamp(15%, 15vh, 45%);
+        }
     }
 }
 
+
 .databaseContainer {
     @include flex-row-space-itemCenter;
-    height: 10%;
+    height: 15%;
     width: 45%;
+    text-shadow: $text-shadow;
+
+    @include media-mobile {
+        margin: 0.5rem;
+    }
+
+    @include media-tablet {
+        margin: 0.5rem;
+        height: clamp(15%, 15vh, 45%);
+    }
 }
 
 .lang,
 .name {
     color: $text-color;
     padding-bottom: 1rem;
+
+    @include media-mobile {
+        padding-bottom: 0.5rem;
+    }
+
+    @include media-tablet {
+        padding-bottom: 0.5rem;
+    }
 }
 
 .databaseTool {
     color: $text-color;
-    padding: 0 0.3rem 1rem 0.3rem;
+    padding: 0 0.5rem 0 0.5rem;
+    text-align: center;
 }
 
 .nameDatabase {
     color: $text-color;
-    padding: 0 0.3rem 1rem 0.3rem;
+    padding: 0 0.5rem 0 0.5rem;
+    text-align: center;
 }

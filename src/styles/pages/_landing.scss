@@ -1,14 +1,19 @@
 #landing-page {
     @include mainSection-measurementsInViewH-W;
     background-color: $dark-background;
+    overflow: hidden;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../lib/images/bg.jpg');
+    background-image: url('../lib/images/bg.webp');
     @include parallaxImage;
+
+    @include media-mobile {
+        @include parallaxImageMobile;
+    }
 }
 
 .content {

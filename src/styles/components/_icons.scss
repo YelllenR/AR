@@ -2,6 +2,7 @@
     color: $text-color;
     align-self: flex-end;
     padding: 1rem;
+    margin-top: 1rem;
     cursor: pointer;
     background-color: transparent;
     border-radius: 100%;
@@ -44,6 +45,7 @@
 .iconPreprocessor {
     color: $text-color;
     font-size: $font-size-icon;
+
 }
 
 
@@ -51,10 +53,10 @@
     align-self: center;
     color: $text-color;
     font-size: $font-size-icon;
+    padding-right: 0.5rem;
 }
 
-.githubIcon{
-    margin-right: 10%;
+.githubIcon {
     color: $text-color;
     font-size: $font-size-icon;
 }

@@ -1,4 +1,5 @@
 <script lang="ts">
+	export const prerender = true;
 	import { company } from './experiences';
 
 	let flipCard = false;
@@ -32,9 +33,13 @@
 					</div>
 
 					<div class="backCard">
+						<ul>
 						{#each duty as duties}
+						
 							<li class="dutyLists">{duties}</li>
+						
 						{/each}
+					</ul>
 					</div>
 				</div>
 			</div>

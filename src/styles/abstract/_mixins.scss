@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 ;
@@ -84,7 +85,7 @@
 
 @mixin flex-row-spaceEvenly-itemCenter {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -95,6 +96,8 @@
         }
     }
 }
+
+;
 
 
 
@@ -145,7 +148,7 @@
     height: 100%;
 }
 
-// backface-visibility
+
 
 @mixin backface-visibility {
     -webkit-backface-visibility: hidden;
@@ -211,6 +214,16 @@
     background-position: center;
     height: 100%;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin parallaxImageMobile {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-attachment: unset;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
