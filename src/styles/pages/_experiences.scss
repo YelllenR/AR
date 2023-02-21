@@ -79,8 +79,7 @@
   position: relative;
   @include mainSection-measurementsInPercentage;
   text-align: center;
-  transition: transform 450ms cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition-delay: 200ms;
+  transition: transform 400ms cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
   @include backface-visibility;
 }
@@ -99,6 +98,8 @@
   text-align: center;
   border-radius: $CardRadius;
   transform: translate3d(0, 0px, 0px) perspective(200px);
+  @include backface-visibility;
+  transition-delay: 300ms
 }
 
 .frontCard {
@@ -108,7 +109,7 @@
   z-index: 2;
   border-radius: $CardRadius;
   @include cardShadow;
-  @include backface-visibility;
+
 }
 
 .backCard {
@@ -119,7 +120,6 @@
   border-radius: $CardRadius;
   text-align: center;
   @include glassCard;
-  @include backface-visibility
 }
 
 .btn {

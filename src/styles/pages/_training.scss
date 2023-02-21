@@ -28,14 +28,14 @@
             left: 50%;
             width: 95%;
             height: 35%;
-            transform: translate(-50%, 10%);
+            transform: translate(-50%, 2%);
         }
 
         @include media-tablet {
             top: auto;
             left: 50%;
             width: 90%;
-            transform: translate(-50%, 18%);
+            transform: translate(-50%, 2%);
         }
     }
 }

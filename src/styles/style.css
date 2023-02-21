@@ -125,7 +125,7 @@ p, li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../lib/images/bg.webp");
   background-position: center;
   height: 100%;
   background-attachment: fixed;
@@ -503,8 +503,7 @@ p, li {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 450ms cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition-delay: 200ms;
+  transition: transform 400ms cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -527,6 +526,11 @@ p, li {
   text-align: center;
   border-radius: 1rem;
   transform: translate3d(0, 0px, 0px) perspective(200px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  transition-delay: 300ms;
 }
 
 .frontCard {
@@ -540,10 +544,6 @@ p, li {
   border-radius: 1rem;
   background: linear-gradient(145deg, #132137, #101c2e);
   box-shadow: 10px 10px 20px #0d1624, -10px -10px 20px #172842;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
 }
 
 .backCard {
@@ -560,10 +560,6 @@ p, li {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(37, 52, 67, 0.75);
   border: 1px solid rgba(73, 85, 98, 0.432);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
 }
 
 .btn {
@@ -632,7 +628,7 @@ p, li {
     left: 50%;
     width: 95%;
     height: 35%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 2%);
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -640,7 +636,7 @@ p, li {
     top: auto;
     left: 50%;
     width: 90%;
-    transform: translate(-50%, 18%);
+    transform: translate(-50%, 2%);
   }
 }
 
@@ -975,7 +971,7 @@ p, li {
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .contactMainSection {
-    background-image: url("../lib/images/bg.jpg");
+    background-image: url("../lib/images/bg.webp");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -983,7 +979,7 @@ p, li {
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .contactMainSection {
-    background-image: url("../lib/images/bg.jpg");
+    background-image: url("../lib/images/bg.webp");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -1005,7 +1001,7 @@ p, li {
 .sideOne {
   width: 50%;
   border-radius: 30% 0 0 0;
-  background-image: url("../lib/images/bg.jpg");
+  background-image: url("../lib/images/bg.webp");
   background-position: center;
   height: 100%;
   background-attachment: fixed;

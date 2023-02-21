@@ -1,8 +1,8 @@
-import FCCImage1 from '$lib/images/freecodecamp1.png';
+import FCCImage1 from '$lib/images/freecodecamp1.webp';
 import FCCIcon from '$lib/images/FCC.svg';
 
-import FCCImage2 from '$lib/images/freecodecamp2.png';
-import OCimage from '$lib/images/OC-diplome.png';
+import FCCImage2 from '$lib/images/freecodecamp2.webp';
+import OCimage from '$lib/images/OC-diplome.webp';
 import OCIcon from '$lib/images/OC.svg';
 
 
