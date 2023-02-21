@@ -1,15 +1,15 @@
 {
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "app/immutable/chunks/0-c37f83a9.js",
+    "file": "_app/immutable/chunks/0-e4657917.js",
     "imports": [
-      "layout-da46b06b.js",
+      "__layout-da46b06b.js",
       "src/routes/+layout.svelte"
     ],
     "isDynamicEntry": true,
     "src": ".svelte-kit/generated/nodes/0.js"
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "app/immutable/chunks/1-31ae7685.js",
+    "file": "_app/immutable/chunks/1-31ae7685.js",
     "imports": [
       "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
     ],
@@ -17,27 +17,23 @@
     "src": ".svelte-kit/generated/nodes/1.js"
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "app/immutable/chunks/2-df8cbd7b.js",
+    "file": "_app/immutable/chunks/2-7a73a520.js",
     "imports": [
-      "page-da46b06b.js",
       "src/routes/+page.svelte"
     ],
     "isDynamicEntry": true,
     "src": ".svelte-kit/generated/nodes/2.js"
   },
-  "layout-da46b06b.js": {
-    "file": "app/immutable/chunks/layout-da46b06b.js"
+  "__layout-da46b06b.js": {
+    "file": "_app/immutable/chunks/_layout-da46b06b.js"
   },
-  "page-da46b06b.js": {
-    "file": "app/immutable/chunks/page-da46b06b.js"
+  "_index-fb1ee084.js": {
+    "file": "_app/immutable/chunks/index-fb1ee084.js"
   },
-  "index-fb1ee084.js": {
-    "file": "app/immutable/chunks/index-fb1ee084.js"
-  },
-  "singletons-a0b3075b.js": {
-    "file": "app/immutable/chunks/singletons-a0b3075b.js",
+  "_singletons-a0b3075b.js": {
+    "file": "_app/immutable/chunks/singletons-a0b3075b.js",
     "imports": [
-      "index-fb1ee084.js"
+      "_index-fb1ee084.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
@@ -46,99 +42,91 @@
       ".svelte-kit/generated/nodes/1.js",
       ".svelte-kit/generated/nodes/2.js"
     ],
-    "file": "app/immutable/start-a1b88f2c.js",
+    "file": "_app/immutable/start-63eadfb3.js",
     "imports": [
-      "index-fb1ee084.js",
-      "singletons-a0b3075b.js"
+      "_index-fb1ee084.js",
+      "_singletons-a0b3075b.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "app/immutable/components/error.svelte-0ddc5b98.js",
+    "file": "_app/immutable/components/error.svelte-0ddc5b98.js",
     "imports": [
-      "index-fb1ee084.js",
-      "singletons-a0b3075b.js"
+      "_index-fb1ee084.js",
+      "_singletons-a0b3075b.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
   },
   "src/lib/images/FCC.svg": {
-    "file": "app/immutable/assets/FCC-b5b12ab1.svg",
+    "file": "_app/immutable/assets/FCC-b5b12ab1.svg",
     "src": "src/lib/images/FCC.svg"
   },
   "src/lib/images/OC-diplome.png": {
-    "file": "app/immutable/assets/OC-diplome-3061c014.png",
+    "file": "_app/immutable/assets/OC-diplome-3061c014.png",
     "src": "src/lib/images/OC-diplome.png"
   },
   "src/lib/images/OC.svg": {
-    "file": "app/immutable/assets/OC-f66e4dfe.svg",
+    "file": "_app/immutable/assets/OC-f66e4dfe.svg",
     "src": "src/lib/images/OC.svg"
   },
   "src/lib/images/bg.jpg": {
-    "file": "app/immutable/assets/bg-ada5a597.jpg",
+    "file": "_app/immutable/assets/bg-ada5a597.jpg",
     "src": "src/lib/images/bg.jpg"
   },
   "src/lib/images/cardsBackground.svg": {
-    "file": "app/immutable/assets/cardsBackground-f4d7e13a.svg",
+    "file": "_app/immutable/assets/cardsBackground-f4d7e13a.svg",
     "src": "src/lib/images/cardsBackground.svg"
   },
   "src/lib/images/freecodecamp1.png": {
-    "file": "app/immutable/assets/freecodecamp1-f0ac0469.png",
+    "file": "_app/immutable/assets/freecodecamp1-f0ac0469.png",
     "src": "src/lib/images/freecodecamp1.png"
   },
   "src/lib/images/freecodecamp2.png": {
-    "file": "app/immutable/assets/freecodecamp2-16129119.png",
+    "file": "_app/immutable/assets/freecodecamp2-16129119.png",
     "src": "src/lib/images/freecodecamp2.png"
   },
   "src/routes/+layout.css": {
-    "file": "app/immutable/assets/layout-de625141.css",
+    "file": "_app/immutable/assets/_layout-bed349ac.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.svelte": {
     "assets": [
-      "app/immutable/assets/bg-ada5a597.jpg",
-      "app/immutable/assets/cardsBackground-f4d7e13a.svg"
+      "_app/immutable/assets/bg-ada5a597.jpg",
+      "_app/immutable/assets/cardsBackground-f4d7e13a.svg"
     ],
     "css": [
-      "app/immutable/assets/layout-de625141.css"
+      "_app/immutable/assets/_layout-bed349ac.css"
     ],
-    "file": "app/immutable/components/pages/layout.svelte-a758f373.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-00a32107.js",
     "imports": [
-      "index-fb1ee084.js"
+      "_index-fb1ee084.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
   },
   "src/routes/+layout.ts": {
-    "file": "app/immutable/modules/pages/layout.ts-9cbb603b.js",
+    "file": "_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
     "imports": [
-      "layout-da46b06b.js"
+      "__layout-da46b06b.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.ts"
   },
   "src/routes/+page.svelte": {
     "assets": [
-      "app/immutable/assets/freecodecamp1-f0ac0469.png",
-      "app/immutable/assets/FCC-b5b12ab1.svg",
-      "app/immutable/assets/freecodecamp2-16129119.png",
-      "app/immutable/assets/OC-diplome-3061c014.png",
-      "app/immutable/assets/OC-f66e4dfe.svg"
+      "_app/immutable/assets/freecodecamp1-f0ac0469.png",
+      "_app/immutable/assets/FCC-b5b12ab1.svg",
+      "_app/immutable/assets/freecodecamp2-16129119.png",
+      "_app/immutable/assets/OC-diplome-3061c014.png",
+      "_app/immutable/assets/OC-f66e4dfe.svg"
     ],
-    "file": "app/immutable/components/pages/page.svelte-03468950.js",
+    "file": "_app/immutable/components/pages/_page.svelte-402c8548.js",
     "imports": [
-      "index-fb1ee084.js"
+      "_index-fb1ee084.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
-  },
-  "src/routes/+page.ts": {
-    "file": "app/immutable/modules/pages/page.ts-dc85b7cd.js",
-    "imports": [
-      "page-da46b06b.js"
-    ],
-    "isEntry": true,
-    "src": "src/routes/+page.ts"
   }
 }
