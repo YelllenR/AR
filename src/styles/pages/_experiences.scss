@@ -43,6 +43,10 @@
   padding: $padding;
 }
 
+ul{
+  height: auto;
+  width: auto;
+}
 
 .experience-box {
   @include media-mobile {

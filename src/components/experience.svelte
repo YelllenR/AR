@@ -33,9 +33,13 @@
 					</div>
 
 					<div class="backCard">
+						<ul>
 						{#each duty as duties}
+						
 							<li class="dutyLists">{duties}</li>
+						
 						{/each}
+					</ul>
 					</div>
 				</div>
 			</div>

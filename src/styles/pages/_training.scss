@@ -92,6 +92,7 @@
             width: auto;
             height: 40%;
 
+
             .trainingCard:hover & {
                 opacity: 1;
                 transform: scale(1.1);
@@ -162,8 +163,7 @@
     transform: translate3d(0, 0, 0);
     border-radius: $CardRadius;
 
-    &:hover,
-    :active {
+    &:hover {
         @include shadowCardTraining;
     }
 }
