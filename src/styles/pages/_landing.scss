@@ -8,15 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../lib/images/bg.jpg');
+    background-image: url('../lib/images/bg.jpg');
     @include parallaxImage;
 
     @include media-mobile {
-        background-size: contain;
-        background-position: center;
-        background-attachment: unset;
-        height: 100%;
-        width: 100%;
+        @include parallaxImageMobile;
     }
 }
 

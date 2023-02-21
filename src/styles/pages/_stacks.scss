@@ -3,6 +3,10 @@
     background-color: $dark-background;
     @include flex-column-itemsCenter;
     overflow: hidden;
+
+    @include media-tablet {
+        @include mainSection-measurementsInPercentage;
+    }
 }
 
 .titleStacks {
@@ -11,6 +15,8 @@
     margin: 1.5rem 0 0.7rem 0;
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
+
+
 }
 
 .programmingLangContainer,
@@ -22,11 +28,24 @@
     flex-wrap: wrap;
     height: 27%;
     width: 90%;
+    text-shadow: $text-shadow;
+    @include media-tablet {
+        margin: 0.5rem
+    }
 
     &__data {
         @include flex-column-contentCenter-itemsCenter;
         width: auto;
         margin: 1rem;
+        text-shadow: $text-shadow;
+        
+        @include media-mobile{
+            margin: 0.5rem
+        }
+        
+        @include media-tablet {
+            margin: 0.6rem;
+        }
     }
 }
 
@@ -34,12 +53,29 @@
     @include flex-row-space-itemCenter;
     height: 15%;
     width: 45%;
+    text-shadow: $text-shadow;
+
+    @include media-mobile{
+        margin: 0.5rem
+    }
+
+    @include media-tablet {
+        margin: 0.5rem
+    }
 }
 
 .lang,
 .name {
     color: $text-color;
     padding-bottom: 1rem;
+
+    @include media-mobile{
+        padding-bottom: 0.5rem;
+    }
+
+    @include media-tablet{
+        padding-bottom: 0.5rem;
+    }
 }
 
 .databaseTool {

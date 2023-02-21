@@ -45,6 +45,7 @@
 .iconPreprocessor {
     color: $text-color;
     font-size: $font-size-icon;
+
 }
 
 
@@ -52,10 +53,10 @@
     align-self: center;
     color: $text-color;
     font-size: $font-size-icon;
+    padding-right: 0.5rem;
 }
 
-.githubIcon{
-    margin-right: 10%;
+.githubIcon {
     color: $text-color;
     font-size: $font-size-icon;
 }

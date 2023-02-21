@@ -1,7 +1,6 @@
 <script lang="ts">
 	export const prerender = true;
 	import { contactInformations } from './contact';
-
 </script>
 
 <section class="contactMainSection">
@@ -14,7 +13,9 @@
 			{#each contactInformations as { phone, phoneIcon, email, sendEmail, emailIcon, location, locationIcon, githubLink, githubIcon, linkedInIcon, linkedInLink }}
 				<div class="phone">
 					<i class={phoneIcon} />
-					<p class="contactData">{phone}</p>
+					<p class="contactData">
+						{phone}
+					</p>
 				</div>
 
 				<div class="location">
@@ -44,5 +45,4 @@
 			{/each}
 		</div>
 	</div>
-	  
 </section>

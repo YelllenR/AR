@@ -19,7 +19,7 @@
 
 <section class="projectMainContainer">
 	<div class="projectContainer">
-		<h2 class="projectContainer__title">PROJECTS</h2>
+		<h2 class="projectContainer__title">PROJETS</h2>
 
 		<div class="cardContainer">
 			{#each projects as { projectTitle, projectDescription, projectStacks, link }, index}

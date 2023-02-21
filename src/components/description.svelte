@@ -33,7 +33,6 @@
 	on:change={({ detail }) => {
 		isInView = detail.inView;
 	}}
-	
 >
 	{#if isInView}
 		<div
@@ -45,12 +44,17 @@
 			<div class="informationsContainer">
 				<div class="skillsDescriptions">
 					<AnimationStart>
-						{#each description as { skillsList, skillsTitle }}
+						{#each description as { skillsList, skillsTitle, skillsSubTitle }}
 							<div class="containerOfSkills">
 								<h3 transition:typewriter class="skills">{skillsTitle}</h3>
-								<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="SkillsList">
-									{skillsList}
-								</p>
+								<h4 class="subtitle" in:fly={{ x: 300, duration: 800, delay: 1900 }}>{skillsSubTitle}</h4>
+								<ul class="listOfSkills" in:fly={{ x: 300, duration: 800, delay: 1900 }}>
+									{#each skillsList as skills}
+										<li class="SkillsList">
+											{skills}
+										</li>
+									{/each}
+								</ul>
 							</div>
 						{/each}
 					</AnimationStart>

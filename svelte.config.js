@@ -16,14 +16,11 @@ const config = {
 			fallback: null
 		}),
 
-		// prerender: ({
-		// 	externaliseScriptsAndStyles: true
-		// }),
-		paths: {
-			base: '/AR'
-		},
+		// paths: {
+		// 	base: '/AR'
+		// },
 		csp: {
-			// mode: "auto",
+	
 			directives: {
 
 				'script-src': [

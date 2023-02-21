@@ -108,6 +108,10 @@
   z-index: 2;
   border-radius: $CardRadius;
   @include cardShadow;
+
+  @include media-mobile {
+    @include backface-visibility
+  }
 }
 
 .backCard {
@@ -118,6 +122,10 @@
   border-radius: $CardRadius;
   text-align: center;
   @include glassCard;
+
+  @include media-mobile {
+    @include backface-visibility
+  }
 }
 
 .btn {
