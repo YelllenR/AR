@@ -13,7 +13,6 @@ $text-color: #C1D1D9ff;
 $button-radius: 0.5rem;
 
 /* min/max width & min/max height */
-
 $experienceCards-width: clamp(16rem, 35vw, 30rem);
 $experienceCards-height: clamp(20rem, 43vh, 30rem);
 $marginBetweenCards: clamp(0.5rem, 40vw, 1rem);
@@ -29,7 +28,7 @@ $dotHeight: clamp(2rem, 5vh, 3rem);
 $dotWidth: clamp(2rem, 5vw, 3rem);
 /* font size, padding, margin*/
 $font-size-p: clamp(0.9rem, 2vw, 1rem);
-$font-size-h1: clamp(2rem, 10vw, 4rem);
+$font-size-h1: clamp(2rem, 12vw, 4rem);
 
 $font-size-h2: clamp(1.5rem, 2vw, 2rem);
 $font-size-h3: clamp(1.1rem, 2vw, 1.2rem);
@@ -66,23 +65,3 @@ $charcoal-2: #2E495Dff;
 $beau-blue: #C1D1D9ff;
 $pewter-blue: #8AA8B6ff;
 $charcoal-3: #29455Bff;
-
-/* SCSS RGB */
-$gunmetal: rgba(37, 52, 67, 1);
-$blue-sapphire: rgba(43, 80, 104, 1);
-$charcoal: rgba(38, 59, 79, 1);
-$charcoal-2: rgba(46, 73, 93, 1);
-$beau-blue: rgba(193, 209, 217, 1);
-$pewter-blue: rgba(138, 168, 182, 1);
-$charcoal-3: rgba(41, 69, 91, 1);
-
-/* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-right: linear-gradient(90deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-bottom: linear-gradient(180deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-left: linear-gradient(270deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-top-right: linear-gradient(45deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-bottom-right: linear-gradient(135deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-top-left: linear-gradient(225deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-bottom-left: linear-gradient(315deg, #253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
-$gradient-radial: radial-gradient(#253443ff, #2B5068ff, #263B4Fff, #2E495Dff, #C1D1D9ff, #8AA8B6ff, #29455Bff);
