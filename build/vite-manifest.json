@@ -1,0 +1,132 @@
+{
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "app/immutable/chunks/0-9f943134.js",
+    "imports": [
+      "layout-da46b06b.js",
+      "src/routes/+layout.svelte"
+    ],
+    "isDynamicEntry": true,
+    "src": ".svelte-kit/generated/nodes/0.js"
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "app/immutable/chunks/1-ca39daeb.js",
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ],
+    "isDynamicEntry": true,
+    "src": ".svelte-kit/generated/nodes/1.js"
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "app/immutable/chunks/2-222e64ec.js",
+    "imports": [
+      "src/routes/+page.svelte"
+    ],
+    "isDynamicEntry": true,
+    "src": ".svelte-kit/generated/nodes/2.js"
+  },
+  "layout-da46b06b.js": {
+    "file": "app/immutable/chunks/layout-da46b06b.js"
+  },
+  "index-da3d4620.js": {
+    "file": "app/immutable/chunks/index-da3d4620.js"
+  },
+  "singletons-715b6ea9.js": {
+    "file": "app/immutable/chunks/singletons-715b6ea9.js",
+    "imports": [
+      "index-da3d4620.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "dynamicImports": [
+      ".svelte-kit/generated/nodes/0.js",
+      ".svelte-kit/generated/nodes/1.js",
+      ".svelte-kit/generated/nodes/2.js"
+    ],
+    "file": "app/immutable/start-00bc5575.js",
+    "imports": [
+      "index-da3d4620.js",
+      "singletons-715b6ea9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "app/immutable/components/error.svelte-9341fb2d.js",
+    "imports": [
+      "index-da3d4620.js",
+      "singletons-715b6ea9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "src/lib/images/FCC.svg": {
+    "file": "app/immutable/assets/FCC-b5b12ab1.svg",
+    "src": "src/lib/images/FCC.svg"
+  },
+  "src/lib/images/OC-diplome.webp": {
+    "file": "app/immutable/assets/OC-diplome-1928f028.webp",
+    "src": "src/lib/images/OC-diplome.webp"
+  },
+  "src/lib/images/OC.svg": {
+    "file": "app/immutable/assets/OC-f66e4dfe.svg",
+    "src": "src/lib/images/OC.svg"
+  },
+  "src/lib/images/bg.webp": {
+    "file": "app/immutable/assets/bg-fbcd7ca8.webp",
+    "src": "src/lib/images/bg.webp"
+  },
+  "src/lib/images/cardsBackground.svg": {
+    "file": "app/immutable/assets/cardsBackground-f4d7e13a.svg",
+    "src": "src/lib/images/cardsBackground.svg"
+  },
+  "src/lib/images/freecodecamp1.webp": {
+    "file": "app/immutable/assets/freecodecamp1-5fff0120.webp",
+    "src": "src/lib/images/freecodecamp1.webp"
+  },
+  "src/lib/images/freecodecamp2.webp": {
+    "file": "app/immutable/assets/freecodecamp2-a1d613da.webp",
+    "src": "src/lib/images/freecodecamp2.webp"
+  },
+  "src/routes/+layout.css": {
+    "file": "app/immutable/assets/layout-8081fe18.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+layout.svelte": {
+    "assets": [
+      "app/immutable/assets/bg-fbcd7ca8.webp",
+      "app/immutable/assets/cardsBackground-f4d7e13a.svg"
+    ],
+    "css": [
+      "app/immutable/assets/layout-8081fe18.css"
+    ],
+    "file": "app/immutable/components/pages/layout.svelte-c06618be.js",
+    "imports": [
+      "index-da3d4620.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+layout.ts": {
+    "file": "app/immutable/modules/pages/layout.ts-9cbb603b.js",
+    "imports": [
+      "layout-da46b06b.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.ts"
+  },
+  "src/routes/+page.svelte": {
+    "assets": [
+      "app/immutable/assets/freecodecamp1-5fff0120.webp",
+      "app/immutable/assets/FCC-b5b12ab1.svg",
+      "app/immutable/assets/freecodecamp2-a1d613da.webp",
+      "app/immutable/assets/OC-diplome-1928f028.webp",
+      "app/immutable/assets/OC-f66e4dfe.svg"
+    ],
+    "file": "app/immutable/components/pages/page.svelte-32f96a88.js",
+    "imports": [
+      "index-da3d4620.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  }
+}
