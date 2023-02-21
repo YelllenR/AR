@@ -5,7 +5,7 @@ import preprocess from 'svelte-preprocess';
 
 const config = {
 	appDir: 'build',
-
+	outDir:".",
 	preprocess: preprocess({
 		css: true
 	}),
