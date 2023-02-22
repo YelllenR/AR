@@ -29,19 +29,14 @@
 
 <section
 	id="description"
-	use:inview={{ unobserveOnEnter: false, rootMargin: '-5%' }}
+	use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
 	on:change={({ detail }) => {
 		isInView = detail.inView;
 	}}
 >
-
 	{#if isInView}
-		<div
-			class="informationsContainer"
-			in:slide={{ duration: 600, delay: 800 }}
-			out:slide={{ duration: 600, delay: 600 }}
-		>
-		<h2 class="describe">Informations personnelles</h2>
+		<div class="informationsContainer">
+			<h2 class="describe">Informations personnelles</h2>
 			<div class="skillsDescriptions">
 				<AnimationStart>
 					{#each description as { skillsList, skillsTitle, skillsSubTitle }}
