@@ -10,7 +10,7 @@
 			<div class="img" />
 		</div>
 		<div class="contactInformations">
-			{#each contactInformations as { phone, phoneIcon, email, sendEmail, emailIcon, location, locationIcon, githubLink, githubIcon, linkedInIcon, linkedInLink }}
+			{#each contactInformations as { phone, phoneIcon, email, sendEmail, emailIcon, location, locationIcon, githubLink, githubIcon, linkedInIcon, linkedInLink, cv, downloadIcon }}
 				<div class="phone">
 					<i class={phoneIcon} />
 					<p class="contactData">
@@ -41,6 +41,11 @@
 					<a class="contactDataHref" href={linkedInLink}>
 						<p class="contactData">Aurélie ROSE</p>
 					</a>
+				</div>
+
+				<div class="cv">
+					<i class={downloadIcon} />
+					<a class="downloadCV" href={cv} download="Curriculum vitae"> Téléchargez le CV</a>
 				</div>
 			{/each}
 		</div>

@@ -19,22 +19,23 @@
 }
 
 .containerOverallContactElement {
-    display: flex;
+    @include flex-column-contentCenter-itemsCenter;
     height: 60%;
     width: 90%;
     margin-top: 5%;
 
-    @include media-tablet{
+    @include media-tablet {
         height: 80%;
     }
 }
 
 .sideOne {
-    width: 50%;
+    width: 80%;
+    height: 50%;
     border-radius: 30% 0 0 0;
     background-image: url('../lib/images/bg.webp');
     @include parallaxImageContact;
-    
+
     @include media-mobile {
         display: none;
     }
@@ -46,8 +47,8 @@
 
 .contactInformations {
     @include flex-column-contentSpacedEvenly;
-    width: 50%;
-    height: 100%;
+    width: 80%;
+    height: 70%;
     @include glassContactBox;
     border-radius: 0 0 30% 0;
 
@@ -58,7 +59,7 @@
     }
 
     @include media-tablet {
-        width: 100%;
+        width: 80%;
         height: 95%;
         border-radius: 5%;
     }
@@ -68,12 +69,18 @@
 .location,
 .email,
 .github,
-.linkedin {
+.linkedin,
+.cv {
     @include flex-row-spaceEvenly-itemCenter;
     margin: 0.6rem;
-    width: 80%;
+    width: 60%;
+
     @include media-mobile {
         width: 60%;
+    }
+
+    @include media-tablet{
+        width: 55%;
     }
 
 }
@@ -83,7 +90,7 @@
     color: $text-color;
 }
 
-.contactDataHref {
+.contactDataHref, .downloadCV {
     color: $text-color;
     text-decoration: none;
 }

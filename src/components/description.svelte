@@ -29,54 +29,55 @@
 
 <section
 	id="description"
-	use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+	use:inview={{ unobserveOnEnter: false, rootMargin: '-5%' }}
 	on:change={({ detail }) => {
 		isInView = detail.inView;
 	}}
 >
+
 	{#if isInView}
 		<div
-			class="descriptionContainer"
+			class="informationsContainer"
 			in:slide={{ duration: 600, delay: 800 }}
 			out:slide={{ duration: 600, delay: 600 }}
 		>
-			<h2 in:typewriter class="describe">Informations personnelles</h2>
-			<div class="informationsContainer">
-				<div class="skillsDescriptions">
-					<AnimationStart>
-						{#each description as { skillsList, skillsTitle, skillsSubTitle }}
-							<div class="containerOfSkills">
-								<h3 transition:typewriter class="skills">{skillsTitle}</h3>
-								<h4 class="subtitle" in:fly={{ x: 300, duration: 800, delay: 1900 }}>{skillsSubTitle}</h4>
-								<ul class="listOfSkills" in:fly={{ x: 300, duration: 800, delay: 1900 }}>
-									{#each skillsList as skills}
-										<li class="SkillsList">
-											{skills}
-										</li>
-									{/each}
-								</ul>
-							</div>
-						{/each}
-					</AnimationStart>
+		<h2 class="describe">Informations personnelles</h2>
+			<div class="skillsDescriptions">
+				<AnimationStart>
+					{#each description as { skillsList, skillsTitle, skillsSubTitle }}
+						<div class="containerOfSkills">
+							<h3 transition:typewriter class="skills">{skillsTitle}</h3>
+							<h4 class="subtitle" in:fly={{ x: 300, duration: 800, delay: 1900 }}>
+								{skillsSubTitle}
+							</h4>
+							<ul class="listOfSkills" in:fly={{ x: 300, duration: 800, delay: 1900 }}>
+								{#each skillsList as skills}
+									<li class="SkillsList">
+										{skills}
+									</li>
+								{/each}
+							</ul>
+						</div>
+					{/each}
+				</AnimationStart>
 
-					<AnimationStart>
-						<h3 in:typewriter class="spokenLang">Anglais courant</h3>
-					</AnimationStart>
+				<AnimationStart>
+					<h3 in:typewriter class="spokenLang">Anglais courant</h3>
+				</AnimationStart>
 
-					<div class="otherDescriptions">
-						<AnimationStart>
-							<h3 in:typewriter class="hobbyTitle">Centre d'intérêts</h3>
-							<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
-								Sport : Course à pied, squash
-							</p>
-							<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
-								Lecture : Psychologie
-							</p>
-							<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
-								Musique : Classique, Blues, Rock
-							</p>
-						</AnimationStart>
-					</div>
+				<div class="otherDescriptions">
+					<AnimationStart>
+						<h3 in:typewriter class="hobbyTitle">Centre d'intérêts</h3>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Sport : Course à pied, squash
+						</p>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Lecture : Psychologie
+						</p>
+						<p in:fly={{ x: 300, duration: 800, delay: 1900 }} class="hobbies">
+							Musique : Classique, Blues, Rock
+						</p>
+					</AnimationStart>
 				</div>
 			</div>
 		</div>
