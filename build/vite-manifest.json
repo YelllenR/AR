@@ -1,6 +1,6 @@
 {
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "app/immutable/chunks/0-9f943134.js",
+    "file": "app/immutable/chunks/0-98f5b7d3.js",
     "imports": [
       "layout-da46b06b.js",
       "src/routes/+layout.svelte"
@@ -17,7 +17,7 @@
     "src": ".svelte-kit/generated/nodes/1.js"
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "app/immutable/chunks/2-222e64ec.js",
+    "file": "app/immutable/chunks/2-eaaef583.js",
     "imports": [
       "src/routes/+page.svelte"
     ],
@@ -42,7 +42,7 @@
       ".svelte-kit/generated/nodes/1.js",
       ".svelte-kit/generated/nodes/2.js"
     ],
-    "file": "app/immutable/start-00bc5575.js",
+    "file": "app/immutable/start-a051e319.js",
     "imports": [
       "index-da3d4620.js",
       "singletons-715b6ea9.js"
@@ -58,6 +58,10 @@
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "src/lib/images/Curriculum-vitae.pdf": {
+    "file": "app/immutable/assets/Curriculum-vitae-382b6ced.pdf",
+    "src": "src/lib/images/Curriculum-vitae.pdf"
   },
   "src/lib/images/FCC.svg": {
     "file": "app/immutable/assets/FCC-b5b12ab1.svg",
@@ -88,7 +92,7 @@
     "src": "src/lib/images/freecodecamp2.webp"
   },
   "src/routes/+layout.css": {
-    "file": "app/immutable/assets/layout-8081fe18.css",
+    "file": "app/immutable/assets/layout-588cd94f.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.svelte": {
@@ -97,9 +101,9 @@
       "app/immutable/assets/cardsBackground-f4d7e13a.svg"
     ],
     "css": [
-      "app/immutable/assets/layout-8081fe18.css"
+      "app/immutable/assets/layout-588cd94f.css"
     ],
-    "file": "app/immutable/components/pages/layout.svelte-c06618be.js",
+    "file": "app/immutable/components/pages/layout.svelte-301de63c.js",
     "imports": [
       "index-da3d4620.js"
     ],
@@ -120,9 +124,10 @@
       "app/immutable/assets/FCC-b5b12ab1.svg",
       "app/immutable/assets/freecodecamp2-a1d613da.webp",
       "app/immutable/assets/OC-diplome-1928f028.webp",
-      "app/immutable/assets/OC-f66e4dfe.svg"
+      "app/immutable/assets/OC-f66e4dfe.svg",
+      "app/immutable/assets/Curriculum-vitae-382b6ced.pdf"
     ],
-    "file": "app/immutable/components/pages/page.svelte-32f96a88.js",
+    "file": "app/immutable/components/pages/page.svelte-533ed82b.js",
     "imports": [
       "index-da3d4620.js"
     ],
