@@ -3,28 +3,22 @@
     background-color: $dark-background;
     overflow: hidden;
 
-    @include media-tablet{
-        @include mainSection-measurementsInPercentage;
-    }
-}
-
-.descriptionContainer {
-    @include flex-column-itemsCenter;
-    @include mainSection-measurementsInViewH-W;
-
-    @include media-tablet{
+    @include media-tablet {
         @include mainSection-measurementsInPercentage;
     }
 }
 
 
 .informationsContainer {
-    height: 85%;
-    width: 100%;
-    @include flex-row-space-itemCenter;
+    @include flex-column-itemsCenter;
+    @include mainSection-measurementsInViewH-W;
 
     @include media-mobile {
         height: 95%;
+    }
+
+    @include media-tablet {
+        @include mainSection-measurementsInPercentage;
     }
 }
 
@@ -36,15 +30,16 @@
 
 .skillsDescriptions {
     @include flex-column-contentSpacedEvenly;
-    height: 85%;
+    height: 95%;
     width: 90%;
 
-    @include media-mobile {
-        width: 95%;
-    }
+    // @include media-mobile {
+    //     width: 95%;
+    // }
 
     @include media-tablet {
         height: 95%;
+
     }
 }
 
@@ -52,6 +47,8 @@
     color: $text-color;
     margin-top: 2rem;
     text-shadow: $text-shadow;
+    text-align: center;
+
     @include media-mobile {
         margin-top: 1rem;
         padding: 0 0.3rem 0 0.3rem;
@@ -70,7 +67,7 @@
     text-align: center;
     padding: 0.5rem;
 
-    @include media-mobile{
+    @include media-mobile {
         padding: 0.3rem;
     }
 
@@ -85,11 +82,11 @@
     padding: 0.5rem;
     text-align: center;
     text-shadow: $text-shadow;
-    
-    @include media-mobile{
+
+    @include media-mobile {
         padding-top: 0.5rem;
     }
-    
+
     @include media-tablet {
         padding: 0.3rem;
     }
@@ -102,7 +99,7 @@
     text-align: center;
     padding: 0.5rem;
     text-shadow: $text-shadow;
-    
+
     @include media-mobile {
         padding: 0.2rem;
     }

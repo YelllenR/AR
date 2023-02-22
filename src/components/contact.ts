@@ -1,3 +1,5 @@
+import cv from '../lib/images/Curriculum-vitae.pdf'
+
 export const contactInformations = [
     {
         phone: "0641188135",
@@ -10,6 +12,8 @@ export const contactInformations = [
         githubLink: "https://github.com/YelllenR",
         githubIcon: "fab fa-github-square githubIcon",
         linkedInLink: "https://www.linkedin.com/in/aur%C3%A9lie-rose-045a08259/",
-        linkedInIcon: "fab fa-linkedin  contactIcon"
+        linkedInIcon: "fab fa-linkedin  contactIcon",
+        downloadIcon: "fas fa-download contactIcon",
+        cv: cv
     }
 ];

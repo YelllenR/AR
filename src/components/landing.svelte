@@ -11,13 +11,13 @@
 
 <section
 	id="landing-page"
-	use:inview={{ unobserveOnEnter: true, rootMargin: '-50%' }}
+	use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
 	on:change={({ detail }) => {
 		isInView = detail.inView;
 	}}
 >
 	{#if isInView}
-		<div class="container" in:slide={{ duration: 800, delay: 600, easing: backOut }}>
+		<div class="container" in:slide={{ duration: 400, easing: backOut }}>
 			<div class="content">
 				<div class="texts">
 					<AnimationStart>
@@ -25,7 +25,7 @@
 							<div class="overflow">
 								<span
 									class="text"
-									in:fly={{ y: 250, duration: 800, delay: 500 * i, easing: backOut }}
+									in:fly={{ y: 300, duration: 800, delay: 650 * i, easing: backOut }}
 								>
 									{text}
 								</span>
